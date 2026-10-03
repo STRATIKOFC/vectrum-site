@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <style>
+    .vsym{fill:#00665E}
+    @media (prefers-color-scheme: dark){ .vsym{fill:#16BFA9} }
+  </style>
+  <g transform="translate(33.6 4.1) scale(0.82)"><path class="vsym" fill-rule="evenodd" d="M20 0L40 56L20 112L0 56Z M5.5 43L10 43L20 68L30 43L34.5 43L20 79Z"/></g>
+</svg>

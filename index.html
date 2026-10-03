@@ -1,0 +1,1677 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- previa interna: fora dos buscadores ate a casa decidir publicar -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta data-i18n-a="content:k44d27bb6" name="description" content="Vectrum Capital, escritório de Assessoria de Investimentos credenciado à XP Investimentos.">
+<meta name="theme-color" content="#F5F7F6">
+<script>/* tema antes da pintura: o site nasce claro; quem escolheu o escuro volta no escuro */try{var tv=localStorage.getItem('vectrum-tema-v2');if(tv==='escuro')document.documentElement.removeAttribute('data-tema');else if(tv==='verde')document.documentElement.setAttribute('data-tema','verde');if((localStorage.getItem('vectrum-idioma')||'pt')!=='pt')document.documentElement.className+=' i18n-carregando'}catch(e){}</script>
+<link rel="stylesheet" href="i18n/i18n.css?v=4">
+<script src="i18n/i18n.js?v=4" defer></script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<meta data-i18n-a="content:k346839f8" property="og:title" content="Vectrum Capital">
+<meta data-i18n-a="content:kbe88fcd1" property="og:description" content="Recurso parado tem valor. Recurso com direção tem destino.">
+<meta property="og:type" content="website">
+<title data-i18n="k346839f8">Vectrum Capital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+:root{
+  /* texto mais claro e mais legivel que a versao anterior */
+  --ink-0:#FFFFFF; --ink-1:#EDEFEE; --ink-2:#C8CCCB; --ink-3:#9AA3A1; --ink-4:#848D8B; --ink-5:#7A8381;
+
+  --green:#00665E; --green-live:#16BFA9; --green-deep:#002420; --green-abyss:#001210; --surface:#00231F;
+  --metal:#B8A567; --preto:#121212;
+  --up:#16BFA9; --down:#E8685C;
+
+  --bg:#000000; --card:#080A0A; --card-hi:#0E1312;
+  --line:rgba(200,204,203,.13); --line-soft:rgba(200,204,203,.06);
+
+  --f-disp:"Fraunces",Georgia,serif;
+  --f-ui:"Schibsted Grotesk",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --f-marca:"Cormorant Garamond",Georgia,serif;
+
+  /* superficies que o tema claro precisa inverter */
+  --nav-bg:rgba(0,0,0,.84); --nav-bg-mob:rgba(0,0,0,.98);
+  --selo-bg:rgba(0,0,0,.6); --selo-bd:rgba(184,165,103,.3); --selo-tx:rgba(184,165,103,.92);
+  --faixa-1:linear-gradient(180deg,#000,#01100E 52%,#000);
+  --faixa-2:linear-gradient(180deg,#000,#01100E 50%,#000);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(0,102,94,.2), transparent 64%),#000;
+  --carreira-bg:linear-gradient(180deg,#000,#01100E 40%,#001A17);
+  --foco-bg:#0E1312;
+  --ticker-bg:#050707; --rodape-bg:#020303; --campo-bg:#0A0D0D;
+  --tiras-bg:#060808; --tira-bg:#0C110F; --galeria-bg:#0A0E0D; --hover-suave:rgba(255,255,255,.03);
+
+  --pad:clamp(20px,5vw,64px);
+  --nav-h:76px;
+  --ease:cubic-bezier(.16,.84,.44,1);
+}
+/* ====== TEMA CLARO ======
+   O site nasce claro (pedido da Victoria, 27/09). O escuro e opcional e entra so quando a pessoa clica.
+   Aqui so os tokens mudam: nenhuma regra de layout e reescrita. */
+:root[data-tema="claro"]{
+  --ink-0:#0B1110; --ink-1:#18211F; --ink-2:#343F3D; --ink-3:#48524F; --ink-4:#55615E; --ink-5:#5E6A67;
+
+  --green:#00564F; --green-live:#00786C; --metal:#7A6829;
+  --up:#0B7D6E; --down:#BE4237;
+
+  --bg:#F5F7F6; --card:#FFFFFF; --card-hi:#ECF1EF;
+  --line:rgba(11,17,16,.16); --line-soft:rgba(11,17,16,.07);
+
+  --nav-bg:rgba(245,247,246,.86); --nav-bg-mob:rgba(245,247,246,.98);
+  --selo-bg:rgba(122,104,41,.09); --selo-bd:rgba(122,104,41,.34); --selo-tx:#6B5A22;
+  --faixa-1:linear-gradient(180deg,#EDF2F0,#F7FAF9 52%,#EDF2F0);
+  --faixa-2:linear-gradient(180deg,#EDF2F0,#F7FAF9 50%,#EDF2F0);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(0,102,94,.10), transparent 64%),#F0F4F3;
+  --carreira-bg:linear-gradient(180deg,#EDF2F0,#F3F7F6 40%,#E6EFED);
+  --foco-bg:#FFFFFF;
+  --ticker-bg:#EDF1F0; --rodape-bg:#E7ECEA; --campo-bg:#FFFFFF;
+  --tiras-bg:#E9EEEC; --tira-bg:#DDE5E3; --galeria-bg:#E4EBE9; --hover-suave:rgba(11,17,16,.05);
+}
+/* ====== TEMA VERDE (28/09) ======
+   Terceira opção: o verde Aston Martin da marca (#00665E) vira o ambiente.
+   Parte do escuro (texto claro) e troca só as superfícies e os acentos. */
+:root[data-tema="verde"]{
+  --green:#008C80; --green-live:#7FE3D2; --green-deep:#00241F; --green-abyss:#001A17; --surface:#003A34;
+  --up:#7FE3D2; --down:#FF9A8F;
+  --bg:#00332E; --card:#003D37; --card-hi:#004841;
+  --line:rgba(255,255,255,.15); --line-soft:rgba(255,255,255,.07);
+  --nav-bg:rgba(0,51,46,.88); --nav-bg-mob:rgba(0,51,46,.98);
+  --selo-bg:rgba(0,36,31,.55);
+  --faixa-1:linear-gradient(180deg,#00332E,#003E38 52%,#00332E);
+  --faixa-2:linear-gradient(180deg,#00332E,#003E38 50%,#00332E);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(127,227,210,.14), transparent 64%),#00332E;
+  --carreira-bg:linear-gradient(180deg,#00332E,#003A34 40%,#00443D);
+  --foco-bg:#003D37;
+  --ticker-bg:#002C28; --rodape-bg:#002622; --campo-bg:#003A34;
+  --tiras-bg:#002E29; --tira-bg:#003D37; --galeria-bg:#003530; --hover-suave:rgba(255,255,255,.05);
+}
+/* o veu sobre foto continua escuro nos dois temas: ele protege texto branco sobre imagem */
+/* rotulo verde sobre foto: a foto continua escura, entao o verde vivo do tema escuro e o que aparece */
+:root[data-tema="claro"] .socio .galeria .nome-sobre span,
+:root[data-tema="claro"] .faixa-img .frase small{color:#16BFA9}
+/* cartoes das faixas: o veu escuro sobre card claro virava cinza sujo, no claro a mesa some no papel */
+:root[data-tema="claro"] .fx .arte{opacity:.34;filter:saturate(.5) contrast(1.02)}
+:root[data-tema="claro"] .fx:hover .arte{opacity:.5}
+:root[data-tema="claro"] .fx .arte::after{background:linear-gradient(178deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.78) 42%, rgba(255,255,255,.97) 70%, #FFFFFF 100%)}
+:root[data-tema="claro"] .fx .brasao{filter:drop-shadow(0 6px 14px rgba(0,36,32,.28)) drop-shadow(0 0 18px rgba(22,191,169,.12))}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px)}
+body{
+  margin:0;background:var(--bg);color:var(--ink-2);
+  font-family:var(--f-ui);font-weight:400;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:1260px;margin:0 auto;padding-inline:var(--pad)}
+h1,h2,h3,h4{margin:0;text-wrap:balance;color:var(--ink-1)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* tipografia com carater: display Fraunces, corpo grotesca, numeros mono */
+h1,h2{font-family:var(--f-disp);font-weight:500;font-variation-settings:"SOFT" 0,"WONK" 0;letter-spacing:-.012em}
+h3{font-family:var(--f-ui);font-weight:600;letter-spacing:-.005em}
+.num-mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+.eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--green-live);margin:0}
+.eyebrow.metal{color:var(--metal)}
+.lede{color:var(--ink-3);font-size:17.5px;max-width:60ch;line-height:1.72}
+strong{color:var(--ink-1);font-weight:600}
+
+/* marca */
+.vsym{fill:currentColor}   /* fill precisa ser herdado: nao atravessa o shadow do <use> */
+.xp{fill:currentColor}
+.vname{font-family:var(--f-marca);font-weight:300;line-height:1;letter-spacing:.055em;white-space:nowrap}
+.vdesc{font-family:var(--f-ui);font-weight:500;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;white-space:nowrap}
+
+/* lockup com a XP, padrao dos credenciados: fio vertical, alinhado pela altura */
+.lockup{display:flex;align-items:center;gap:clamp(14px,1.9vw,24px)}
+.lockup .lk-v{display:flex;align-items:center;gap:clamp(12px,1.5vw,19px);color:var(--ink-0)}
+.lockup .lk-fio{width:1px;background:var(--line);flex:none}
+.lockup .xp{width:auto;flex:none;color:var(--ink-1)}
+
+/* slot */
+.slot::after{
+  content:attr(data-slot);position:absolute;top:9px;left:9px;z-index:4;
+  font-family:var(--f-mono);font-size:8.5px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--selo-tx);background:var(--selo-bg);border:1px solid var(--selo-bd);
+  padding:3px 7px;border-radius:2px;pointer-events:none;
+}
+.foto-vazia{background:radial-gradient(70% 90% at 30% 10%, rgba(22,191,169,.10), transparent 62%),linear-gradient(160deg,#0E1413,#060909);position:relative;overflow:hidden}
+
+/* ================= NAV ================= */
+.nav{position:sticky;top:0;z-index:70;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:clamp(12px,2.2vw,34px);height:var(--nav-h)}
+.nav-marca{text-decoration:none;flex:none}
+.nav-marca .vsym{height:40px}
+.nav-marca .vname{font-size:27px;letter-spacing:.07em}
+.nav-marca .vdesc{font-size:6.5px;letter-spacing:.46em;padding-left:.46em;margin-top:5px;color:var(--ink-4)}
+.nav-marca .lk-fio{height:38px}
+.nav-marca .xp{height:35px}
+.nav-links{display:flex;align-items:center;gap:clamp(9px,1.5vw,24px);margin-left:auto}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--ink-3);text-decoration:none;
+  padding:9px 2px;position:relative;transition:color .22s;white-space:nowrap;
+}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:1px;background:var(--green-live);transition:right .32s var(--ease)}
+.nav-links a:hover{color:var(--ink-0)}
+.nav-links a:hover::after{right:0}
+.nav-links a.destaque{color:var(--green-live);font-weight:600}
+.nav-cta{
+  flex:none;background:var(--green);color:#fff;text-decoration:none;font-family:var(--f-ui);
+  font-size:13.5px;font-weight:600;padding:12px 22px;border-radius:2px;
+  transition:background .24s,transform .24s,box-shadow .24s;white-space:nowrap;
+}
+.nav-cta:hover{background:#007D72;transform:translateY(-1px);box-shadow:0 8px 22px -8px rgba(0,102,94,.8)}
+.nav-tema{background:none;border:1px solid var(--line);border-radius:2px;color:var(--ink-2);
+  width:38px;height:38px;flex:none;cursor:pointer;display:grid;place-items:center;
+  transition:border-color .25s var(--ease),color .25s var(--ease)}
+.nav-tema:hover{border-color:var(--green-live);color:var(--ink-0)}
+.nav-tema svg{width:17px;height:17px;fill:currentColor}
+/* o ícone mostra o PRÓXIMO tema: claro → escuro (lua) → verde (bolinha verde) → claro (sol) */
+.nav-tema .t-lua,.nav-tema .t-sol{display:none}
+:root[data-tema="claro"] .nav-tema .t-lua{display:block}
+:root[data-tema="claro"] .nav-tema .t-verde{display:none}
+:root[data-tema="verde"] .nav-tema .t-sol{display:block}
+:root[data-tema="verde"] .nav-tema .t-verde{display:none}
+.nav-burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:2px;color:var(--ink-1);padding:9px 13px;cursor:pointer;font-family:var(--f-ui);font-size:13px;font-weight:500}
+@media(max-width:1060px){
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--nav-bg-mob);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 18px;margin:0}
+  .nav-links.aberto{display:flex}
+  .nav-links a{width:100%;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .nav-burger{display:block}.nav-cta{display:none}
+}
+
+/* ================= HERO ================= */
+.hero{position:relative;padding-block:clamp(52px,8vw,96px) clamp(44px,6vw,78px);overflow:hidden}
+.hero-fundo{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(56% 60% at 74% 16%, rgba(0,102,94,.32), transparent 62%),
+             radial-gradient(46% 50% at 12% 86%, rgba(22,191,169,.10), transparent 60%),
+             var(--faixa-1)}
+.hero-grade{position:absolute;inset:0;z-index:0;opacity:.55;
+  background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:68px 68px;mask-image:radial-gradient(70% 70% at 50% 40%,#000,transparent)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,4.6vw,64px);align-items:center}
+@media(max-width:940px){.hero-in{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(40px,6.2vw,76px);line-height:1.04;margin-block:20px 22px;color:var(--ink-0);font-weight:500}
+.hero h1 em{font-style:italic;color:var(--green-live);font-weight:500}
+.hero .sub{color:var(--ink-2);font-size:clamp(16px,1.5vw,18.5px);max-width:50ch;line-height:1.7}
+.hero-botoes{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:0;cursor:pointer;
+  font-family:var(--f-ui);font-size:14.5px;font-weight:600;
+  padding:15px 28px;border-radius:2px;position:relative;overflow:hidden;
+  transition:background .24s,transform .24s,border-color .24s,color .24s,box-shadow .24s;
+}
+.btn-1{background:var(--green);color:#fff}
+.btn-1:hover{background:#007D72;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(0,102,94,.9)}
+.btn-2{background:transparent;color:var(--ink-1);border:1px solid rgba(200,204,203,.3)}
+.btn-2:hover{border-color:var(--green-live);color:var(--green-live);transform:translateY(-2px);background:rgba(22,191,169,.06)}
+.btn:focus-visible{outline:2px solid var(--green-live);outline-offset:3px}
+
+.hero-visual{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.hero-visual img,.hero-visual video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.1s var(--ease)}
+.hero-visual:hover img,.hero-visual:hover video{transform:scale(1.06)}
+.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,.62) 100%);pointer-events:none}
+.hero-visual .legenda{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 22px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+@media(max-width:940px){.hero-visual{aspect-ratio:16/10}}
+
+/* ================= NUMEROS ================= */
+.numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:1px;background:var(--line-soft);border-block:1px solid var(--line)}
+.num{background:var(--card);padding:clamp(24px,3vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:7px;position:relative;transition:background .35s}
+.num::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 100% at 50% 0%, rgba(22,191,169,.10), transparent 70%);opacity:0;transition:opacity .4s}
+.num:hover{background:var(--card-hi)}
+.num:hover::before{opacity:1}
+.num b{font-family:var(--f-mono);font-weight:700;font-size:clamp(28px,3.6vw,42px);line-height:1;color:var(--ink-0);letter-spacing:-.02em;position:relative}
+.num span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);position:relative}
+
+/* ================= SECOES ================= */
+.sec{padding-block:clamp(60px,8vw,110px);position:relative}
+.sec-linha{border-top:1px solid var(--line)}
+.sec-head{max-width:60ch;margin-bottom:clamp(30px,4vw,52px)}
+.sec-head h2{font-size:clamp(31px,4.4vw,52px);line-height:1.1;margin-block:14px 17px;color:var(--ink-0);font-weight:500}
+.sec-head h2 em{font-style:italic;color:var(--green-live)}
+.faixa-escura{background:var(--faixa-2)}
+.faixa-verde{background:var(--faixa-3)}
+
+/* ============ BLOCO VIVO: base de todo card ============ */
+.vivo{
+  position:relative;background:var(--card);border:1px solid var(--line);border-radius:3px;
+  overflow:hidden;isolation:isolate;
+  transition:transform .42s var(--ease),border-color .42s,background .42s,box-shadow .42s;
+}
+.vivo::before{ /* luz que segue o ponteiro */
+  content:"";position:absolute;inset:-1px;z-index:0;pointer-events:none;opacity:0;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%), rgba(22,191,169,.16), transparent 62%);
+  transition:opacity .45s;
+}
+.vivo::after{ /* filete superior que cresce */
+  content:"";position:absolute;top:0;left:0;height:2px;width:0;z-index:2;
+  background:linear-gradient(90deg,var(--green-live),rgba(22,191,169,0));
+  transition:width .55s var(--ease);
+}
+.vivo:hover{transform:translateY(-5px);border-color:rgba(22,191,169,.34);background:var(--card-hi);box-shadow:0 22px 44px -26px rgba(0,0,0,.95)}
+.vivo:hover::before{opacity:1}
+.vivo:hover::after{width:100%}
+.vivo > *{position:relative;z-index:1}
+
+/* ================= DIFERENCIAIS ================= */
+.grade-6{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:clamp(14px,1.7vw,20px)}
+.dcard{padding:clamp(24px,2.7vw,32px);display:flex;flex-direction:column;gap:13px}
+.dcard .ico{width:30px;height:30px;color:var(--green-live);transition:transform .45s var(--ease),color .3s}
+.dcard:hover .ico{transform:translateY(-2px) scale(1.08)}
+.dcard .ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.dcard h3{font-size:18px;color:var(--ink-0)}
+.dcard p{font-size:15.5px;line-height:1.66;color:var(--ink-2)}
+.dcard .grifo{color:var(--green-live);font-weight:600}
+
+/* ================= FAIXAS ================= */
+.faixas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(12px,1.5vw,16px)}
+.fx{padding:clamp(30px,3.4vw,44px);display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;min-height:clamp(260px,26vw,330px);justify-content:flex-end}
+/* arte de fundo: malha geométrica que ganha densidade conforme o nível sobe */
+.fx .arte{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-size:cover;background-position:center;
+  opacity:.50;filter:saturate(.62) contrast(1.06);
+  transition:opacity .7s var(--ease),transform 1.5s var(--ease),filter .7s;
+  transform:scale(1.05);
+}
+/* o véu mantém o texto legível e deixa a mesa aparecer só no topo do card */
+.fx .arte::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(178deg, rgba(0,0,0,.18) 0%, rgba(4,10,9,.72) 46%, rgba(4,10,9,.96) 78%, #040A09 100%);
+}
+.fx:hover .arte{opacity:.78;transform:scale(1.1);filter:saturate(.85) contrast(1.1)}
+.fx > *:not(.arte){position:relative;z-index:1}
+/* selo sólido: massa de metal, não contorno */
+.fx .brasao{width:78px;height:78px;margin-bottom:16px;display:block;position:relative;
+  filter:drop-shadow(0 6px 16px rgba(0,0,0,.95)) drop-shadow(0 0 22px rgba(22,191,169,.18))}
+.fx .brasao svg{width:100%;height:100%;overflow:visible;transition:transform .55s var(--ease)}
+.fx .brasao .corpo{fill:url(#metal);transition:fill .5s}
+.fx .brasao .chapa{fill:url(#chapa)}
+.fx .brasao .aro{fill:none;stroke:rgba(255,255,255,.34);stroke-width:1.1}
+.fx .brasao .vinco{fill:none;stroke:rgba(0,0,0,.42);stroke-width:1.4}
+.fx .brasao .cravo{fill:#0B1413}
+.fx .brasao .lasca{fill:rgba(255,255,255,.20)}
+.fx .brasao .numeral{
+  font-family:var(--f-mono);font-size:15px;font-weight:700;letter-spacing:.04em;
+  fill:#04100E;text-anchor:middle;
+}
+.fx:hover .brasao svg{transform:scale(1.07) rotate(-4deg)}
+.fx:hover .brasao .corpo{fill:url(#metal-hi)}
+.fx .valor{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--green-live);font-weight:500}
+.fx .nivel{font-family:var(--f-disp);font-size:29px;color:var(--ink-0);font-weight:500;line-height:1.1}
+.fx ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.fx li{font-size:15px;color:var(--ink-2);padding-left:18px;position:relative;line-height:1.55}
+.carreira .sub-titulo{font-family:var(--f-disp);font-size:clamp(21px,2.6vw,31px);line-height:1.2;color:var(--ink-2);font-weight:400;margin:-4px 0 18px}
+.carreira .sub-titulo em{font-style:italic;color:var(--green-live)}
+.fx li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--green-live);transform:rotate(45deg);transition:transform .4s var(--ease)}
+.fx .btn-faixa{margin-top:auto;padding-top:22px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--green-live);text-decoration:none;display:inline-flex;align-items:center;gap:9px;align-self:flex-start;transition:gap .35s var(--ease),color .35s}
+.fx .btn-faixa::after{content:"";width:7px;height:7px;border-top:1.4px solid currentColor;border-right:1.4px solid currentColor;transform:rotate(45deg);transition:transform .35s var(--ease)}
+.fx .btn-faixa:hover{gap:15px;color:var(--ink-0)}
+.fx .btn-faixa:focus-visible{outline:2px solid var(--green-live);outline-offset:4px}
+.fx:hover li::before{transform:rotate(135deg)}
+
+/* ================= FUNDADORES ================= */
+.socios{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:clamp(16px,2vw,24px)}
+.socio{display:flex;flex-direction:column}
+.socio .galeria{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--galeria-bg)}
+.socio .galeria img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .72s var(--ease),transform 1.3s var(--ease)}
+.socio .galeria img.ativa{opacity:1;transform:scale(1)}
+.socio .galeria .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.82) 100%);z-index:2;pointer-events:none}
+.socio .galeria .contador{position:absolute;top:12px;right:13px;z-index:3;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.72);background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14);padding:3px 8px;border-radius:2px}
+.socio .galeria .nome-sobre{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 20px 16px;display:flex;flex-direction:column;gap:3px}
+.socio .galeria .nome-sobre b{font-family:var(--f-disp);font-size:30px;font-weight:500;color:#fff;line-height:1.05}
+.socio .galeria .nome-sobre span{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-live)}
+
+/* miniaturas: a selecionada se destaca */
+.tiras{display:flex;gap:7px;padding:12px 14px;background:var(--tiras-bg);border-bottom:1px solid var(--line-soft);overflow-x:auto;scrollbar-width:none}
+.tiras::-webkit-scrollbar{display:none}
+.tira{
+  flex:0 0 auto;width:46px;height:46px;border-radius:2px;overflow:hidden;cursor:pointer;position:relative;
+  border:1px solid var(--line);background:var(--tira-bg);padding:0;
+  opacity:.48;filter:grayscale(.55);
+  transition:opacity .35s,filter .35s,transform .35s var(--ease),border-color .35s,width .35s var(--ease),height .35s var(--ease);
+}
+.tira img{width:100%;height:100%;object-fit:cover}
+.tira:hover{opacity:.85;filter:grayscale(.15);transform:translateY(-2px)}
+.tira[aria-selected="true"]{opacity:1;filter:none;border-color:var(--green-live);width:58px;height:58px;box-shadow:0 0 0 1px rgba(22,191,169,.45),0 8px 20px -10px rgba(22,191,169,.7)}
+.tira.vazia{display:grid;place-items:center}
+.tira.vazia span{font-family:var(--f-mono);font-size:15px;color:var(--ink-5)}
+.tira:focus-visible{outline:2px solid var(--green-live);outline-offset:2px}
+
+.socio .corpo{padding:clamp(20px,2.3vw,26px);display:flex;flex-direction:column;gap:14px;flex:1}
+.socio .bio{font-size:15px;line-height:1.65;color:var(--ink-2)}
+.socio .skills{display:flex;flex-wrap:wrap;gap:6px}
+.socio .skills span{font-family:var(--f-mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);border-radius:2px;padding:5px 9px;transition:border-color .3s,color .3s,background .3s}
+.socio:hover .skills span{border-color:rgba(22,191,169,.24)}
+.socio .trilha{margin-top:auto;padding-top:15px;border-top:1px solid var(--line-soft);display:flex;flex-direction:column;gap:7px}
+.socio .trilha i{font-style:normal;font-size:13.5px;color:var(--ink-4);display:flex;gap:12px}
+.socio .trilha i b{font-family:var(--f-mono);color:var(--ink-2);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;min-width:82px;padding-top:2px}
+.socio .nome-full{font-family:var(--f-disp);font-size:20px;line-height:1.2;color:var(--ink-0);font-weight:500;margin-bottom:6px}
+.socio .credencial{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-live);line-height:1.7;padding-bottom:13px;margin-bottom:14px;border-bottom:1px solid var(--line-soft)}
+.socio .bio p{font-size:14.5px;line-height:1.7;color:var(--ink-2);margin:0 0 11px}
+.socio .bio p:last-child{margin-bottom:0}
+.socio .bio b{color:var(--ink-0);font-weight:600}
+.socio .mais{max-height:0;overflow:hidden;transition:max-height .7s var(--ease)}
+.socio.aberto .mais{max-height:900px}
+.socio .ler{margin-top:12px;background:none;border:0;padding:0;cursor:pointer;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--green-live);display:inline-flex;align-items:center;gap:8px;transition:gap .35s var(--ease)}
+.socio .ler::after{content:"";width:6px;height:6px;border-right:1.3px solid currentColor;border-bottom:1.3px solid currentColor;transform:rotate(45deg);transition:transform .4s var(--ease)}
+.socio.aberto .ler::after{transform:rotate(-135deg)}
+.socio .ler:hover{gap:13px}
+.socio .ler:focus-visible{outline:2px solid var(--green-live);outline-offset:4px}
+
+/* ================= CLASSES ================= */
+.classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(186px,1fr));gap:clamp(10px,1.2vw,14px)}
+.cl{padding:22px 20px 24px;display:flex;flex-direction:column;gap:7px}
+.cl b{font-size:15.5px;font-weight:600;color:var(--ink-1)}
+.cl span{font-size:13px;color:var(--ink-4);line-height:1.5}
+
+/* insígnias: desenhadas com o vocabulário da marca — ângulos, losangos e retas */
+.insignia{
+  width:38px;height:38px;margin-bottom:9px;position:relative;
+  display:grid;place-items:center;flex:none;
+}
+.insignia::before{ /* moldura em losango, o motivo da casa */
+  content:"";position:absolute;inset:2px;border:1px solid var(--line);
+  transform:rotate(45deg);border-radius:2px;
+  transition:border-color .45s var(--ease),transform .55s var(--ease),background .45s;
+}
+.cl:hover .insignia::before,.fx:hover .insignia::before{
+  border-color:rgba(22,191,169,.42);transform:rotate(90deg);
+  background:radial-gradient(60% 60% at 50% 50%, rgba(22,191,169,.10), transparent 70%);
+}
+.insignia svg{
+  position:relative;width:19px;height:19px;
+  fill:none;stroke:var(--green-live);stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .45s var(--ease),stroke .3s;
+}
+.cl:hover .insignia svg,.fx:hover .insignia svg{transform:scale(1.12)}
+.insignia svg .cheio{fill:var(--green-live);stroke:none}
+
+/* ================= CARREIRA ================= */
+.carreira{background:var(--carreira-bg)}
+.verdade{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(12px,1.5vw,16px)}
+.vd{padding:clamp(22px,2.5vw,28px);display:flex;flex-direction:column;gap:9px}
+.vd .fase{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--metal);font-weight:500}
+.vd b{font-family:var(--f-disp);font-size:26px;font-weight:500;color:var(--ink-0);line-height:1.12}
+.vd p{font-size:14.5px;color:var(--ink-2);line-height:1.62}
+.vd .barra{height:3px;background:rgba(200,204,203,.1);border-radius:2px;overflow:hidden;margin-top:4px}
+.vd .barra i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green-live));width:0;transition:width 1.1s var(--ease)}
+.vd.revela .barra i,.vd:hover .barra i{width:var(--w,25%)}
+
+.tab-rolagem{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.comparativo{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.comparativo th,.comparativo td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line-soft)}
+.comparativo thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-4);font-weight:500;border-bottom:1px solid var(--line)}
+.comparativo tbody th{font-weight:400;color:var(--ink-3);font-size:14.5px}
+.comparativo tbody tr{transition:background .3s}
+.comparativo tbody tr:hover{background:rgba(22,191,169,.04)}
+.comparativo .assessor{color:var(--ink-0);font-weight:500}
+.comparativo .banco{color:var(--ink-4)}
+.comparativo tr.destaque td,.comparativo tr.destaque th{background:rgba(22,191,169,.07)}
+.comparativo tr.destaque .assessor{color:var(--green-live);font-weight:600}
+
+.quiz-chamada{
+  margin-top:clamp(28px,3.4vw,44px);border:1px solid rgba(22,191,169,.32);border-radius:3px;
+  background:radial-gradient(70% 150% at 10% 0%, rgba(0,102,94,.28), transparent 68%),var(--card);
+  padding:clamp(26px,3.4vw,46px);
+  display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,40px);align-items:center;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.quiz-chamada .txt{flex:1 1 320px;display:flex;flex-direction:column;gap:12px}
+.quiz-chamada h3{font-family:var(--f-disp);font-size:clamp(26px,3.2vw,38px);font-weight:500;color:var(--ink-0);line-height:1.12}
+.quiz-chamada p{font-size:15.5px;color:var(--ink-2);max-width:46ch}
+.quiz-passos{display:flex;flex-wrap:wrap;gap:7px;margin-top:5px}
+.quiz-passos span{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:2px;padding:6px 10px;transition:border-color .3s,color .3s}
+.quiz-chamada:hover .quiz-passos span{border-color:rgba(22,191,169,.3);color:var(--ink-2)}
+
+/* ================= MIDIA ================= */
+.midia{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:clamp(14px,1.7vw,20px)}
+.mcard{display:flex;flex-direction:column}
+.mcard .capa{aspect-ratio:16/10;position:relative;overflow:hidden}
+.mcard .capa img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.1s var(--ease),filter .5s}
+.mcard:hover .capa img{transform:scale(1.07)}
+.mcard .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55));pointer-events:none}
+/* tarja de exemplo: sai quando entrar materia real */
+.mcard .tarja{
+  position:absolute;top:10px;left:10px;z-index:3;
+  font-family:var(--f-mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--selo-tx);background:var(--selo-bg);border:1px solid var(--selo-bd);
+  padding:4px 8px;border-radius:2px;
+}
+.mcard .txt{padding:19px 21px 23px;display:flex;flex-direction:column;gap:10px;flex:1}
+.mcard .txt p{font-size:15px;color:var(--ink-2);line-height:1.5}
+.mcard .veic{margin-top:auto;padding-top:13px;border-top:1px solid var(--line-soft);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4)}
+
+/* ================= MAPA ================= */
+.mapa-bloco{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,60px);align-items:center}
+@media(max-width:900px){.mapa-bloco{grid-template-columns:1fr}}
+.mapa-caixa{position:relative;display:grid;place-items:center;padding:clamp(14px,2vw,26px)}
+.mapa-svg{width:100%;max-width:420px;height:auto;overflow:visible}
+.mapa-svg .pais{fill:#0B1110;stroke:rgba(200,204,203,.22);stroke-width:1.2;stroke-linejoin:round}
+.mapa-svg .sp{fill:var(--green);stroke:var(--green-live);stroke-width:1.4;opacity:0;animation:acende 1s var(--ease) .35s forwards}
+@keyframes acende{to{opacity:1}}
+.mapa-svg .pulso{fill:none;stroke:var(--green-live);stroke-width:1.5;transform-origin:268px 322px;animation:pulsar 2.9s ease-out infinite}
+@keyframes pulsar{0%{r:7;opacity:.85}70%{r:30;opacity:0}100%{r:30;opacity:0}}
+.mapa-svg .ponto{fill:var(--green-live)}
+.mapa-svg .risca{stroke:var(--green-live);stroke-width:1;stroke-dasharray:3 3}
+.mapa-svg .rotulo{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:var(--green-live)}
+.mapa-svg .rotulo-sub{font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;fill:var(--ink-4)}
+.mapa-legenda{display:flex;flex-direction:column;gap:14px}
+.praca{padding:clamp(20px,2.3vw,26px);display:flex;align-items:flex-start;gap:16px}
+.praca .marcador{width:10px;height:10px;border-radius:50%;background:var(--green-live);margin-top:7px;flex:none;box-shadow:0 0 0 4px rgba(22,191,169,.15)}
+.praca.futura .marcador{background:transparent;border:1px solid var(--ink-4);box-shadow:none}
+.praca .txt{display:flex;flex-direction:column;gap:5px}
+.praca b{font-family:var(--f-disp);font-size:24px;font-weight:500;color:var(--ink-0)}
+.praca span{font-size:14.5px;color:var(--ink-3);line-height:1.55}
+.praca .marca-tempo{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--metal)}
+
+/* ================= FORM ================= */
+.mel{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-bloco{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(30px,4vw,64px);align-items:start}
+@media(max-width:880px){.form-bloco{grid-template-columns:1fr}}
+form{display:flex;flex-direction:column;gap:15px}
+.campo{display:flex;flex-direction:column;gap:7px}
+.campo label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-4);font-weight:500}
+.campo input,.campo select{
+  font-family:var(--f-ui);font-size:15.5px;font-weight:400;color:var(--ink-1);
+  background:var(--campo-bg);border:1px solid var(--line);border-radius:2px;padding:14px 15px;
+  transition:border-color .25s,background .25s,box-shadow .25s;
+}
+.campo input::placeholder{color:var(--ink-5)}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--green-live);background:var(--foco-bg);box-shadow:0 0 0 3px rgba(22,191,169,.1)}
+.campo-2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:540px){.campo-2{grid-template-columns:1fr}}
+.lgpd{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-4);line-height:1.55;margin-top:5px}
+.lgpd input{margin-top:3px;accent-color:var(--green);flex:none;width:16px;height:16px}
+.lgpd a{color:var(--ink-2)}
+.ouvidoria{margin-top:28px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.ouvidoria b{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);margin-bottom:6px}
+.ouvidoria span{font-family:var(--f-mono);font-size:19px;color:var(--green-live);letter-spacing:.02em}
+
+/* ================= TICKER ================= */
+.ticker{border-top:1px solid var(--line);background:var(--ticker-bg);overflow:hidden}
+.ticker-topo{display:flex;align-items:center;gap:13px;flex-wrap:wrap;padding:12px 0 0}
+.ticker-abas{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.ticker-abas button{
+  appearance:none;border:0;background:transparent;cursor:pointer;font-family:var(--f-mono);
+  font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4);
+  padding:8px 14px;border-right:1px solid var(--line-soft);transition:background .25s,color .25s;
+}
+.ticker-abas button:last-child{border-right:0}
+.ticker-abas button:hover{color:var(--ink-1);background:var(--hover-suave)}
+.ticker-abas button[aria-pressed="true"]{background:var(--green);color:#fff}
+.ticker-abas button:focus-visible{outline:2px solid var(--green-live);outline-offset:-2px}
+.ticker-nota{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-5)}
+.esteira{position:relative;overflow:hidden;padding:14px 0 16px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.esteira-linha{display:flex;width:max-content;animation:correr 48s linear infinite;transition:opacity .2s}
+.esteira:hover .esteira-linha{animation-play-state:paused}
+@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk{display:flex;align-items:center;gap:10px;padding:0 26px;border-right:1px solid var(--line-soft);white-space:nowrap}
+.tk .marca{
+  width:22px;height:22px;min-width:22px;max-width:22px;min-height:22px;max-height:22px;
+  padding:0;margin:0;flex:0 0 22px;display:grid;place-items:center;border-radius:50%;
+  background:rgba(255,255,255,.05);border:1px solid var(--line-soft);overflow:hidden;
+}
+.tk .marca svg{width:12px;height:12px;fill:currentColor;stroke:none}
+/* prefixo m- para nao colidir com classes de layout (a .fx das faixas de patrimonio) */
+.tk .marca.m-btc{color:#F7931A;background:rgba(247,147,26,.1);border-color:rgba(247,147,26,.3)}
+.tk .marca.m-eth{color:#9AA0C4;background:rgba(154,160,196,.12);border-color:rgba(154,160,196,.32)}
+.tk .marca.m-sol{color:#14F195;background:rgba(20,241,149,.1);border-color:rgba(20,241,149,.28)}
+.tk .marca.m-xrp{color:#DEDEDE;background:rgba(222,222,222,.09);border-color:rgba(222,222,222,.26)}
+.tk .marca.m-ada{color:#5A96F7;background:rgba(90,150,247,.12);border-color:rgba(90,150,247,.32)}
+.tk .marca.m-link{color:#6A9AF5;background:rgba(106,154,245,.12);border-color:rgba(106,154,245,.32)}
+.tk .marca.m-idx{color:var(--green-live);background:rgba(22,191,169,.1);border-color:rgba(22,191,169,.28)}
+.tk .marca.m-fx{color:var(--metal);background:rgba(184,165,103,.1);border-color:rgba(184,165,103,.3)}
+.tk .marca.m-txt{font-family:var(--f-mono);font-size:9.5px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.tk .nome{font-family:var(--f-ui);font-size:13px;font-weight:600;color:var(--ink-1)}
+.tk .preco{font-family:var(--f-mono);font-size:13px;color:var(--ink-2)}
+.tk .var{font-family:var(--f-mono);font-size:12px;display:flex;align-items:center;gap:4px}
+.tk .var.sobe{color:var(--up)} .tk .var.cai{color:var(--down)}
+.tk .var svg{width:9px;height:9px;fill:currentColor}
+
+/* ================= RODAPE ================= */
+.rodape{background:var(--rodape-bg);border-top:1px solid var(--line);padding-block:clamp(44px,5vw,68px) 32px}
+.rodape-topo{
+  display:grid;
+  grid-template-columns:minmax(340px,1.9fr) repeat(4,minmax(128px,1fr));
+  gap:clamp(30px,3.6vw,54px);
+  padding-bottom:clamp(30px,3.4vw,44px);border-bottom:1px solid var(--line);
+}
+@media(max-width:1120px){.rodape-topo{grid-template-columns:minmax(300px,1fr) repeat(2,minmax(128px,1fr))}}
+@media(max-width:720px){.rodape-topo{grid-template-columns:1fr 1fr}.rodape-marca{grid-column:1 / -1}}
+@media(max-width:460px){.rodape-topo{grid-template-columns:1fr}}
+.rodape-marca{display:flex;flex-direction:column;gap:22px;min-width:0}
+.rodape-topo > *{min-width:0}
+.rodape-marca .lockup{flex-wrap:wrap;row-gap:12px}
+.rodape-marca .vsym{height:62px}
+.rodape-marca .vname{font-size:41px;letter-spacing:.07em}
+.rodape-marca .vdesc{font-size:9px;letter-spacing:.5em;padding-left:.5em;margin-top:9px;color:var(--ink-4)}
+.rodape-marca .lk-fio{height:58px}
+.rodape-marca .xp{height:52px}
+.rodape-marca p{font-size:14px;color:var(--ink-4);max-width:40ch;line-height:1.6}
+.rodape-col{display:flex;flex-direction:column;gap:10px}
+.rodape-col b{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-bottom:3px}
+.rodape-col a{font-size:14.5px;color:var(--ink-4);text-decoration:none;transition:color .22s,transform .22s;width:fit-content}
+.rodape-col a:hover{color:var(--green-live);transform:translateX(2px)}
+.legal{padding-top:28px;display:flex;flex-direction:column;gap:18px}
+.legal p{font-size:12px;line-height:1.75;color:var(--ink-5)}
+.legal .fim{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:baseline;padding-top:16px;border-top:1px solid var(--line-soft)}
+.legal .fim span{font-family:var(--f-mono);font-size:11px;color:var(--ink-5)}
+
+/* ================= FAIXA DE IMAGEM ================= */
+.faixa-img{position:relative;height:clamp(230px,34vw,400px);overflow:hidden;border-block:1px solid var(--line)}
+.faixa-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.4s var(--ease)}
+.faixa-img:hover img{transform:scale(1.11)}
+.faixa-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.28) 42%,rgba(0,0,0,.86) 100%)}
+.faixa-img .frase{
+  position:absolute;inset:0;z-index:2;display:grid;place-items:center;text-align:center;
+  padding-inline:var(--pad);
+}
+.faixa-img .frase b{
+  font-family:var(--f-disp);font-weight:500;font-style:italic;
+  font-size:clamp(23px,3.4vw,42px);line-height:1.2;color:#fff;max-width:22ch;
+  text-shadow:0 2px 30px rgba(0,0,0,.8);
+}
+.faixa-img .frase small{
+  display:block;margin-top:14px;font-family:var(--f-mono);font-size:10.5px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--green-live);font-style:normal;
+}
+
+/* ================= BLOCO COM IMAGEM LATERAL ================= */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3.4vw,54px);align-items:center}
+@media(max-width:880px){.duo{grid-template-columns:1fr}}
+.duo-img{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);border-radius:3px}
+.duo-img img,.duo-img video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.1s var(--ease)}
+.duo-img:hover img,.duo-img:hover video{transform:scale(1.07)}
+.duo-img::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.6) 100%);pointer-events:none}
+.duo-img .selo{position:absolute;left:0;bottom:0;z-index:2;padding:18px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+/* ================= MAPA (imagem) ================= */
+.mapa-caixa{position:relative;padding:0;overflow:hidden;aspect-ratio:1}
+.mapa-caixa img{width:100%;height:100%;object-fit:cover;display:block}
+.mapa-pin{position:absolute;left:66.5%;top:69%;z-index:3;transform:translate(-50%,-50%);pointer-events:none}
+.mapa-pin .anel{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:1px solid var(--green-live);border-radius:50%;animation:anelar 2.8s ease-out infinite}
+.mapa-pin .anel:nth-child(2){animation-delay:.9s}
+@keyframes anelar{0%{transform:scale(.6);opacity:.9}70%{transform:scale(3.6);opacity:0}100%{transform:scale(3.6);opacity:0}}
+.mapa-rotulo{position:absolute;left:calc(66.5% + 26px);top:69%;z-index:4;transform:translateY(-50%);display:flex;align-items:center;gap:10px}
+.mapa-rotulo .tracinho{width:clamp(18px,3vw,42px);height:1px;background:linear-gradient(90deg,var(--green-live),rgba(22,191,169,.2))}
+.mapa-rotulo .txt{display:flex;flex-direction:column;gap:2px}
+.mapa-rotulo b{font-family:var(--f-mono);font-size:clamp(11px,1.5vw,14px);letter-spacing:.14em;text-transform:uppercase;color:var(--green-live)}
+.mapa-rotulo span{font-family:var(--f-mono);font-size:clamp(8px,1.1vw,10px);letter-spacing:.1em;color:var(--ink-3)}
+
+/* ================= FLOCOS ================= */
+/* Poeira luminosa sobre a pagina inteira. Fica acima dos fundos e abaixo da
+   navegacao, em modo screen: acende sobre o escuro e some sobre o claro. */
+#flocos{
+  position:fixed;inset:0;z-index:5;pointer-events:none;
+  mix-blend-mode:screen;opacity:.92;
+}
+@media(prefers-reduced-motion:reduce){#flocos{display:none}}
+
+/* ================= ENTRADA ================= */
+.pre{opacity:0;transform:translateY(18px)}
+.revela{opacity:1;transform:none;transition:opacity .78s var(--ease),transform .78s var(--ease)}
+@media(prefers-reduced-motion:reduce){.pre{opacity:1!important;transform:none!important}*{animation:none!important;transition:none!important}}
+</style>
+
+<style id="lapidacao-16-09">
+/* ================= LAPIDACAO 16/09 ================= */
+
+/* titulos: Cormorant Garamond (a familia do letreiro). Destaque separa por PESO e por cor */
+:root{--f-disp:"Cormorant Garamond",Georgia,serif}
+h1,h2{font-weight:600;letter-spacing:-.005em;font-variation-settings:normal}
+h1{font-size:clamp(44px,6.2vw,84px)}
+.sec-head h2{font-size:clamp(35px,4.9vw,58px);line-height:1.04}
+h1 em,h2 em,h3 em,h4 em,.sec-head h2 em{font-weight:700;font-style:italic}
+.fx .nivel{font-size:33px;font-weight:600}
+.socio .galeria .nome-sobre b{font-size:34px;font-weight:600}
+.quiz legend,.quiz-porta h4,.quiz-chamada h3{font-weight:600}
+.faixa-img .frase b{font-weight:600}
+
+/* ---------- o lacre: botao da casa, em verde Aston ---------- */
+.lacre{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden;
+  padding:13px 22px;text-decoration:none;white-space:nowrap;cursor:pointer;
+  background:linear-gradient(168deg,#23C9B1 0%,#00806F 44%,#00524A 100%);
+  border:1px solid #003F39;
+  box-shadow:0 10px 26px -8px rgba(0,0,0,.55),inset 0 1px 0 rgba(220,255,248,.45);
+  transition:background .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease),border-color .5s;
+}
+.lacre::before{content:"";position:absolute;inset:4px;z-index:1;pointer-events:none;border:1px solid rgba(220,255,248,.28);transition:border-color .5s}
+.lacre::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(235,255,250,.7),transparent);transform:skewX(-16deg);opacity:0}
+.lacre b{position:relative;z-index:2;font-family:var(--f-ui);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 0 rgba(0,40,36,.55)}
+.lacre i{position:absolute;z-index:2;width:8px;height:8px;pointer-events:none;border:0 solid rgba(230,255,250,.75);opacity:.8;
+  transition:width .5s var(--ease),height .5s var(--ease),opacity .45s}
+.lacre i:nth-child(1){top:-1px;left:-1px;border-top-width:2px;border-left-width:2px}
+.lacre i:nth-child(2){top:-1px;right:-1px;border-top-width:2px;border-right-width:2px}
+.lacre i:nth-child(3){bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px}
+.lacre i:nth-child(4){bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px}
+.lacre:hover,.lacre:focus-visible{
+  background:linear-gradient(168deg,#4FE6CF 0%,#00A08D 44%,#00645A 100%);border-color:#00766A;transform:translateY(-3px);
+  box-shadow:0 18px 38px -10px rgba(22,191,169,.55),0 10px 26px -8px rgba(0,0,0,.55),inset 0 1px 0 rgba(235,255,250,.7)}
+.lacre:hover::after,.lacre:focus-visible::after{animation:lustro .85s var(--ease)}
+.lacre:hover i,.lacre:focus-visible i{width:14px;height:14px;opacity:1}
+.lacre:hover::before{border-color:rgba(235,255,250,.5)}
+.lacre:active{transform:translateY(-1px) scale(.98)}
+.lacre:focus-visible{outline:2px solid var(--green-live);outline-offset:3px}
+/* a segunda porta: mesma moldura, metal profundo */
+.lacre.profundo{background:linear-gradient(168deg,#0F4A43 0%,#012E29 50%,#001A17 100%);border-color:#0B5C53}
+.lacre.profundo b{color:#BFF5EB}
+.lacre.profundo:hover,.lacre.profundo:focus-visible{background:linear-gradient(168deg,#16695F 0%,#034139 50%,#00241F 100%);border-color:#16BFA9}
+.lacre.grande{padding:17px 28px}
+.lacre.grande b{font-size:13px}
+@keyframes lustro{0%{left:-60%;opacity:0}20%{opacity:1}100%{left:120%;opacity:0}}
+
+/* nav com as duas portas */
+
+/* nav: as duas portas falam a lingua dos outros links. Destaque pela marca (losango), nao pelo volume */
+.nav-portas{display:flex;align-items:center;gap:clamp(16px,1.8vw,28px);flex:none;padding-left:clamp(14px,1.6vw,24px);border-left:1px solid var(--line)}
+.porta{position:relative;display:inline-flex;align-items:center;gap:9px;text-decoration:none;white-space:nowrap;
+  font-family:var(--f-ui);font-size:14px;font-weight:600;color:var(--green-live);padding:9px 0;transition:color .25s}
+.porta::before{content:"";width:7px;height:7px;flex:none;transform:rotate(45deg);
+  background:linear-gradient(168deg,#4FE6CF,#00806F 55%,#00524A);box-shadow:0 0 8px rgba(22,191,169,.55);transition:transform .5s var(--ease),box-shadow .4s}
+.porta::after{content:"";position:absolute;left:16px;right:100%;bottom:4px;height:1.5px;
+  background:linear-gradient(90deg,#00806F,#7FF0DD,#00806F);box-shadow:0 0 8px rgba(31,216,190,.6);transition:right .45s var(--ease)}
+.porta:hover,.porta:focus-visible{color:var(--ink-0)}
+.porta:hover::before,.porta:focus-visible::before{transform:rotate(225deg);box-shadow:0 0 14px rgba(31,216,190,.9)}
+.porta:hover::after,.porta:focus-visible::after{right:0}
+.porta[aria-current="page"]::after{right:0}
+.porta:focus-visible{outline:2px solid var(--green-live);outline-offset:4px}
+:root[data-tema="claro"] .porta::before{box-shadow:0 0 6px rgba(0,120,108,.35)}
+.nav-links a.so-mobile{display:none}
+@media(max-width:1240px){
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--nav-bg-mob);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 18px;margin:0}
+  .nav-links.aberto{display:flex}
+  .nav-links a{width:100%;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .nav-burger{display:block;margin-left:auto}
+}
+@media(max-width:760px){
+  .nav-portas{display:none}
+  .nav-links a.so-mobile{display:block;color:var(--green-live);font-weight:600}
+}
+
+/* ---------- a marca acesa: simbolo esmeralda, XP no mesmo verde ---------- */
+.lockup .vsym{fill:url(#esmeralda);filter:drop-shadow(0 0 7px rgba(22,191,169,.45));animation:respira 5.5s ease-in-out infinite}
+@keyframes respira{0%,100%{filter:drop-shadow(0 0 5px rgba(22,191,169,.32))}50%{filter:drop-shadow(0 0 13px rgba(31,216,190,.62))}}
+.lockup .vname{
+  background:linear-gradient(100deg,var(--ink-0) 0%,var(--ink-0) 38%,#7FF0DD 50%,var(--ink-0) 62%,var(--ink-0) 100%);
+  background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;
+  transition:background-position 1.1s var(--ease)}
+.lockup:hover .vname{background-position:0 0}
+.lockup .vdesc{color:var(--green-live)!important}
+.lockup .xp{color:#00665E;filter:drop-shadow(0 0 7px rgba(22,191,169,.28))}
+:root[data-tema="claro"] .lockup .vsym{fill:#00665E;animation:none;filter:drop-shadow(0 2px 5px rgba(0,86,79,.28))}
+:root[data-tema="claro"] .lockup .vname{background-image:linear-gradient(100deg,var(--ink-0) 0%,var(--ink-0) 38%,#00A08D 50%,var(--ink-0) 62%,var(--ink-0) 100%)}
+:root[data-tema="claro"] .lockup .xp{color:#00564F;filter:none}
+/* no verde, a XP entra na versão branca (monocromática, como a assinatura conjunta pede) */
+:root[data-tema="verde"] .lockup .xp{color:#FFFFFF;filter:none}
+
+/* ---------- ticker no topo: uma faixa so, logo abaixo da nav ---------- */
+.ticker.topo{border-top:0;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5}
+.ticker.topo .ticker-topo{max-width:none;margin:0;padding:0 14px 0 var(--pad);flex:none;gap:10px}
+.ticker.topo .ticker-abas button{padding:6px 10px;font-size:9.5px}
+.ticker.topo .ticker-nota{display:none}
+.ticker.topo .esteira{flex:1;min-width:0;padding:9px 0}
+@media(max-width:760px){
+  .ticker.topo{flex-direction:column;align-items:stretch}
+  .ticker.topo .ticker-topo{padding:8px var(--pad) 0;overflow-x:auto}
+  .ticker.topo .ticker-abas{flex:none}
+}
+@media (prefers-reduced-motion: reduce){.lockup .vsym{animation:none}.lacre::after{animation:none!important}}
+
+/* peso: as regras de secao travavam 500, aqui o titulo fica firme e o destaque em negrito */
+.hero h1{font-weight:600;font-size:clamp(44px,6.6vw,84px)}
+.hero h1 em{font-weight:700}
+/* titulos com peso escrito direto na tag tambem seguem a regra */
+h1,h2{font-weight:600!important}
+h1 em,h2 em{font-weight:700!important}
+.sec-head h2{font-weight:600}
+/* nav: "Para voce" e "Para sua empresa" moram no menu; no desktop a porta Investir cumpre o papel */
+@media(min-width:1241px){.nav-links a.so-menu{display:none}}
+</style>
+
+<style id="lapidacao-16-09-home">
+/* ---------- insignias das faixas no tema claro: miolo perola em vez de preto ---------- */
+:root[data-tema="claro"] .fx .brasao .cravo{fill:#F3FAF8}
+:root[data-tema="claro"] .fx .brasao .vinco{stroke:rgba(0,58,53,.35)}
+:root[data-tema="claro"] .fx .brasao .numeral{fill:#00564F!important}
+
+/* ---------- prateleira: insignia em metal solido e caixa que abre ---------- */
+.classes{grid-auto-flow:row dense}
+.cl{padding:0;display:block;transition:border-color .35s}
+.cl .cl-abrir{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:7px;width:100%;padding:22px 20px 24px;position:relative}
+.cl:not(.aberto) .cl-abrir{height:100%}
+.cl .cl-abrir:focus-visible{outline:2px solid var(--green-live);outline-offset:-2px}
+.cl .cl-abrir::after{content:"+";position:absolute;top:16px;right:18px;font-family:var(--f-mono);font-size:17px;color:var(--ink-4);transition:transform .45s var(--ease),color .3s}
+.cl:hover .cl-abrir::after{color:var(--green-live)}
+.cl.aberto .cl-abrir::after{transform:rotate(45deg);color:var(--green-live)}
+.cl .insignia{width:44px;height:44px}
+.cl .insignia::before{
+  inset:5px;border:1px solid #003F39;
+  background:linear-gradient(168deg,#23C9B1 0%,#00806F 46%,#00524A 100%);
+  box-shadow:0 6px 14px -6px rgba(0,0,0,.6),inset 0 1px 0 rgba(220,255,248,.45)}
+.cl .insignia::after{content:"";position:absolute;inset:9px;border:1px solid rgba(220,255,248,.3);transform:rotate(45deg);pointer-events:none;transition:transform .55s var(--ease)}
+.cl:hover .insignia::before,.cl.aberto .insignia::before{background:linear-gradient(168deg,#4FE6CF 0%,#00A08D 46%,#00645A 100%);border-color:#00766A;transform:rotate(135deg)}
+.cl:hover .insignia::after,.cl.aberto .insignia::after{transform:rotate(135deg)}
+.cl .insignia svg{width:18px;height:18px;stroke:#F2FFFC;stroke-width:1.7;filter:drop-shadow(0 1px 0 rgba(0,40,36,.6))}
+.cl .insignia svg .cheio{fill:#F2FFFC}
+.cl.aberto{grid-column:1/-1;border-color:rgba(22,191,169,.42)}
+.cl.aberto .cl-abrir{flex-direction:row;align-items:center;gap:16px;padding-bottom:6px}
+.cl.aberto .cl-abrir .insignia{margin-bottom:0}
+.cl.aberto .cl-abrir b{font-family:var(--f-disp);font-size:30px;font-weight:600;color:var(--ink-0)}
+.cl-mais{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.cl.aberto .cl-mais{grid-template-rows:1fr}
+.cl-mais > div{overflow:hidden}
+.cl-mais .cols{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(18px,3vw,44px);padding:6px 20px 24px 80px}
+.cl-mais h5{margin:0 0 8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-live);font-weight:500}
+.cl-mais p{font-size:15.5px;line-height:1.72;color:var(--ink-2);margin:0}
+.cl-mais .atencao p{color:var(--ink-3)}
+.cl-mais small{display:block;margin-top:12px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-5)}
+@media(max-width:760px){.cl-mais .cols{grid-template-columns:1fr;padding:4px 20px 22px}}
+@media (prefers-reduced-motion: reduce){.cl-mais{transition:none}}
+/* painel da prateleira: abre ABAIXO da linha do card clicado. Nenhum card muda de lugar */
+.cl .cl-mais{display:none}
+.cl.ativo{border-color:rgba(22,191,169,.55);background:var(--card-hi)}
+.cl.ativo .cl-abrir::after{transform:rotate(45deg);color:var(--green-live)}
+.cl.ativo .insignia::before{background:linear-gradient(168deg,#4FE6CF 0%,#00A08D 46%,#00645A 100%);border-color:#00766A;transform:rotate(135deg)}
+.cl.ativo .insignia::after{transform:rotate(135deg)}
+.cl-painel{grid-column:1/-1;margin-top:6px;display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.cl-painel.aberto{grid-template-rows:1fr}
+.cl-painel > div{overflow:hidden;min-height:0}
+.cl-painel .caixa-p{border:1px solid rgba(22,191,169,.42);background:var(--card);border-radius:3px;position:relative}
+.cl-painel .caixa-p::before{content:"";position:absolute;top:-7px;left:var(--seta,40px);width:12px;height:12px;background:var(--card);border-left:1px solid rgba(22,191,169,.42);border-top:1px solid rgba(22,191,169,.42);transform:rotate(45deg)}
+.cl-painel .topo-p{display:flex;align-items:center;gap:14px;padding:22px 22px 4px}
+.cl-painel .topo-p b{font-family:var(--f-disp);font-size:30px;font-weight:600;color:var(--ink-0);line-height:1.1}
+.cl-painel .topo-p span{font-size:13.5px;color:var(--ink-4)}
+.cl-painel .fechar-p{margin-left:auto;background:none;border:1px solid var(--line);color:var(--ink-2);width:34px;height:34px;cursor:pointer;font-size:17px;line-height:1}
+.cl-painel .fechar-p:hover{border-color:var(--green-live);color:var(--green-live)}
+.cl-painel .cols{padding:10px 22px 24px}
+.classes{grid-auto-flow:row}
+@media (prefers-reduced-motion: reduce){.cl-painel{transition:none}}
+/* o conteudo do painel reaproveita o desenho da caixa */
+.cl-painel .insignia{width:44px;height:44px;margin-bottom:0;flex:none}
+.cl-painel .insignia::before{inset:5px;border:1px solid #00766A;background:linear-gradient(168deg,#4FE6CF 0%,#00A08D 46%,#00645A 100%);box-shadow:0 6px 14px -6px rgba(0,0,0,.6),inset 0 1px 0 rgba(220,255,248,.45);transform:rotate(45deg)}
+.cl-painel .insignia::after{content:"";position:absolute;inset:9px;border:1px solid rgba(220,255,248,.3);transform:rotate(45deg)}
+.cl-painel .insignia svg{width:18px;height:18px;stroke:#F2FFFC;stroke-width:1.7}
+.cl-painel .insignia svg .cheio{fill:#F2FFFC}
+.cl-painel .cols{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(18px,3vw,44px);padding:10px 22px 26px 80px}
+.cl-painel h5{margin:0 0 8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-live);font-weight:500}
+.cl-painel p{font-size:15.5px;line-height:1.72;color:var(--ink-2);margin:0}
+.cl-painel .atencao p{color:var(--ink-3)}
+.cl-painel small{display:block;margin-top:12px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-5)}
+@media(max-width:760px){.cl-painel .cols{grid-template-columns:1fr;padding:6px 20px 22px}}
+
+
+</style>
+
+
+<style id="tradingview-css">
+/* faixa do TradingView no lugar da esteira feita a mao */
+.ticker.topo .tv-faixa{flex:1;min-width:0;height:46px;overflow:hidden;position:relative;transition:opacity .2s}
+.ticker:not(.topo) .tv-faixa{height:46px;overflow:hidden;margin-top:10px;transition:opacity .2s}
+.ticker:not(.topo) .tv-faixa .tradingview-widget-container{height:46px}
+.ticker.topo .tv-faixa .tradingview-widget-container{height:46px}
+.ticker.topo .tv-faixa iframe{display:block}
+.ticker.topo .tv-faixa .tradingview-widget-copyright{display:none}
+@media(max-width:760px){.ticker.topo .tv-faixa{flex:none;width:100%}}
+</style>
+<style id="ticker-fixo-celular">
+/* celular: a faixa de cotacoes fica presa no pe da tela enquanto a pessoa rola,
+   como o menu fica preso no topo. As abas seguem no fim da pagina e trocam a lista da faixa. */
+@media(max-width:760px){
+  .ticker:not(.topo) .tv-faixa{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;margin-top:0;
+    height:calc(46px + env(safe-area-inset-bottom,0px));
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    background:var(--ticker-bg);border-top:1px solid var(--line);
+    box-shadow:0 -6px 18px rgba(0,0,0,.14);
+  }
+  .ticker:not(.topo){padding-bottom:12px}
+  body{padding-bottom:calc(46px + env(safe-area-inset-bottom,0px))}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="vsym" viewBox="0 0 40 112"><path fill-rule="evenodd" d="M20 0L40 56L20 112L0 56Z M5.5 43L10 43L20 68L30 43L34.5 43L20 79Z"/></symbol>
+  <linearGradient id="esmeralda" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4FE6CF"/><stop offset="48%" stop-color="#00A08D"/><stop offset="100%" stop-color="#005850"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1FD8BE"/><stop offset="46%" stop-color="#00897C"/><stop offset="100%" stop-color="#004A44"/>
+  </linearGradient>
+  <linearGradient id="metal-hi" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#39EBD2"/><stop offset="46%" stop-color="#00A092"/><stop offset="100%" stop-color="#005850"/>
+  </linearGradient>
+  <linearGradient id="chapa" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="rgba(255,255,255,.34)"/><stop offset="52%" stop-color="rgba(255,255,255,.04)"/><stop offset="100%" stop-color="rgba(0,0,0,.28)"/>
+  </linearGradient>
+  <symbol id="xp" viewBox="0 0 56 51"><path d="M40.788 39.035h6.343c2.372 0 4.022-1.083 4.022-3.3 0-2.218-1.65-3.3-4.022-3.3h-6.343v6.6zm0 11.5h8.457c4.486 0 6.807-2.321 6.807-6.808v-4.692h-.155c-1.29 3.919-4.641 5.105-8.612 5.105h-6.29c-.155 0-.207.051-.207.206v6.188zm-11.911-14.8l6.497 6.29v-12.58l-6.497 6.29zm-22.07 14.8h28.567V49.09c0-2.527.877-3.97 2.887-4.744v-.154H30.27c-.413 0-.567-.052-.877-.361l-4.177-4.332-4.331 4.383c-.206.206-.361.31-.774.31h-6.445c-.361 0-.361-.207-.155-.413l8.25-7.993-8.405-8.147c-.206-.206-.154-.412.207-.412h6.497c.36 0 .516.051.722.309l4.538 4.538 4.28-4.538c.206-.206.36-.31.67-.31h16.965c3.919 0 7.374 1.29 8.663 5.209h.155V6.807C56.052 2.32 53.732 0 49.245 0H6.807C2.32 0 0 2.32 0 6.807v36.972c0 4.435 2.32 6.755 6.807 6.755z"/></symbol>
+</defs></svg>
+
+<canvas id="flocos" aria-hidden="true"></canvas>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a data-i18n-a="aria-label:ka42d8a34" class="nav-marca lockup" href="#topo" aria-label="Vectrum Capital, escritório credenciado à XP Investimentos">
+      <span class="lk-v">
+        <svg class="vsym" viewBox="0 0 40 112" aria-hidden="true"><use href="#vsym"/></svg>
+        <span><span data-i18n="k9fcedc9a" class="vname">Vectrum</span><span data-i18n="k2bd8d265" class="vdesc" style="display:block">Capital</span></span>
+      </span>
+      <span class="lk-fio"></span>
+      <svg class="xp" viewBox="0 0 56 51" aria-hidden="true"><use href="#xp"/></svg>
+    </a>
+    <button data-i18n-a="title:k5ebac4d2;aria-label:kac0c41a6" class="nav-tema" id="tema" type="button" aria-label="Alternar tema claro e escuro" title="Tema claro ou escuro">
+      <svg class="t-sol" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.2a1 1 0 0 1-1-1V1.6a1 1 0 1 1 2 0v1.2a1 1 0 0 1-1 1zm0 18.6a1 1 0 0 1-1-1v-1.2a1 1 0 1 1 2 0v1.2a1 1 0 0 1-1 1zM3.8 12a1 1 0 0 1-1 1H1.6a1 1 0 1 1 0-2h1.2a1 1 0 0 1 1 1zm18.6 0a1 1 0 0 1-1 1h-1.2a1 1 0 1 1 0-2h1.2a1 1 0 0 1 1 1zM5.6 5.6a1 1 0 0 1 0-1.4l.85-.85a1 1 0 1 1 1.4 1.4l-.85.85a1 1 0 0 1-1.4 0zm11.4 11.4a1 1 0 0 1 0-1.4l.85-.85a1 1 0 0 1 1.4 1.4l-.85.85a1 1 0 0 1-1.4 0zM5.6 18.4a1 1 0 0 1 1.4 0l.85.85a1 1 0 0 1-1.4 1.4l-.85-.85a1 1 0 0 1 0-1.4zM17 7a1 1 0 0 1 1.4 0l.85-.85a1 1 0 0 0-1.4-1.4L17 5.6A1 1 0 0 1 17 7z"/></svg>
+      <svg class="t-verde" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2" fill="#00665E" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="t-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.1 13.4A9.2 9.2 0 1 1 10.6 2.9a7.4 7.4 0 0 0 10.5 10.5z"/></svg>
+    </button>
+    <div class="nav-lingua" id="idioma">
+      <button class="nav-idioma" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Idioma: Português" title="Idioma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3z"/></svg>
+        <span class="idioma-sigla">PT</span>
+        <svg class="idioma-seta" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+      </button>
+      <div class="idioma-menu" role="menu" hidden></div>
+    </div>
+    <button data-i18n="k57f5f5ef" class="nav-burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <div class="nav-links" id="menu">
+      <a data-i18n="kde4780f1" class="so-menu" href="#para-voce">Para você</a>
+      <a data-i18n="kacb59da7" class="so-menu" href="#empresas">Para sua empresa</a>
+      <a data-i18n="kde3c9c1a" href="#a-casa">A Vectrum</a>
+      <a data-i18n="k062c3afe" href="#fundadores">Os fundadores</a>
+      <a data-i18n="k56661c07" href="#contato">Contato</a>
+      <a data-i18n="kee1af3e5" class="so-mobile" href="investir.html">Investir com a Vectrum</a>
+      <a data-i18n="k612eb93c" class="so-mobile" href="assessor.html">Seja um Assessor Vectrum</a>
+    </div>
+    <div class="nav-portas"><a data-i18n="kee1af3e5" class="porta" href="investir.html">Investir com a Vectrum</a><a data-i18n="k612eb93c" class="porta" href="assessor.html">Seja um Assessor Vectrum</a></div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="topo">
+  <div class="hero-fundo"></div>
+  <div class="hero-grade"></div>
+  <div class="wrap hero-in">
+    <div>
+      <p data-i18n="k24278ad8" class="eyebrow">Escritório credenciado à XP Investimentos</p>
+      <h1 data-i18n="k80daec71">Recurso parado tem valor.<br>Recurso com <em>direção</em><br>tem destino.</h1>
+      <p data-i18n="ka47a315b" class="sub">Vectrum vem de vetor, a única grandeza que carrega duas coisas ao mesmo tempo: para onde ir e com quanta força. É assim que tratamos o patrimônio de quem senta à nossa mesa.</p>
+      <div class="hero-botoes">
+        <a class="lacre grande" href="#contato"><i></i><i></i><i></i><i></i><b data-i18n="kee1af3e5">Investir com a Vectrum</b></a>
+        <a class="lacre grande profundo" href="assessor.html"><i></i><i></i><i></i><i></i><b data-i18n="k612eb93c">Seja um Assessor Vectrum</b></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <video data-i18n-a="aria-label:ke629a6fa" src="hero-obj.mp4" poster="hero-obj.jpg" autoplay muted loop playsinline preload="metadata"
+             aria-label="O símbolo da Vectrum como objeto de metal, com névoa passando ao fundo"></video>
+      <span data-i18n="k14ba2492" class="legenda">Direção e força · o símbolo da casa</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NUMEROS ================= -->
+<section data-i18n-a="aria-label:kf58c3aa0" class="numeros" aria-label="Números da casa">
+  <div class="num"><b>02</b><span data-i18n="k7fd2d854">Sócios fundadores</span></div>
+  <div class="num"><b>2026</b><span data-i18n="kb8d53811">Ano de fundação</span></div>
+</section>
+
+<div class="faixa-img">
+  <img data-i18n-a="alt:kf622de54" src="faixa-mesa.jpg" alt="Duas pessoas conversando sobre um documento em uma mesa de reunião">
+  <span data-i18n="kf00dfa44" class="frase"><b>A conversa sobre recursos começa com uma pergunta sobre a sua vida.<small>A casa</small></b></span>
+</div>
+
+<!-- ================= A CASA ================= -->
+<section class="sec faixa-escura" id="a-casa">
+  <div class="wrap">
+    <div class="sec-head">
+      <p data-i18n="kcf5acd0f" class="eyebrow metal">A casa</p>
+      <h2 data-i18n="kf84f948a">Autonomia para transformar,<br>excelência para <em>entregar</em>.</h2>
+      <p data-i18n="k8c55b24b" class="lede">A Vectrum Capital nasceu de uma inquietação, da busca constante por fazer diferente e, principalmente, fazer melhor. Construímos nosso escritório com autonomia para tomar decisões, liberdade para buscar as melhores soluções e uma gestão mais humana que valoriza as pessoas por trás do negócio.</p>
+    </div>
+
+    <div class="grade-6" id="para-voce">
+      <article class="vivo dcard">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3 data-i18n="kf1710325">Prateleira aberta</h3>
+        <p data-i18n="k28f34b5e">Acesso à plataforma da XP, a maior da América Latina. <span class="grifo">Nenhuma grade obrigatória</span>: o que entra na sua carteira entra porque faz sentido, aderente à sua necessidade e planejamento.</p>
+      </article>
+      <article class="vivo dcard">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div>
+        <h3 data-i18n="k3c43af80">O perfil vem primeiro</h3>
+        <p data-i18n="kc5430bb3">Nenhuma carteira é montada antes de entendermos prazo, objetivo e tolerância a risco.</p>
+      </article>
+      <article class="vivo dcard">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-i18n="k74a98f65">Segurança institucional</h3>
+        <p data-i18n="k4947bfcc">Custódia e liquidação na XP Investimentos, sob a Resolução CVM 178/23.</p>
+      </article>
+      <article class="vivo dcard">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 data-i18n="k866c60eb">Conversa sem jargão</h3>
+        <p data-i18n="k04a73857">Relatório que se entende, reunião que cabe na agenda e resposta no mesmo dia. <span class="grifo">A complexidade é nossa expertise.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAIXAS ================= -->
+<section class="sec sec-linha" id="empresas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p data-i18n="kc574a5cd" class="eyebrow metal">Como atendemos</p>
+      <h2 data-i18n="ka1c618c6">Para <em>você</em><br>e para a sua <em>empresa</em>.</h2>
+      <p data-i18n="k760c786d" class="lede">Soluções para cada dimensão de patrimônio pessoal e empresarial, com uma visão integrada de investimentos, liquidez, proteção e sucessão.</p>
+    </div>
+    <div class="faixas">
+      <div class="vivo fx">
+        <span class="arte" style="background-image:url(mesa-1.jpg)"></span>
+        <span class="brasao"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="corpo" d="M32 1L63 32L32 63L1 32Z"/><path class="chapa" d="M32 1L63 32L32 63L1 32Z"/><path class="aro" d="M32 6.5L57.5 32L32 57.5L6.5 32Z"/><path class="lasca" d="M32 1L63 32L58 32L32 6Z"/><path class="cravo" d="M32 19L45 32L32 45L19 32Z"/></svg></span>
+        <span data-i18n="kb0d8c113" class="nivel">Pessoa Física</span>
+        <a data-i18n="k14dfa76e" class="btn-faixa" href="#contato">Falar com um assessor</a>
+      </div>
+      <div class="vivo fx">
+        <span class="arte" style="background-image:url(mesa-4.jpg)"></span>
+        <span class="brasao"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="corpo" d="M32 1L63 32L32 63L1 32Z"/><path class="chapa" d="M32 1L63 32L32 63L1 32Z"/><path class="aro" d="M32 6.5L57.5 32L32 57.5L6.5 32Z"/><path class="lasca" d="M32 1L63 32L58 32L32 6Z"/><path class="cravo" d="M23 18L36 32L23 46L10 32Z"/><path class="cravo" d="M41 18L54 32L41 46L28 32Z"/><path class="corpo" d="M32 25L39 32L32 39L25 32Z"/></svg></span>
+        <span data-i18n="kbbf24d0c" class="nivel">Pessoa Jurídica</span>
+        <a data-i18n="k14dfa76e" class="btn-faixa" href="#contato">Falar com um assessor</a>
+      </div>
+    </div>
+
+
+    <div class="duo" style="margin-top:clamp(40px,5vw,72px)">
+      <div class="vivo duo-img" style="padding:0">
+        <video data-i18n-a="aria-label:k6e262ea0" src="legado.mp4" poster="legado.jpg" autoplay muted loop playsinline preload="metadata"
+               aria-label="Escritório residencial ao entardecer, com chuva escorrendo na janela"></video>
+        <span data-i18n="k1e04b186" class="selo">O que fica depois</span>
+      </div>
+      <div>
+        <p data-i18n="kbd7dccac" class="eyebrow metal">Legado</p>
+        <h2 data-i18n="k31d5dc2e" style="font-size:clamp(26px,3.4vw,40px);line-height:1.12;margin-block:12px 15px;color:var(--ink-0);font-weight:500">Patrimônio é o que<br>atravessa <em style="font-style:italic;color:var(--green-live)">gerações</em>.</h2>
+        <p data-i18n="kc0158b69" class="lede">A construção de patrimônio vai além dos investimentos. Envolve a vida financeira, os negócios, a proteção e os planos para o futuro.</p>
+        <p data-i18n="kb9e3664b" class="lede" style="margin-top:14px">Por isso, partimos de uma visão integrada do patrimônio, conectando necessidades e oferecendo soluções para diferentes momentos da vida, da gestão dos investimentos à proteção, liquidez e sucessão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FUNDADORES ================= -->
+<section class="sec sec-linha faixa-verde" id="fundadores">
+  <div class="wrap">
+    <div class="sec-head">
+      <p data-i18n="k4169c4e8" class="eyebrow metal">Quem responde por isso</p>
+      <h2 data-i18n="k5de3fddf">Conheça os <em>fundadores</em>.</h2>
+      <p data-i18n="k72c3f12d" class="lede">Por trás de cada recomendação, estão pessoas que você pode conhecer. Veja quem está do outro lado da mesa, de onde veio, o que já fez e no que acredita. Clique nas miniaturas para ver mais.</p>
+    </div>
+
+    <div class="socios">
+
+      <article class="vivo socio" data-socio="victoria">
+        <div class="galeria">
+          <img data-i18n-a="alt:k906815ae" class="ativa" src="victoria-1.jpg?v=2" alt="Victoria, sócia fundadora da Vectrum Capital">
+          <span class="veu"></span>
+          <span class="contador"><b class="atual">1</b>/<span class="total">1</span></span>
+          <span class="nome-sobre"><span data-i18n="k6875ebe0">Sócia fundadora</span><b data-i18n="kdf8cd538">Victoria</b></span>
+        </div>
+        <div data-i18n-a="aria-label:kf40e9c8b" class="tiras" role="tablist" aria-label="Fotos de Victoria">
+          <button class="tira" role="tab" aria-selected="true" data-img="victoria-1.jpg?v=2"><img src="victoria-1.jpg?v=2" alt=""></button>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+        </div>
+        <div class="corpo">
+          <p data-i18n="k2d7636c9" class="nome-full">Victoria Torres Alencar</p>
+          <p data-i18n="k4de9a40a" class="credencial">Economista &nbsp;|&nbsp; Especialista em Investimentos &nbsp;|&nbsp; C-Pro I</p>
+          <div class="bio"><p data-i18n="kf1a4e833">Economista e especialista em investimentos, Victoria construiu sua trajetória profissional no universo de alta renda, unindo conhecimento técnico a uma compreensão profunda das pessoas por trás de cada patrimônio.</p><div class="mais"><p data-i18n="k1461a2c6">Nos últimos cinco anos, atuou no mercado bancário diretamente na gestão e no relacionamento com carteiras de clientes de alta renda, experiência marcada por reconhecimentos em satisfação e excelência no atendimento. Sua relação com esse segmento, no entanto, começou muito antes: são mais de dez anos de vivência e proximidade com o mercado de alta renda e luxo, o que lhe proporcionou repertório sobre seus códigos, expectativas e, principalmente, sobre a importância da confiança em relações patrimoniais de longo prazo.</p><p data-i18n="k99f26358">Economista de formação e certificada <b>C-Pro I</b> pela ANBIMA, Victoria acredita que patrimônio não deve ser compreendido apenas por números, produtos ou rentabilidade, mas dentro do contexto de vida de cada cliente: seus negócios, sua família, seus projetos e o legado que deseja construir.</p><p data-i18n="k8ec171bf">Cristã, casada e mãe, leva para a Vectrum valores que também orientam sua vida: responsabilidade, confiança, excelência e visão de longo prazo.</p></div></div>
+          <button data-i18n="k226e8215" class="ler" type="button" aria-expanded="false">Continuar lendo</button>
+        </div>
+      </article>
+
+      <article class="vivo socio" data-socio="thiago">
+        <div class="galeria">
+          <img data-i18n-a="alt:k754fcda9" class="ativa" src="thiago-1.jpg?v=2" alt="Thiago, sócio fundador da Vectrum Capital">
+          <span class="veu"></span>
+          <span class="contador"><b class="atual">1</b>/<span class="total">1</span></span>
+          <span class="nome-sobre"><span data-i18n="k3c119950">Sócio fundador</span><b data-i18n="k2d8eac8a">Thiago</b></span>
+        </div>
+        <div data-i18n-a="aria-label:kd1dd8eaf" class="tiras" role="tablist" aria-label="Fotos de Thiago">
+          <button class="tira" role="tab" aria-selected="true" data-img="thiago-1.jpg?v=2"><img src="thiago-1.jpg?v=2" alt=""></button>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+          <span data-i18n-a="title:k61069761" class="tira vazia" title="Slot para próxima foto"><span>+</span></span>
+        </div>
+        <div class="corpo">
+          <p data-i18n="k212baec9" class="nome-full">Thiago Santos Rodrigues</p>
+          <p data-i18n="kd405bd6e" class="credencial">Assessor de Investimentos &nbsp;|&nbsp; Pós em Gestão Empresarial &nbsp;|&nbsp; CFP&reg; &middot; ANCORD &middot; PQO &middot; C-Pro I</p>
+          <div class="bio"><p data-i18n="k0f4f132d">Dezessete anos de mercado financeiro, e um caminho pouco comum até chegar aqui. Thiago é o Assessor de Investimentos credenciado da casa, e começou a carreira olhando o mundo pela lógica do comércio entre países, para hoje olhar a vida das famílias pela lógica do que precisa durar.</p><div class="mais"><p data-i18n="k592ae261">Graduado em <b>Comércio Exterior</b> e pós-graduado em <b>Gestão Empresarial</b>, trouxe do início da trajetória um olhar de negócio que nunca o abandonou: o hábito de enxergar risco, câmbio, ciclo e contexto antes de olhar produto. É uma formação que ensina a ler o mundo como um sistema conectado, e essa leitura continua presente no jeito dele de montar uma carteira.</p><p data-i18n="k5f212cc2">Reúne um conjunto de certificações que raramente aparece junto na mesma pessoa. É <b>CFP&reg;</b>, a certificação internacional de maior reconhecimento em finanças pessoais, concedida no Brasil pela Planejar. É credenciado <b>ANCORD</b> como Assessor de Investimentos, tem o <b>PQO</b> da B3, qualificação operacional exigida de quem atua no mercado de capitais brasileiro, e a <b>C-Pro I</b> da ANBIMA, voltada à estruturação de portfólios e ao assessoramento técnico qualificado.</p><p data-i18n="k2876e227">Sua passagem por multi family office o colocou dentro de um tipo específico de conversa: a de famílias que já resolveram a questão do rendimento e passaram a se ocupar do que vem depois dele. Organização, previsibilidade, continuidade, sucessão. É um ambiente em que ninguém pergunta qual foi o melhor fundo do trimestre, e sim como o patrimônio atravessa a próxima década sem se desfazer.</p><p data-i18n="k466068d9">É desse repertório que nasce a leitura que ele traz para a Vectrum: patrimônio é estrutura, não produto. E estrutura se constrói com técnica, mas se sustenta com confiança.</p></div></div>
+          <button data-i18n="k226e8215" class="ler" type="button" aria-expanded="false">Continuar lendo</button>
+        </div>
+      </article>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLATAFORMA ================= -->
+<section class="sec sec-linha">
+  <div class="wrap">
+    <div class="sec-head">
+      <p data-i18n="k57e8b07b" class="eyebrow metal">O que está na plataforma</p>
+      <h2 data-i18n="k85815375">A prateleira inteira,<br>em caráter <em>educacional</em>.</h2>
+      <p data-i18n="kf2c398a0" class="lede">As classes abaixo estão disponíveis na plataforma da XP. O que faz sentido para você depende de perfil, prazo e objetivo, e isso se decide na mesa.</p>
+    </div>
+    <div class="classes">
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-rendafixa"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 16h18"/><path d="M8 4v16M16 4v16"/></svg></span>
+        <b data-i18n="k4a898402">Renda Fixa</b><span data-i18n="k31ed428a">Títulos públicos e privados</span></button>
+        <div data-i18n-a="aria-label:k4a898402" class="cl-mais" id="cl-rendafixa" role="region" aria-label="Renda Fixa"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k1a8e4357">Na renda fixa você empresta recursos a um governo, a um banco ou a uma empresa e recebe de volta com a remuneração definida no momento da aplicação. Ela pode ser prefixada, pós-fixada, atrelada ao CDI ou à Selic, ou híbrida, com inflação mais uma taxa. Tesouro Direto, CDB, LCI, LCA e debêntures são exemplos.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k96254a74">Existe o risco de crédito de quem emitiu o título, e a venda antes do vencimento pode sair por preço diferente do esperado. Alguns títulos contam com a garantia do FGC, dentro dos limites dele.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-acoes"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19L9 11l4 4 7-10"/><path d="M15 4h5v5"/></svg></span>
+        <b data-i18n="k66c341b3">Ações</b><span data-i18n="k019d654b">Mercado à vista</span></button>
+        <div data-i18n-a="aria-label:k66c341b3" class="cl-mais" id="cl-acoes" role="region" aria-label="Ações"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k6dd49153">Comprar uma ação é se tornar sócio de uma empresa de capital aberto listada na B3. O resultado pode vir da valorização das ações e da distribuição de lucros, como dividendos e juros sobre capital próprio.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="kad699ee6">É renda variável: o preço muda todos os dias e pode ficar abaixo do valor investido. Ações não têm garantia do FGC.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-fundos"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+        <b data-i18n="k8d456b17">Fundos</b><span data-i18n="ka129ed36">Multimercado, ações e RF</span></button>
+        <div data-i18n-a="aria-label:k8d456b17" class="cl-mais" id="cl-fundos" role="region" aria-label="Fundos"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k35acec3f">Um fundo reúne os recursos de vários investidores numa única carteira, conduzida por um gestor profissional e supervisionada pela CVM. Existem fundos de renda fixa, multimercado, ações e cambiais, cada um com a sua política de investimento.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k87a8b3a7">Fundos cobram taxas, como a de administração, e têm prazos próprios para o resgate. A lâmina e o regulamento mostram as regras de cada um.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-fundosimobilirios"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></span>
+        <b data-i18n="k2bc2d589">Fundos Imobiliários</b><span data-i18n="kc3ea08a2">Renda e tijolo</span></button>
+        <div data-i18n-a="aria-label:k2bc2d589" class="cl-mais" id="cl-fundosimobilirios" role="region" aria-label="Fundos Imobiliários"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k1f139e5e">Os fundos imobiliários investem em imóveis, como lajes corporativas, galpões logísticos e shoppings, ou em títulos do setor, como CRI. As cotas são negociadas na bolsa e os rendimentos costumam ser distribuídos periodicamente.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k46b46b21">O preço da cota oscila no mercado e os rendimentos não são garantidos: dependem de vacância, inadimplência e do momento do setor.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-coe"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 5v10l-8 5-8-5V7z"/><path d="M12 9l3.5 2v4L12 17l-3.5-2v-4z"/></svg></span>
+        <b data-i18n="k5eecbb0a">COE</b><span data-i18n="ka1ece85d">Operações estruturadas</span></button>
+        <div data-i18n-a="aria-label:k5eecbb0a" class="cl-mais" id="cl-coe" role="region" aria-label="COE"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k7a51f194">O Certificado de Operações Estruturadas combina elementos de renda fixa e de derivativos num único produto. Ele tem prazo definido e cenários de retorno conhecidos desde o início, atrelados a um ativo de referência, como um índice ou uma moeda.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k74f7b3d7">Conforme a estrutura, o capital pode ser protegido ou ficar em risco. O resgate antes do vencimento pode não estar disponível ou sair abaixo do valor aplicado. Não tem cobertura do FGC.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-ofertaspublicas"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v7"/><path d="M6 10h12l2 11H4z"/><circle class="cheio" cx="12" cy="3" r="1.8"/></svg></span>
+        <b data-i18n="k2503556f">Ofertas Públicas</b><span data-i18n="k5d7cec69">Primárias e secundárias</span></button>
+        <div data-i18n-a="aria-label:k2503556f" class="cl-mais" id="cl-ofertaspublicas" role="region" aria-label="Ofertas Públicas"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="kfb22f66c">É quando uma empresa ou um fundo emite novos papéis para captar recursos no mercado, como na abertura de capital de uma empresa ou na emissão de debêntures e de cotas de fundos. O investidor faz a reserva durante o período da oferta.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k2a3cbd1c">Cada oferta tem prospecto, regras de rateio e riscos próprios. Fazer a reserva não garante receber toda a quantidade pedida.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-previdncia"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12M6 22h12"/><path d="M8 2c0 5 8 5 8 0M8 22c0-5 8-5 8 0"/></svg></span>
+        <b data-i18n="k4ae2912a">Previdência</b><span data-i18n="k6342a3aa">PGBL e VGBL</span></button>
+        <div data-i18n-a="aria-label:k4ae2912a" class="cl-mais" id="cl-previdncia" role="region" aria-label="Previdência"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k433e829e">A previdência privada é um investimento de longo prazo pensado para a aposentadoria e para a sucessão patrimonial. O PGBL costuma fazer sentido para quem declara o imposto de renda no modelo completo, e o VGBL para os demais casos.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="kfe7d13e5">A escolha entre tabela progressiva e regressiva de tributação muda o resultado e precisa ser feita com cuidado. Resgates antecipados podem pagar mais imposto.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-seguros"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v7c0 5-8 10-8 10S4 17 4 12V5z"/><path d="M9.5 12l2 2 3.5-4"/></svg></span>
+        <b data-i18n="k7ea4b1a4">Seguros</b><span data-i18n="ka6e48187">Vida e patrimoniais</span></button>
+        <div data-i18n-a="aria-label:k7ea4b1a4" class="cl-mais" id="cl-seguros" role="region" aria-label="Seguros"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k8ecb16bd">O seguro protege o que você construiu contra o que não dá para prever. O seguro de vida garante uma indenização aos beneficiários, e os patrimoniais cobrem bens como imóveis e veículos.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="kc783f80c">Cada apólice tem coberturas, exclusões e carências próprias. O seguro é emitido pela seguradora e distribuído pela XP.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-cambio"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span>
+        <b data-i18n="k2866507d">Câmbio</b><span data-i18n="k8cff528b">Envio e recebimento</span></button>
+        <div data-i18n-a="aria-label:k2866507d" class="cl-mais" id="cl-cambio" role="region" aria-label="Câmbio"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k69b0e67c">O câmbio permite enviar e receber recursos do exterior, pagar despesas fora do país e comprar moeda estrangeira, dentro das regras do Banco Central.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k3906c42b">A cotação muda ao longo do dia, e as operações têm custos e impostos próprios, como o IOF.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-credito"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h9"/><path d="M12 4l8 8-8 8"/><circle class="cheio" cx="4" cy="12" r="1.6"/></svg></span>
+        <b data-i18n="kf05ef4bb">Crédito</b><span data-i18n="k825c9778">Colateralizado</span></button>
+        <div data-i18n-a="aria-label:kf05ef4bb" class="cl-mais" id="cl-credito" role="region" aria-label="Crédito"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k67b2bc76">No crédito colateralizado, os investimentos que você já tem servem de garantia para um empréstimo. É uma forma de acessar liquidez sem precisar desmontar a carteira.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="kfc4dd4dd">Se o valor da garantia cair, pode ser necessário reforçá-la. Taxas e condições dependem da análise de crédito.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-internacional"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></svg></span>
+        <b data-i18n="ke926eccd">Internacional</b><span data-i18n="k8686d11b">Conta e alocação global</span></button>
+        <div data-i18n-a="aria-label:ke926eccd" class="cl-mais" id="cl-internacional" role="region" aria-label="Internacional"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k7b6145a5">Investir fora do Brasil permite ter parte do patrimônio em outras moedas e mercados, com acesso a ações, fundos e títulos estrangeiros, diretamente no exterior ou por produtos disponíveis aqui.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k009726c6">Além da oscilação dos próprios ativos, existe o risco da variação cambial, e a tributação segue regras específicas.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+      <div class="vivo cl">
+        <button class="cl-abrir" type="button" aria-expanded="false" aria-controls="cl-futuros"><span class="insignia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M6 20V13M11 20V8M16 20v-4"/><path d="M14 4l4 2-4 2z" class="cheio"/></svg></span>
+        <b data-i18n="kbdd471c8">Futuros</b><span data-i18n="k88ddf519">Derivativos</span></button>
+        <div data-i18n-a="aria-label:kbdd471c8" class="cl-mais" id="cl-futuros" role="region" aria-label="Futuros"><div><div class="cols"><div><h5 data-i18n="ka3a7b250">Como funciona</h5><p data-i18n="k9e148444">Contratos futuros são acordos de compra ou venda de um ativo, como índice, dólar ou commodity, numa data futura e por um preço definido hoje. São usados para proteção, o chamado hedge, ou em operações de prazo curto.</p></div><div class="atencao"><h5 data-i18n="kc0fbec0a">Pontos de atenção</h5><p data-i18n="k3662d312">São derivativos alavancados: a perda pode superar o valor depositado como margem. Exigem perfil de investidor compatível.</p><small data-i18n="kbac26adb">Conteúdo educacional · não é recomendação</small></div></div></div></div>
+      </div>
+    </div>
+    <p data-i18n="k8f65f688" class="lede" style="margin-top:20px;font-size:12.5px;color:var(--ink-5)">Conteúdo meramente informativo. Não constitui recomendação ou oferta. Rentabilidade passada não é garantia de rentabilidade futura.</p>
+  </div>
+</section>
+
+<!-- ================= ONDE ESTAMOS ================= -->
+<section class="sec sec-linha faixa-escura">
+  <div class="wrap">
+    <div class="sec-head">
+      <p data-i18n="k77a6af6a" class="eyebrow metal">Onde estamos</p>
+      <h2 data-i18n="k801e5079">Estamos em <em>São Paulo</em>.</h2>
+    </div>
+
+    <div class="mapa-bloco">
+      <div class="vivo mapa-caixa">
+        <img data-i18n-a="alt:k8304149a" src="mapa.png" alt="Mapa do Brasil em malha luminosa com São Paulo em destaque">
+        <span class="mapa-pin"><span class="anel"></span><span class="anel"></span></span>
+        <span class="mapa-rotulo">
+          <span class="tracinho"></span>
+          <span class="txt"><b data-i18n="k666c786e">São Paulo</b><span data-i18n="k01c5a38e">Sede · 2026</span></span>
+        </span>
+      </div>
+
+      <div class="mapa-legenda">
+        <!-- endereco e contatos: preencher com os dados registrados na XP (tem que bater exatamente) -->
+        <div class="vivo praca">
+          <span class="marcador"></span>
+          <span class="txt">
+            <span data-i18n="k4f8ec3cb" class="marca-tempo">Sede</span>
+            <b data-i18n="k666c786e">São Paulo</b>
+            <span data-i18n="kc2287573"><strong>Av. Hilário Pereira de Souza, 492, Sala 1715, Industrial Autonomistas, Osasco/SP, CEP 06010-170</strong></span>
+          </span>
+        </div>
+        <div class="vivo praca">
+          <span class="marcador"></span>
+          <span class="txt">
+            <span data-i18n="ke20fc1fe" class="marca-tempo">Fale com a casa</span>
+            <b data-i18n="kfff9eab2">Atendimento</b>
+            <span><strong>(11) 2191-8318</strong> · <strong data-i18n="k865f7c22">contato@vectrumcapital.com.br</strong></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa-img" style="height:clamp(150px,20vw,240px)">
+  <img data-i18n-a="alt:ke8ea9339" src="textura.jpg" alt="Superfície de mármore verde escuro">
+  <span data-i18n="k93dd4d71" class="frase"><b style="font-size:clamp(19px,2.4vw,30px)">Toda fortuna começa com uma conversa honesta.<small>O primeiro passo</small></b></span>
+</div>
+
+<!-- ================= CONTATO ================= -->
+<section class="sec sec-linha" id="contato">
+  <div class="wrap form-bloco">
+    <div class="sec-head" style="margin-bottom:0">
+      <p data-i18n="k052eb79b" class="eyebrow metal">Fale com a Vectrum</p>
+      <h2 data-i18n="kecca4d29">Vamos conversar sobre<br>o seu <em>patrimônio</em>.</h2>
+      <p data-i18n="k293f6e42" class="lede">Conte o que você busca para os seus investimentos e um dos nossos assessores entra em contato com você. A primeira conversa é sem compromisso e começa pelos seus objetivos, não por produto.</p>
+      <div class="ouvidoria">
+        <b data-i18n="k73c161a6">Ouvidoria XP</b>
+        <span>0800 722 3730</span>
+      </div>
+    </div>
+
+    <form id="form-contato" data-tipo="cliente" novalidate>
+      <input type="text" name="site" class="mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="campo">
+        <label data-i18n="k695fc3f3" for="c-nome">Nome completo</label>
+        <input data-i18n-a="placeholder:ka6ef941e" type="text" id="c-nome" name="nome" placeholder="Seu nome" autocomplete="name">
+      </div>
+      <div class="campo-2">
+        <div class="campo"><label data-i18n="k0d01e2e8" for="c-email">E-mail</label><input data-i18n-a="placeholder:ka69c980b" type="email" id="c-email" name="email" placeholder="voce@email.com" autocomplete="email"></div>
+        <div class="campo"><label data-i18n="k04e04102" for="c-tel">Telefone</label><input type="tel" id="c-tel" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel"></div>
+      </div>
+      <div class="campo-2">
+        <div class="campo">
+          <label data-i18n="kd691024d" for="c-faixa">Valor disponível para investir</label>
+          <select id="c-faixa" name="faixa">
+            <option data-i18n="k46695e79" value="Até R$ 100 mil">Até R$ 100 mil</option><option data-i18n="keb5b2781" value="R$ 100 mil a R$ 300 mil">R$ 100 mil a R$ 300 mil</option><option data-i18n="kfaa7946b" value="R$ 300 mil a R$ 1 milhão">R$ 300 mil a R$ 1 milhão</option>
+            <option data-i18n="k33b2b1dd" value="R$ 1 milhão a R$ 5 milhões">R$ 1 milhão a R$ 5 milhões</option><option data-i18n="k5b7fe985" value="Acima de R$ 5 milhões">Acima de R$ 5 milhões</option><option data-i18n="kc1544dc1" value="Sou empresa">Sou empresa</option><option data-i18n="k9df7bad5" value="Ainda não invisto">Ainda não invisto</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label data-i18n="k4185b7ae" for="c-xp">Já tem conta na XP?</label>
+          <select id="c-xp" name="conta_xp"><option data-i18n="kff5f89e9" value="Não tenho">Não tenho</option><option data-i18n="k4605eb16" value="Tenho, com outro escritório">Tenho, com outro escritório</option><option data-i18n="kf358ee72" value="Tenho, sem assessoria">Tenho, sem assessoria</option></select>
+        </div>
+      </div>
+      <div class="campo">
+        <label data-i18n="kc99a17af" for="c-assunto">Sobre o que você quer falar</label>
+        <select id="c-assunto" name="assunto">
+          <option data-i18n="keef3d0f4" value="Quero assessoria para meus investimentos">Quero assessoria para meus investimentos</option>
+          <option data-i18n="k2f9da246" value="Quero atendimento para minha empresa">Quero atendimento para minha empresa</option>
+        </select>
+      </div>
+      <label class="lgpd" for="c-lgpd">
+        <input type="checkbox" id="c-lgpd" name="lgpd">
+        <span data-i18n="k11967c41">Autorizo o contato e o tratamento dos meus dados conforme a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>, nos termos da Lei 13.709/18.</span>
+      </label>
+      <button data-i18n="k6337450c" class="btn btn-1" type="submit" style="margin-top:8px">Começar a conversa</button>
+      <p id="form-aviso" style="font-family:var(--f-mono);font-size:12px;color:var(--metal);min-height:18px"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+<div data-i18n-a="aria-label:k194f892e" class="ticker" aria-label="Cotações de mercado">
+  <div class="wrap ticker-topo">
+    <div data-i18n-a="aria-label:k36ba9155" class="ticker-abas" role="group" aria-label="Escolher praça">
+      <button data-i18n="kc0caf2e6" type="button" data-praca="destaques" aria-pressed="true">Destaques</button>
+      <button data-i18n="k6a969b07" type="button" data-praca="br" aria-pressed="false">Brasil</button>
+      <button data-i18n="k2a728b64" type="button" data-praca="b3" aria-pressed="false">B3</button>
+      <button data-i18n="kcccbd8ae" type="button" data-praca="us" aria-pressed="false">Estados Unidos</button>
+      <button data-i18n="k55cc2ff8" type="button" data-praca="nq" aria-pressed="false">NASDAQ</button>
+      <button data-i18n="kbbc663ef" type="button" data-praca="fx" aria-pressed="false">Moedas</button>
+      <button data-i18n="k24c77e18" type="button" data-praca="cr" aria-pressed="false">Cripto</button>
+    </div>
+  </div>
+  <!-- cotacoes: widget Ticker Tape do TradingView (mesmo da AVIN). Lista completa para os socios decidirem o que fica -->
+  <div class="tv-faixa" id="tv-faixa"></div>
+</div>
+
+<!-- ================= RODAPE ================= -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-topo">
+      <div class="rodape-marca">
+        <div class="lockup">
+          <span class="lk-v">
+            <svg class="vsym" viewBox="0 0 40 112" aria-hidden="true"><use href="#vsym"/></svg>
+            <span><span data-i18n="k9fcedc9a" class="vname">Vectrum</span><span data-i18n="k2bd8d265" class="vdesc" style="display:block">Capital</span></span>
+          </span>
+          <span class="lk-fio"></span>
+          <svg data-i18n-a="aria-label:ke525a57a" class="xp" viewBox="0 0 56 51" aria-label="XP Investimentos"><use href="#xp"/></svg>
+        </div>
+        <p data-i18n="kd8599262">Escritório de Assessoria de Investimentos credenciado à XP Investimentos.</p>
+        <div class="ouvidoria" style="margin-top:0"><b data-i18n="k73c161a6">Ouvidoria XP</b><span>0800 722 3730</span></div>
+      </div>
+
+      <div class="rodape-col"><b data-i18n="kcf5acd0f">A casa</b><a data-i18n="k3b1d17e8" href="#a-casa">Quem somos</a><a data-i18n="k062c3afe" href="#fundadores">Os fundadores</a><a data-i18n="kb2d7fedb" href="assessores.html">Relação de assessores</a><a data-i18n="k56661c07" href="#contato">Contato</a></div>
+      <div class="rodape-col"><b data-i18n="kfff9eab2">Atendimento</b><a data-i18n="kde4780f1" class="so-menu" href="#para-voce">Para você</a><a data-i18n="kacb59da7" class="so-menu" href="#empresas">Para sua empresa</a><a data-i18n="kbea19da0" href="investir.html">Abrir conta</a></div>
+      <div class="rodape-col"><b data-i18n="k53d5bafa">Carreira</b><a data-i18n="kc69ac3a3" href="assessor.html">Seja um assessor</a><a data-i18n="k68eaf801" href="assessor.html">Vindo do banco</a><a data-i18n="k321bf392" href="assessor.html#candidatura">Candidatar-se</a></div>
+      <div class="rodape-col"><b data-i18n="k902c91d9">Legal</b><a data-i18n="k30913ac9" href="privacidade.html">Política de Privacidade</a><a data-i18n="k00820352" href="cookies.html">Política de Cookies</a><a data-i18n="ke7b6e197" href="canal-confidencial.html">Canal Confidencial</a></div>
+    </div>
+
+    <div class="legal">
+      <p data-i18n="k0c9e51cb">A <strong>VECTRUM ASSESSORES DE INVESTIMENTOS LTDA</strong>, inscrita sob o CNPJ <strong>68.674.385/0001-06</strong>, é uma empresa de Assessoria de Investimento devidamente registrada na Comissão de Valores Mobiliários na forma da Resolução CVM 178/23 ("Sociedade"), que mantém contrato de distribuição de produtos financeiros com a XP Investimentos Corretora de Câmbio, Títulos e Valores Mobiliários S.A. ("XP") e pode, por conta e ordem dos seus clientes, operar no mercado de capitais segundo a legislação vigente. Na forma da legislação da CVM, o Assessor de Investimento não pode administrar ou gerir o patrimônio de investidores. O investimento em ações é um investimento de risco e rentabilidade passada não é garantia de rentabilidade futura. Na realização de operações com derivativos existe a possibilidade de perdas superiores aos valores investidos, podendo resultar em significativas perdas patrimoniais. A Sociedade poderá exercer atividades complementares relacionadas aos mercados financeiro, securitário, de previdência e capitalização, desde que não conflitem com a atividade de assessoria de investimentos, podendo ser realizada por meio da pessoa jurídica acima descrita ou por meio de pessoa jurídica terceira. Todas as atividades são prestadas mantendo a devida segregação e em cumprimento ao quanto previsto nas regras da CVM ou de outros órgãos reguladores e autorreguladores. Para informações e dúvidas sobre produtos, contate seu assessor de investimentos. Para reclamações, contate a Ouvidoria da XP pelo telefone 0800 722 3730.</p>
+      <div class="fim">
+        <span data-i18n="kcbf281fc">© 2026 Vectrum Capital</span>
+        <span data-i18n="k693e1327">vectrumcapital.com.br</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- menu ---------- */
+  /* ---------- tema claro e escuro ----------
+     O site nasce claro. A escolha da pessoa fica guardada no navegador dela.
+     Se o navegador bloquear o armazenamento, o site segue funcionando no claro. */
+  (function(){
+    var raiz = document.documentElement;
+    var botao = document.getElementById('tema');
+    var meta  = document.querySelector('meta[name="theme-color"]');
+    function guardar(v){ try { localStorage.setItem('vectrum-tema-v2', v); } catch(e){} }
+    function ler(){ try { return localStorage.getItem('vectrum-tema-v2'); } catch(e){ return null; } }
+    function aplicar(v){
+      if (v === 'claro' || v === 'verde') raiz.setAttribute('data-tema', v);
+      else raiz.removeAttribute('data-tema');
+      if (meta) meta.setAttribute('content', v === 'claro' ? '#F5F7F6' : v === 'verde' ? '#00332E' : '#000000');
+      if (botao) botao.setAttribute('aria-pressed', String(v === 'claro'));
+    }
+    var salvo = ler(); aplicar(salvo === 'escuro' || salvo === 'verde' ? salvo : 'claro');
+    if (botao) botao.addEventListener('click', function(){
+      var proximo = { claro: 'escuro', escuro: 'verde', verde: 'claro' };
+      var novo = proximo[raiz.getAttribute('data-tema') || 'escuro'];
+      aplicar(novo); guardar(novo);
+    });
+  })();
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var aberto = menu.classList.toggle('aberto');
+    burger.setAttribute('aria-expanded', String(aberto));
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') { menu.classList.remove('aberto'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  /* ---------- luz que segue o ponteiro nos blocos vivos ---------- */
+  var vivos = Array.prototype.slice.call(document.querySelectorAll('.vivo'));
+  vivos.forEach(function(el){
+    el.addEventListener('pointermove', function(e){
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  /* ---------- galeria dos fundadores ---------- */
+  Array.prototype.slice.call(document.querySelectorAll('.socio')).forEach(function(socio){
+    var ler = socio.querySelector('.ler');
+    if (ler) ler.addEventListener('click', function(){
+      var aberto = socio.classList.toggle('aberto');
+      ler.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      ler.firstChild.nodeValue = aberto ? 'Ler menos' : 'Continuar lendo';
+    });
+    var galeria = socio.querySelector('.galeria');
+    var tiras = Array.prototype.slice.call(socio.querySelectorAll('.tira[data-img]'));
+    if (!tiras.length) return;
+    var atual = socio.querySelector('.atual');
+    var total = socio.querySelector('.total');
+    if (total) total.textContent = String(tiras.length);
+
+    tiras.forEach(function(tira, i){
+      tira.addEventListener('click', function(){
+        tiras.forEach(function(o){ o.setAttribute('aria-selected', String(o === tira)); });
+        if (atual) atual.textContent = String(i + 1);
+        var alvo = tira.getAttribute('data-img');
+        var jaTem = galeria.querySelector('img[src="' + alvo + '"]');
+        var visivel = galeria.querySelector('img.ativa');
+        if (!jaTem) {
+          jaTem = document.createElement('img');
+          jaTem.src = alvo;
+          jaTem.alt = '';
+          galeria.insertBefore(jaTem, galeria.querySelector('.veu'));
+        }
+        if (visivel === jaTem) return;
+        requestAnimationFrame(function(){
+          if (visivel) visivel.classList.remove('ativa');
+          jaTem.classList.add('ativa');
+        });
+      });
+    });
+  });
+
+  /* ---------- ticker: widget Ticker Tape do TradingView ----------
+     Dados e logos vem do TradingView. Cada aba recarrega o widget com a sua lista,
+     e a faixa acompanha o tema claro/escuro do site. */
+  var LISTAS = {
+    destaques: [
+      ['FX_IDC:USDBRL','Dólar'], ['FX_IDC:EURBRL','Euro'], ['BINANCE:BTCBRL','Bitcoin'], ['VANTAGE:SP500','S&P 500'],
+      ['BMFBOVESPA:IBOV','Ibovespa'], ['BMFBOVESPA:IFIX','IFIX'], ['BMFBOVESPA:PETR4','Petrobras'], ['BMFBOVESPA:VALE3','Vale'], ['BMFBOVESPA:ITUB4','Itaú']
+    ],
+    br: [
+      ['BMFBOVESPA:IBOV','Ibovespa'], ['BMFBOVESPA:IFIX','IFIX'], ['BMFBOVESPA:SMLL','Small Caps'], ['BMFBOVESPA:IDIV','Dividendos'],
+      ['FX_IDC:USDBRL','Dólar'], ['BMFBOVESPA:IMAT','Materiais Básicos']
+    ],
+    b3: [
+      ['BMFBOVESPA:PETR4','Petrobras'], ['BMFBOVESPA:VALE3','Vale'], ['BMFBOVESPA:ITUB4','Itaú'], ['BMFBOVESPA:BBDC4','Bradesco'],
+      ['BMFBOVESPA:BBAS3','Banco do Brasil'], ['BMFBOVESPA:WEGE3','WEG'], ['BMFBOVESPA:ABEV3','Ambev'], ['BMFBOVESPA:B3SA3','B3'],
+      ['BMFBOVESPA:PRIO3','PRIO'], ['BMFBOVESPA:SUZB3','Suzano']
+    ],
+    us: [
+      ['VANTAGE:SP500','S&P 500'], ['FOREXCOM:NSXUSD','Nasdaq 100'], ['FOREXCOM:DJI','Dow Jones'], ['CAPITALCOM:RTY','Russell 2000'],
+      ['CAPITALCOM:VIX','VIX'], ['TVC:US10Y','Treasury 10 anos']
+    ],
+    nq: [
+      ['NASDAQ:AAPL','Apple'], ['NASDAQ:MSFT','Microsoft'], ['NASDAQ:NVDA','Nvidia'], ['NASDAQ:META','Meta'],
+      ['NASDAQ:AMZN','Amazon'], ['NASDAQ:GOOGL','Alphabet'], ['NASDAQ:TSLA','Tesla'], ['NASDAQ:AVGO','Broadcom']
+    ],
+    fx: [
+      ['FX_IDC:USDBRL','Dólar'], ['FX_IDC:EURBRL','Euro'], ['FX_IDC:GBPBRL','Libra'], ['FX_IDC:CHFBRL','Franco Suíço'],
+      ['FX_IDC:JPYBRL','Iene'], ['FX_IDC:CNYBRL','Yuan']
+    ],
+    cr: [
+      ['BINANCE:BTCBRL','Bitcoin'], ['BINANCE:ETHBRL','Ethereum'], ['BINANCE:SOLBRL','Solana'], ['BINANCE:XRPBRL','XRP'],
+      ['BINANCE:ADABRL','Cardano'], ['BINANCE:LINKUSDT','Chainlink']
+    ]
+  };
+  var faixa = document.getElementById('tv-faixa');
+  var pracaAtual = 'destaques';
+  function temaAtual(){ return document.documentElement.getAttribute('data-tema') === 'claro' ? 'light' : 'dark'; }
+  function montar(praca){
+    if (!faixa) return;
+    pracaAtual = praca;
+    var caixa = document.createElement('div');
+    caixa.className = 'tradingview-widget-container';
+    caixa.innerHTML = '<div class="tradingview-widget-container__widget"></div>';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+    s.text = JSON.stringify({
+      symbols: (LISTAS[praca] || LISTAS.destaques).map(function(x){ return { proName: x[0], title: (window.vectrumT ? window.vectrumT(x[1]) : x[1]) }; }),
+      colorTheme: temaAtual(),
+      locale: (window.vectrumIdioma ? window.vectrumIdioma().tv : 'br'),
+      isTransparent: true,
+      showSymbolLogo: true,
+      displayMode: 'regular'
+    });
+    caixa.appendChild(s);
+    faixa.innerHTML = '';
+    faixa.appendChild(caixa);
+  }
+  var abas = Array.prototype.slice.call(document.querySelectorAll('[data-praca]'));
+  abas.forEach(function(b){
+    b.addEventListener('click', function(){
+      abas.forEach(function(o){ o.setAttribute('aria-pressed', String(o === b)); });
+      faixa.style.opacity = '0';
+      setTimeout(function(){ montar(b.getAttribute('data-praca')); faixa.style.opacity = '1'; }, 170);
+    });
+  });
+  // troca de tema: o widget nao muda sozinho, entao e remontado
+  new MutationObserver(function(){ montar(pracaAtual); })
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['data-tema', 'lang'] });
+  montar('destaques');
+
+  /* ---------- formulario ---------- */
+  var form = document.getElementById('form-contato');
+  var aviso = document.getElementById('form-aviso');
+  /* Endereco do Apps Script da planilha (ver planilha/LEIA-ME.md).
+     Vazio = modo demonstracao: nada sai do navegador. */
+  var PLANILHA_URL = '';
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nome = document.getElementById('c-nome').value.trim();
+    var email = document.getElementById('c-email').value.trim();
+    var tel = document.getElementById('c-tel').value.trim();
+    if (!nome) { aviso.textContent = 'Preencha o seu nome.'; document.getElementById('c-nome').focus(); return; }
+    if (!email && !tel) { aviso.textContent = 'Deixe um e-mail ou um telefone para a gente responder.'; document.getElementById('c-email').focus(); return; }
+    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { aviso.textContent = 'Confira o e-mail.'; document.getElementById('c-email').focus(); return; }
+    if (!document.getElementById('c-lgpd').checked) { aviso.textContent = 'Marque o aceite de dados para enviar.'; return; }
+    if (form.elements.site && form.elements.site.value) return; // campo-isca: so robo preenche
+
+    if (!PLANILHA_URL) { aviso.textContent = 'Demonstração: no site publicado este envio grava na planilha da equipe.'; return; }
+
+    var dados = { tipo: form.getAttribute('data-tipo'), pagina: location.pathname.split('/').pop() || 'index.html', aceite_lgpd: new Date().toISOString() };
+    Array.prototype.forEach.call(form.elements, function(el){
+      if (!el.name || el.name === 'lgpd' || el.name === 'site') return;
+      dados[el.name] = el.tagName === 'SELECT' ? el.options[el.selectedIndex].text : el.value;
+    });
+
+    var botao = form.querySelector('button[type="submit"]');
+    botao.disabled = true;
+    aviso.textContent = 'Enviando...';
+    // text/plain evita a checagem previa de CORS que o Apps Script nao responde
+    fetch(PLANILHA_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(dados) })
+      .then(function(){
+        form.reset();
+        aviso.textContent = dados.tipo === 'assessor'
+          ? 'Recebido. A conversa é reservada: um dos nossos assessores chama você.'
+          : 'Recebido. Um dos nossos assessores entra em contato com você.';
+      })
+      .catch(function(){
+        aviso.textContent = 'Não conseguimos enviar agora. Tente de novo em instantes.';
+      })
+      .then(function(){ botao.disabled = false; });
+  });
+
+  /* ---------- flocos: poeira luminosa em verde Aston ---------- */
+  (function(){
+    var cv = document.getElementById('flocos');
+    if (!cv || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var ctx = cv.getContext('2d', { alpha: true });
+    if (!ctx) return;
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var L = 0, A = 0, flocos = [], rodando = true;
+
+    // tres tons da paleta: o vivo, o primario e o quase branco esverdeado
+    var TONS = [[22,191,169],[0,168,150],[190,235,228]];
+
+    function dimensionar(){
+      L = window.innerWidth; A = window.innerHeight;
+      cv.width = Math.floor(L * dpr); cv.height = Math.floor(A * dpr);
+      cv.style.width = L + 'px'; cv.style.height = A + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function novoFloco(inicial){
+      var t = TONS[(Math.random() * TONS.length) | 0];
+      return {
+        x: Math.random() * L,
+        y: inicial ? Math.random() * A : A + Math.random() * 60,
+        r: 0.5 + Math.random() * 1.9,           // raio
+        vy: 0.10 + Math.random() * 0.38,        // sobem devagar
+        amp: 6 + Math.random() * 26,            // amplitude do bamboleio
+        vel: 0.0006 + Math.random() * 0.0016,   // velocidade do bamboleio
+        fase: Math.random() * Math.PI * 2,
+        a: 0.14 + Math.random() * 0.46,         // opacidade base
+        pulso: 0.0008 + Math.random() * 0.0022, // respiro da opacidade
+        cor: t,
+        brilho: Math.random() < 0.22            // uns poucos com halo
+      };
+    }
+
+    function povoar(){
+      var alvo = Math.round(Math.min(78, Math.max(26, (L * A) / 26000)));
+      flocos = [];
+      for (var i = 0; i < alvo; i++) flocos.push(novoFloco(true));
+    }
+
+    function quadro(t){
+      if (!rodando) return;
+      ctx.clearRect(0, 0, L, A);
+      for (var i = 0; i < flocos.length; i++) {
+        var f = flocos[i];
+        f.y -= f.vy;
+        var x = f.x + Math.sin(t * f.vel + f.fase) * f.amp;
+        var alfa = f.a * (0.62 + 0.38 * Math.sin(t * f.pulso + f.fase));
+
+        if (f.y < -20) { flocos[i] = novoFloco(false); continue; }
+
+        ctx.beginPath();
+        if (f.brilho) { ctx.shadowBlur = 11; ctx.shadowColor = 'rgba(' + f.cor.join(',') + ',.8)'; }
+        else { ctx.shadowBlur = 0; }
+        ctx.fillStyle = 'rgba(' + f.cor.join(',') + ',' + alfa.toFixed(3) + ')';
+        ctx.arc(x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.shadowBlur = 0;
+      requestAnimationFrame(quadro);
+    }
+
+    var esperando;
+    window.addEventListener('resize', function(){
+      clearTimeout(esperando);
+      esperando = setTimeout(function(){ dimensionar(); povoar(); }, 180);
+    });
+    document.addEventListener('visibilitychange', function(){
+      if (document.hidden) { rodando = false; }
+      else if (!rodando) { rodando = true; requestAnimationFrame(quadro); }
+    });
+
+    dimensionar(); povoar(); requestAnimationFrame(quadro);
+  })();
+
+  /* ---------- entrada em cena (nada nasce escondido) ---------- */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var alvos = Array.prototype.slice.call(document.querySelectorAll('.sec-head, .vivo, .tab-rolagem, .quiz-chamada'));
+    var limite = window.innerHeight * 1.05;
+    var abaixo = alvos.filter(function(el){ return el.getBoundingClientRect().top > limite; });
+    abaixo.forEach(function(el){ el.classList.add('pre'); });
+    var obs = new IntersectionObserver(function(ent){
+      ent.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('revela'); en.target.classList.remove('pre'); obs.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:.06 });
+    abaixo.forEach(function(el){ obs.observe(el); });
+    // barras da travessia animam mesmo acima da dobra
+    Array.prototype.slice.call(document.querySelectorAll('.vd')).forEach(function(el){
+      if (el.getBoundingClientRect().top <= limite) el.classList.add('revela');
+    });
+  } else {
+    Array.prototype.slice.call(document.querySelectorAll('.vd')).forEach(function(el){ el.classList.add('revela'); });
+  }
+})();
+</script>
+
+<script>
+/* ---------- prateleira: cada classe abre um painel logo abaixo da sua linha ----------
+   Regra: nenhum card muda de lugar e o card clicado nao se mexe na tela.
+   O painel anterior some na hora; o novo anima crescendo para baixo. */
+(function(){
+  'use strict';
+  var grade = document.querySelector('.classes');
+  if (!grade) return;
+  var cards = Array.prototype.slice.call(grade.querySelectorAll('.cl'));
+  var html = document.documentElement;
+  var painel = null, ativo = null;
+
+  function rolarSeco(dy){
+    if (!dy) return;
+    var suave = html.style.scrollBehavior; html.style.scrollBehavior = 'auto';
+    window.scrollBy(0, dy);
+    html.style.scrollBehavior = suave;
+  }
+  function tirarPainel(){
+    if (painel) { painel.parentNode.removeChild(painel); painel = null; }
+    if (ativo) { ativo.classList.remove('ativo'); ativo.querySelector('.cl-abrir').setAttribute('aria-expanded','false'); ativo = null; }
+  }
+  function ultimoDaLinha(c){
+    var topo = c.offsetTop, ultimo = c;
+    cards.forEach(function(o){ if (o.offsetTop === topo) ultimo = o; });
+    return ultimo;
+  }
+  function montar(c){
+    var mais = c.querySelector('.cl-mais');
+    var p = document.createElement('div');
+    p.className = 'cl-painel';
+    p.id = mais.id + '-painel';
+    p.setAttribute('role','region');
+    p.setAttribute('aria-label', mais.getAttribute('aria-label'));
+    p.innerHTML = '<div><div class="caixa-p"><div class="topo-p">' + c.querySelector('.insignia').outerHTML +
+      '<div><b>' + c.querySelector('.cl-abrir b').textContent + '</b><br><span>' + c.querySelector('.cl-abrir > span:not(.insignia)').textContent + '</span></div>' +
+      '<button class="fechar-p" type="button" aria-label="Fechar">&times;</button></div>' + mais.querySelector('.cols').outerHTML + '</div></div>';
+    p.querySelector('.fechar-p').addEventListener('click', function(){
+      var volta = ativo; fechar(); if (volta) volta.querySelector('.cl-abrir').focus({ preventScroll: true });
+    });
+    return p;
+  }
+  function fechar(){
+    var ref = ativo, antes = ref ? ref.getBoundingClientRect().top : 0;
+    tirarPainel();
+    if (ref) rolarSeco(ref.getBoundingClientRect().top - antes);
+  }
+
+  cards.forEach(function(c){
+    var botao = c.querySelector('.cl-abrir');
+    botao.addEventListener('click', function(){
+      if (ativo === c) { fechar(); return; }
+      var antes = c.getBoundingClientRect().top;
+      tirarPainel();
+      rolarSeco(c.getBoundingClientRect().top - antes); // painel antigo acima: o card nao pode subir
+
+      ativo = c; c.classList.add('ativo'); botao.setAttribute('aria-expanded','true');
+      painel = montar(c);
+      var ultimo = ultimoDaLinha(c);
+      ultimo.parentNode.insertBefore(painel, ultimo.nextSibling);
+      painel.style.setProperty('--seta', Math.max(24, c.offsetLeft - grade.offsetLeft + c.offsetWidth / 2 - 6) + 'px');
+      void painel.offsetHeight;
+      painel.classList.add('aberto');
+
+      // so rola se o painel nao couber, e nunca a ponto de esconder o card clicado
+      var alvo = painel, feito = false;
+      function caber(){
+        if (feito || painel !== alvo) return; feito = true;
+        var fundo = alvo.getBoundingClientRect().bottom, topoCard = c.getBoundingClientRect().top;
+        var falta = fundo - (window.innerHeight - 20), folga = topoCard - 140;
+        if (falta > 0 && folga > 0) window.scrollBy({ top: Math.min(falta, folga), behavior: 'smooth' });
+      }
+      alvo.addEventListener('transitionend', function fim(e){ if (e.target === alvo) { alvo.removeEventListener('transitionend', fim); caber(); } });
+      setTimeout(caber, 700);
+    });
+  });
+
+  // se a tela mudar de largura, a linha muda: reposiciona o painel aberto
+  var largura = window.innerWidth;
+  window.addEventListener('resize', function(){
+    if (!ativo || window.innerWidth === largura) return;
+    largura = window.innerWidth;
+    var c = ativo; tirarPainel(); c.querySelector('.cl-abrir').click();
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && ativo) fechar(); });
+})();
+</script>
+</body>
+</html>

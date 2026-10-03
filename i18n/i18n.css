@@ -1,0 +1,59 @@
+/* Vectrum Capital · seletor de idioma (mesma linguagem do botão de tema) */
+.nav-lingua{position:relative;flex:none}
+.nav-idioma{background:none;border:1px solid var(--line);border-radius:2px;color:var(--ink-2);
+  height:38px;padding:0 11px 0 10px;cursor:pointer;display:flex;align-items:center;gap:7px;
+  font-family:var(--f-mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;
+  transition:border-color .25s var(--ease),color .25s var(--ease)}
+.nav-idioma:hover,.nav-idioma[aria-expanded="true"]{border-color:var(--green-live);color:var(--ink-0)}
+.nav-idioma svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5}
+.nav-idioma .idioma-seta{width:9px;height:9px;stroke-width:2;transition:transform .25s var(--ease)}
+.nav-idioma[aria-expanded="true"] .idioma-seta{transform:rotate(180deg)}
+.idioma-menu{position:absolute;top:calc(100% + 8px);right:0;z-index:60;min-width:196px;
+  background:var(--card);border:1px solid var(--line);border-radius:2px;padding:6px;
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.45);animation:idioma-entra .22s var(--ease)}
+.idioma-menu[hidden]{display:none}
+@keyframes idioma-entra{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.idioma-menu button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;
+  background:none;border:0;border-radius:2px;padding:10px 12px;cursor:pointer;text-align:left;
+  font-family:var(--f-ui);font-size:14px;color:var(--ink-1);transition:background .2s,color .2s}
+.idioma-menu button:hover,.idioma-menu button:focus-visible{background:var(--card-hi);color:var(--ink-0);outline:none}
+.idioma-menu .im-sigla{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-4)}
+.idioma-menu button[aria-checked="true"]{color:var(--green-live);font-weight:600}
+.idioma-menu button[aria-checked="true"] .im-sigla{color:var(--green-live)}
+.idioma-menu button[aria-checked="true"]::before{content:"";position:absolute;left:0;width:2px;height:18px;background:var(--green-live)}
+.idioma-menu button{position:relative}
+@media(max-width:1060px){ .nav-lingua{margin-left:auto} .nav-lingua + .nav-burger{margin-left:8px} }
+/* celular: a barra ganha dois botões, então tudo aperta um pouco para caber sem rolar de lado */
+@media(max-width:560px){
+  .nav-in{gap:7px}
+  .nav .lockup{gap:10px}
+  .nav .lockup .vname{font-size:23px}
+  .nav-tema{width:36px;height:36px}
+  .nav-idioma{height:36px;padding:0 8px;gap:5px}
+  .nav-idioma .idioma-seta{display:none}
+  .nav-lingua + .nav-burger{margin-left:0;padding:8px 10px}
+}
+@media(max-width:380px){
+  .nav-idioma .idioma-sigla{display:none}
+  .nav .lockup{gap:8px}
+  .nav .lockup .vname{font-size:21px}
+}
+
+/* aviso das páginas legais quando traduzidas */
+.i18n-aviso-legal{margin:14px 0 0;padding:12px 14px;border-left:2px solid var(--green-live);
+  background:var(--card-hi);color:var(--ink-2);font-family:var(--f-ui);font-size:13.5px;line-height:1.55}
+
+/* mandarim: as fontes da marca não têm ideogramas, então o sistema entra no lugar certo */
+:root[lang="zh-CN"]{
+  --f-ui:"Schibsted Grotesk","PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-disp:"Fraunces","Songti SC","Noto Serif SC","STSong",Georgia,serif;
+}
+:root[lang="zh-CN"] body{letter-spacing:.01em;word-break:normal;line-break:strict}
+
+/* quem escolheu outro idioma não vê o português piscar antes da troca */
+.i18n-carregando body{opacity:0}
+body{transition:opacity .18s ease}
+.nav-burger{white-space:nowrap}
+.idioma-menu .im-bandeira{flex:none;width:21px;height:14px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.idioma-menu .im-nome{margin-right:auto}
+.nav-idioma svg.idioma-bandeira{width:21px;height:14px;stroke:none;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}

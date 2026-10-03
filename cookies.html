@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- previa interna: fora dos buscadores ate a casa decidir publicar -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta data-i18n-a="content:k02621931" name="description" content="O que o site da Vectrum Capital guarda no seu navegador.">
+<meta name="theme-color" content="#F5F7F6">
+<script>/* tema antes da pintura: o site nasce claro; quem escolheu o escuro volta no escuro */try{var tv=localStorage.getItem('vectrum-tema-v2');if(tv==='escuro')document.documentElement.removeAttribute('data-tema');else if(tv==='verde')document.documentElement.setAttribute('data-tema','verde');if((localStorage.getItem('vectrum-idioma')||'pt')!=='pt')document.documentElement.className+=' i18n-carregando'}catch(e){}</script>
+<link rel="stylesheet" href="i18n/i18n.css?v=4">
+<script src="i18n/i18n.js?v=4" defer></script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<meta data-i18n-a="content:k70225f04" property="og:title" content="Política de Cookies · Vectrum">
+<meta data-i18n-a="content:k02621931" property="og:description" content="O que o site da Vectrum Capital guarda no seu navegador.">
+<meta property="og:type" content="website">
+<title data-i18n="k70225f04">Política de Cookies · Vectrum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+:root{
+  /* texto mais claro e mais legivel que a versao anterior */
+  --ink-0:#FFFFFF; --ink-1:#EDEFEE; --ink-2:#C8CCCB; --ink-3:#9AA3A1; --ink-4:#848D8B; --ink-5:#7A8381;
+
+  --green:#00665E; --green-live:#16BFA9; --green-deep:#002420; --green-abyss:#001210; --surface:#00231F;
+  --metal:#B8A567; --preto:#121212;
+  --up:#16BFA9; --down:#E8685C;
+
+  --bg:#000000; --card:#080A0A; --card-hi:#0E1312;
+  --line:rgba(200,204,203,.13); --line-soft:rgba(200,204,203,.06);
+
+  --f-disp:"Fraunces",Georgia,serif;
+  --f-ui:"Schibsted Grotesk",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --f-marca:"Cormorant Garamond",Georgia,serif;
+
+  /* superficies que o tema claro precisa inverter */
+  --nav-bg:rgba(0,0,0,.84); --nav-bg-mob:rgba(0,0,0,.98);
+  --selo-bg:rgba(0,0,0,.6); --selo-bd:rgba(184,165,103,.3); --selo-tx:rgba(184,165,103,.92);
+  --faixa-1:linear-gradient(180deg,#000,#01100E 52%,#000);
+  --faixa-2:linear-gradient(180deg,#000,#01100E 50%,#000);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(0,102,94,.2), transparent 64%),#000;
+  --carreira-bg:linear-gradient(180deg,#000,#01100E 40%,#001A17);
+  --foco-bg:#0E1312;
+  --ticker-bg:#050707; --rodape-bg:#020303; --campo-bg:#0A0D0D;
+  --tiras-bg:#060808; --tira-bg:#0C110F; --galeria-bg:#0A0E0D; --hover-suave:rgba(255,255,255,.03);
+
+  --pad:clamp(20px,5vw,64px);
+  --nav-h:76px;
+  --ease:cubic-bezier(.16,.84,.44,1);
+}
+/* ====== TEMA CLARO ======
+   O site nasce claro (pedido da Victoria, 27/09). O escuro e opcional e entra so quando a pessoa clica.
+   Aqui so os tokens mudam: nenhuma regra de layout e reescrita. */
+:root[data-tema="claro"]{
+  --ink-0:#0B1110; --ink-1:#18211F; --ink-2:#343F3D; --ink-3:#48524F; --ink-4:#55615E; --ink-5:#5E6A67;
+
+  --green:#00564F; --green-live:#00786C; --metal:#7A6829;
+  --up:#0B7D6E; --down:#BE4237;
+
+  --bg:#F5F7F6; --card:#FFFFFF; --card-hi:#ECF1EF;
+  --line:rgba(11,17,16,.16); --line-soft:rgba(11,17,16,.07);
+
+  --nav-bg:rgba(245,247,246,.86); --nav-bg-mob:rgba(245,247,246,.98);
+  --selo-bg:rgba(122,104,41,.09); --selo-bd:rgba(122,104,41,.34); --selo-tx:#6B5A22;
+  --faixa-1:linear-gradient(180deg,#EDF2F0,#F7FAF9 52%,#EDF2F0);
+  --faixa-2:linear-gradient(180deg,#EDF2F0,#F7FAF9 50%,#EDF2F0);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(0,102,94,.10), transparent 64%),#F0F4F3;
+  --carreira-bg:linear-gradient(180deg,#EDF2F0,#F3F7F6 40%,#E6EFED);
+  --foco-bg:#FFFFFF;
+  --ticker-bg:#EDF1F0; --rodape-bg:#E7ECEA; --campo-bg:#FFFFFF;
+  --tiras-bg:#E9EEEC; --tira-bg:#DDE5E3; --galeria-bg:#E4EBE9; --hover-suave:rgba(11,17,16,.05);
+}
+/* ====== TEMA VERDE (28/09) ======
+   Terceira opção: o verde Aston Martin da marca (#00665E) vira o ambiente.
+   Parte do escuro (texto claro) e troca só as superfícies e os acentos. */
+:root[data-tema="verde"]{
+  --green:#008C80; --green-live:#7FE3D2; --green-deep:#00241F; --green-abyss:#001A17; --surface:#003A34;
+  --up:#7FE3D2; --down:#FF9A8F;
+  --bg:#00332E; --card:#003D37; --card-hi:#004841;
+  --line:rgba(255,255,255,.15); --line-soft:rgba(255,255,255,.07);
+  --nav-bg:rgba(0,51,46,.88); --nav-bg-mob:rgba(0,51,46,.98);
+  --selo-bg:rgba(0,36,31,.55);
+  --faixa-1:linear-gradient(180deg,#00332E,#003E38 52%,#00332E);
+  --faixa-2:linear-gradient(180deg,#00332E,#003E38 50%,#00332E);
+  --faixa-3:radial-gradient(62% 70% at 50% 0%, rgba(127,227,210,.14), transparent 64%),#00332E;
+  --carreira-bg:linear-gradient(180deg,#00332E,#003A34 40%,#00443D);
+  --foco-bg:#003D37;
+  --ticker-bg:#002C28; --rodape-bg:#002622; --campo-bg:#003A34;
+  --tiras-bg:#002E29; --tira-bg:#003D37; --galeria-bg:#003530; --hover-suave:rgba(255,255,255,.05);
+}
+/* o veu sobre foto continua escuro nos dois temas: ele protege texto branco sobre imagem */
+/* rotulo verde sobre foto: a foto continua escura, entao o verde vivo do tema escuro e o que aparece */
+:root[data-tema="claro"] .socio .galeria .nome-sobre span,
+:root[data-tema="claro"] .faixa-img .frase small{color:#16BFA9}
+/* cartoes das faixas: o veu escuro sobre card claro virava cinza sujo, no claro a mesa some no papel */
+:root[data-tema="claro"] .fx .arte{opacity:.34;filter:saturate(.5) contrast(1.02)}
+:root[data-tema="claro"] .fx:hover .arte{opacity:.5}
+:root[data-tema="claro"] .fx .arte::after{background:linear-gradient(178deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.78) 42%, rgba(255,255,255,.97) 70%, #FFFFFF 100%)}
+:root[data-tema="claro"] .fx .brasao{filter:drop-shadow(0 6px 14px rgba(0,36,32,.28)) drop-shadow(0 0 18px rgba(22,191,169,.12))}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px)}
+body{
+  margin:0;background:var(--bg);color:var(--ink-2);
+  font-family:var(--f-ui);font-weight:400;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:1260px;margin:0 auto;padding-inline:var(--pad)}
+h1,h2,h3,h4{margin:0;text-wrap:balance;color:var(--ink-1)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* tipografia com carater: display Fraunces, corpo grotesca, numeros mono */
+h1,h2{font-family:var(--f-disp);font-weight:500;font-variation-settings:"SOFT" 0,"WONK" 0;letter-spacing:-.012em}
+h3{font-family:var(--f-ui);font-weight:600;letter-spacing:-.005em}
+.num-mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+.eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--green-live);margin:0}
+.eyebrow.metal{color:var(--metal)}
+.lede{color:var(--ink-3);font-size:17.5px;max-width:60ch;line-height:1.72}
+strong{color:var(--ink-1);font-weight:600}
+
+/* marca */
+.vsym{fill:currentColor}   /* fill precisa ser herdado: nao atravessa o shadow do <use> */
+.xp{fill:currentColor}
+.vname{font-family:var(--f-marca);font-weight:300;line-height:1;letter-spacing:.055em;white-space:nowrap}
+.vdesc{font-family:var(--f-ui);font-weight:500;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;white-space:nowrap}
+
+/* lockup com a XP, padrao dos credenciados: fio vertical, alinhado pela altura */
+.lockup{display:flex;align-items:center;gap:clamp(14px,1.9vw,24px)}
+.lockup .lk-v{display:flex;align-items:center;gap:clamp(12px,1.5vw,19px);color:var(--ink-0)}
+.lockup .lk-fio{width:1px;background:var(--line);flex:none}
+.lockup .xp{width:auto;flex:none;color:var(--ink-1)}
+
+/* slot */
+.slot::after{
+  content:attr(data-slot);position:absolute;top:9px;left:9px;z-index:4;
+  font-family:var(--f-mono);font-size:8.5px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--selo-tx);background:var(--selo-bg);border:1px solid var(--selo-bd);
+  padding:3px 7px;border-radius:2px;pointer-events:none;
+}
+.foto-vazia{background:radial-gradient(70% 90% at 30% 10%, rgba(22,191,169,.10), transparent 62%),linear-gradient(160deg,#0E1413,#060909);position:relative;overflow:hidden}
+
+/* ================= NAV ================= */
+.nav{position:sticky;top:0;z-index:70;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:clamp(12px,2.2vw,34px);height:var(--nav-h)}
+.nav-marca{text-decoration:none;flex:none}
+.nav-marca .vsym{height:40px}
+.nav-marca .vname{font-size:27px;letter-spacing:.07em}
+.nav-marca .vdesc{font-size:6.5px;letter-spacing:.46em;padding-left:.46em;margin-top:5px;color:var(--ink-4)}
+.nav-marca .lk-fio{height:38px}
+.nav-marca .xp{height:35px}
+.nav-links{display:flex;align-items:center;gap:clamp(9px,1.5vw,24px);margin-left:auto}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--ink-3);text-decoration:none;
+  padding:9px 2px;position:relative;transition:color .22s;white-space:nowrap;
+}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:1px;background:var(--green-live);transition:right .32s var(--ease)}
+.nav-links a:hover{color:var(--ink-0)}
+.nav-links a:hover::after{right:0}
+.nav-links a.destaque{color:var(--green-live);font-weight:600}
+.nav-cta{
+  flex:none;background:var(--green);color:#fff;text-decoration:none;font-family:var(--f-ui);
+  font-size:13.5px;font-weight:600;padding:12px 22px;border-radius:2px;
+  transition:background .24s,transform .24s,box-shadow .24s;white-space:nowrap;
+}
+.nav-cta:hover{background:#007D72;transform:translateY(-1px);box-shadow:0 8px 22px -8px rgba(0,102,94,.8)}
+.nav-tema{background:none;border:1px solid var(--line);border-radius:2px;color:var(--ink-2);
+  width:38px;height:38px;flex:none;cursor:pointer;display:grid;place-items:center;
+  transition:border-color .25s var(--ease),color .25s var(--ease)}
+.nav-tema:hover{border-color:var(--green-live);color:var(--ink-0)}
+.nav-tema svg{width:17px;height:17px;fill:currentColor}
+/* o ícone mostra o PRÓXIMO tema: claro → escuro (lua) → verde (bolinha verde) → claro (sol) */
+.nav-tema .t-lua,.nav-tema .t-sol{display:none}
+:root[data-tema="claro"] .nav-tema .t-lua{display:block}
+:root[data-tema="claro"] .nav-tema .t-verde{display:none}
+:root[data-tema="verde"] .nav-tema .t-sol{display:block}
+:root[data-tema="verde"] .nav-tema .t-verde{display:none}
+.nav-burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:2px;color:var(--ink-1);padding:9px 13px;cursor:pointer;font-family:var(--f-ui);font-size:13px;font-weight:500}
+@media(max-width:1060px){
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--nav-bg-mob);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 18px;margin:0}
+  .nav-links.aberto{display:flex}
+  .nav-links a{width:100%;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .nav-burger{display:block}.nav-cta{display:none}
+}
+
+/* ================= HERO ================= */
+.hero{position:relative;padding-block:clamp(52px,8vw,96px) clamp(44px,6vw,78px);overflow:hidden}
+.hero-fundo{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(56% 60% at 74% 16%, rgba(0,102,94,.32), transparent 62%),
+             radial-gradient(46% 50% at 12% 86%, rgba(22,191,169,.10), transparent 60%),
+             var(--faixa-1)}
+.hero-grade{position:absolute;inset:0;z-index:0;opacity:.55;
+  background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:68px 68px;mask-image:radial-gradient(70% 70% at 50% 40%,#000,transparent)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,4.6vw,64px);align-items:center}
+@media(max-width:940px){.hero-in{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(40px,6.2vw,76px);line-height:1.04;margin-block:20px 22px;color:var(--ink-0);font-weight:500}
+.hero h1 em{font-style:italic;color:var(--green-live);font-weight:500}
+.hero .sub{color:var(--ink-2);font-size:clamp(16px,1.5vw,18.5px);max-width:50ch;line-height:1.7}
+.hero-botoes{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:0;cursor:pointer;
+  font-family:var(--f-ui);font-size:14.5px;font-weight:600;
+  padding:15px 28px;border-radius:2px;position:relative;overflow:hidden;
+  transition:background .24s,transform .24s,border-color .24s,color .24s,box-shadow .24s;
+}
+.btn-1{background:var(--green);color:#fff}
+.btn-1:hover{background:#007D72;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(0,102,94,.9)}
+.btn-2{background:transparent;color:var(--ink-1);border:1px solid rgba(200,204,203,.3)}
+.btn-2:hover{border-color:var(--green-live);color:var(--green-live);transform:translateY(-2px);background:rgba(22,191,169,.06)}
+.btn:focus-visible{outline:2px solid var(--green-live);outline-offset:3px}
+
+.hero-visual{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.hero-visual img,.hero-visual video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.1s var(--ease)}
+.hero-visual:hover img,.hero-visual:hover video{transform:scale(1.06)}
+.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,.62) 100%);pointer-events:none}
+.hero-visual .legenda{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 22px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+@media(max-width:940px){.hero-visual{aspect-ratio:16/10}}
+
+/* ================= NUMEROS ================= */
+.numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:1px;background:var(--line-soft);border-block:1px solid var(--line)}
+.num{background:var(--card);padding:clamp(24px,3vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:7px;position:relative;transition:background .35s}
+.num::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 100% at 50% 0%, rgba(22,191,169,.10), transparent 70%);opacity:0;transition:opacity .4s}
+.num:hover{background:var(--card-hi)}
+.num:hover::before{opacity:1}
+.num b{font-family:var(--f-mono);font-weight:700;font-size:clamp(28px,3.6vw,42px);line-height:1;color:var(--ink-0);letter-spacing:-.02em;position:relative}
+.num span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);position:relative}
+
+/* ================= SECOES ================= */
+.sec{padding-block:clamp(60px,8vw,110px);position:relative}
+.sec-linha{border-top:1px solid var(--line)}
+.sec-head{max-width:60ch;margin-bottom:clamp(30px,4vw,52px)}
+.sec-head h2{font-size:clamp(31px,4.4vw,52px);line-height:1.1;margin-block:14px 17px;color:var(--ink-0);font-weight:500}
+.sec-head h2 em{font-style:italic;color:var(--green-live)}
+.faixa-escura{background:var(--faixa-2)}
+.faixa-verde{background:var(--faixa-3)}
+
+/* ============ BLOCO VIVO: base de todo card ============ */
+.vivo{
+  position:relative;background:var(--card);border:1px solid var(--line);border-radius:3px;
+  overflow:hidden;isolation:isolate;
+  transition:transform .42s var(--ease),border-color .42s,background .42s,box-shadow .42s;
+}
+.vivo::before{ /* luz que segue o ponteiro */
+  content:"";position:absolute;inset:-1px;z-index:0;pointer-events:none;opacity:0;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%), rgba(22,191,169,.16), transparent 62%);
+  transition:opacity .45s;
+}
+.vivo::after{ /* filete superior que cresce */
+  content:"";position:absolute;top:0;left:0;height:2px;width:0;z-index:2;
+  background:linear-gradient(90deg,var(--green-live),rgba(22,191,169,0));
+  transition:width .55s var(--ease);
+}
+.vivo:hover{transform:translateY(-5px);border-color:rgba(22,191,169,.34);background:var(--card-hi);box-shadow:0 22px 44px -26px rgba(0,0,0,.95)}
+.vivo:hover::before{opacity:1}
+.vivo:hover::after{width:100%}
+.vivo > *{position:relative;z-index:1}
+
+/* ================= DIFERENCIAIS ================= */
+.grade-6{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:clamp(14px,1.7vw,20px)}
+.dcard{padding:clamp(24px,2.7vw,32px);display:flex;flex-direction:column;gap:13px}
+.dcard .ico{width:30px;height:30px;color:var(--green-live);transition:transform .45s var(--ease),color .3s}
+.dcard:hover .ico{transform:translateY(-2px) scale(1.08)}
+.dcard .ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.dcard h3{font-size:18px;color:var(--ink-0)}
+.dcard p{font-size:15.5px;line-height:1.66;color:var(--ink-2)}
+.dcard .grifo{color:var(--green-live);font-weight:600}
+
+/* ================= FAIXAS ================= */
+.faixas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(12px,1.5vw,16px)}
+.fx{padding:clamp(30px,3.4vw,44px);display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;min-height:clamp(260px,26vw,330px);justify-content:flex-end}
+/* arte de fundo: malha geométrica que ganha densidade conforme o nível sobe */
+.fx .arte{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-size:cover;background-position:center;
+  opacity:.50;filter:saturate(.62) contrast(1.06);
+  transition:opacity .7s var(--ease),transform 1.5s var(--ease),filter .7s;
+  transform:scale(1.05);
+}
+/* o véu mantém o texto legível e deixa a mesa aparecer só no topo do card */
+.fx .arte::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(178deg, rgba(0,0,0,.18) 0%, rgba(4,10,9,.72) 46%, rgba(4,10,9,.96) 78%, #040A09 100%);
+}
+.fx:hover .arte{opacity:.78;transform:scale(1.1);filter:saturate(.85) contrast(1.1)}
+.fx > *:not(.arte){position:relative;z-index:1}
+/* selo sólido: massa de metal, não contorno */
+.fx .brasao{width:78px;height:78px;margin-bottom:16px;display:block;position:relative;
+  filter:drop-shadow(0 6px 16px rgba(0,0,0,.95)) drop-shadow(0 0 22px rgba(22,191,169,.18))}
+.fx .brasao svg{width:100%;height:100%;overflow:visible;transition:transform .55s var(--ease)}
+.fx .brasao .corpo{fill:url(#metal);transition:fill .5s}
+.fx .brasao .chapa{fill:url(#chapa)}
+.fx .brasao .aro{fill:none;stroke:rgba(255,255,255,.34);stroke-width:1.1}
+.fx .brasao .vinco{fill:none;stroke:rgba(0,0,0,.42);stroke-width:1.4}
+.fx .brasao .cravo{fill:#0B1413}
+.fx .brasao .lasca{fill:rgba(255,255,255,.20)}
+.fx .brasao .numeral{
+  font-family:var(--f-mono);font-size:15px;font-weight:700;letter-spacing:.04em;
+  fill:#04100E;text-anchor:middle;
+}
+.fx:hover .brasao svg{transform:scale(1.07) rotate(-4deg)}
+.fx:hover .brasao .corpo{fill:url(#metal-hi)}
+.fx .valor{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--green-live);font-weight:500}
+.fx .nivel{font-family:var(--f-disp);font-size:29px;color:var(--ink-0);font-weight:500;line-height:1.1}
+.fx ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.fx li{font-size:15px;color:var(--ink-2);padding-left:18px;position:relative;line-height:1.55}
+.carreira .sub-titulo{font-family:var(--f-disp);font-size:clamp(21px,2.6vw,31px);line-height:1.2;color:var(--ink-2);font-weight:400;margin:-4px 0 18px}
+.carreira .sub-titulo em{font-style:italic;color:var(--green-live)}
+.fx li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--green-live);transform:rotate(45deg);transition:transform .4s var(--ease)}
+.fx:hover li::before{transform:rotate(135deg)}
+
+/* ================= FUNDADORES ================= */
+.socios{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:clamp(16px,2vw,24px)}
+.socio{display:flex;flex-direction:column}
+.socio .galeria{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--galeria-bg)}
+.socio .galeria img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .72s var(--ease),transform 1.3s var(--ease)}
+.socio .galeria img.ativa{opacity:1;transform:scale(1)}
+.socio .galeria .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.82) 100%);z-index:2;pointer-events:none}
+.socio .galeria .contador{position:absolute;top:12px;right:13px;z-index:3;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.72);background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14);padding:3px 8px;border-radius:2px}
+.socio .galeria .nome-sobre{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 20px 16px;display:flex;flex-direction:column;gap:3px}
+.socio .galeria .nome-sobre b{font-family:var(--f-disp);font-size:30px;font-weight:500;color:#fff;line-height:1.05}
+.socio .galeria .nome-sobre span{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-live)}
+
+/* miniaturas: a selecionada se destaca */
+.tiras{display:flex;gap:7px;padding:12px 14px;background:var(--tiras-bg);border-bottom:1px solid var(--line-soft);overflow-x:auto;scrollbar-width:none}
+.tiras::-webkit-scrollbar{display:none}
+.tira{
+  flex:0 0 auto;width:46px;height:46px;border-radius:2px;overflow:hidden;cursor:pointer;position:relative;
+  border:1px solid var(--line);background:var(--tira-bg);padding:0;
+  opacity:.48;filter:grayscale(.55);
+  transition:opacity .35s,filter .35s,transform .35s var(--ease),border-color .35s,width .35s var(--ease),height .35s var(--ease);
+}
+.tira img{width:100%;height:100%;object-fit:cover}
+.tira:hover{opacity:.85;filter:grayscale(.15);transform:translateY(-2px)}
+.tira[aria-selected="true"]{opacity:1;filter:none;border-color:var(--green-live);width:58px;height:58px;box-shadow:0 0 0 1px rgba(22,191,169,.45),0 8px 20px -10px rgba(22,191,169,.7)}
+.tira.vazia{display:grid;place-items:center}
+.tira.vazia span{font-family:var(--f-mono);font-size:15px;color:var(--ink-5)}
+.tira:focus-visible{outline:2px solid var(--green-live);outline-offset:2px}
+
+.socio .corpo{padding:clamp(20px,2.3vw,26px);display:flex;flex-direction:column;gap:14px;flex:1}
+.socio .bio{font-size:15px;line-height:1.65;color:var(--ink-2)}
+.socio .skills{display:flex;flex-wrap:wrap;gap:6px}
+.socio .skills span{font-family:var(--f-mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);border-radius:2px;padding:5px 9px;transition:border-color .3s,color .3s,background .3s}
+.socio:hover .skills span{border-color:rgba(22,191,169,.24)}
+.socio .trilha{margin-top:auto;padding-top:15px;border-top:1px solid var(--line-soft);display:flex;flex-direction:column;gap:7px}
+.socio .trilha i{font-style:normal;font-size:13.5px;color:var(--ink-4);display:flex;gap:12px}
+.socio .trilha i b{font-family:var(--f-mono);color:var(--ink-2);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;min-width:82px;padding-top:2px}
+
+/* ================= CLASSES ================= */
+.classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(186px,1fr));gap:clamp(10px,1.2vw,14px)}
+.cl{padding:22px 20px 24px;display:flex;flex-direction:column;gap:7px}
+.cl b{font-size:15.5px;font-weight:600;color:var(--ink-1)}
+.cl span{font-size:13px;color:var(--ink-4);line-height:1.5}
+
+/* insígnias: desenhadas com o vocabulário da marca — ângulos, losangos e retas */
+.insignia{
+  width:38px;height:38px;margin-bottom:9px;position:relative;
+  display:grid;place-items:center;flex:none;
+}
+.insignia::before{ /* moldura em losango, o motivo da casa */
+  content:"";position:absolute;inset:2px;border:1px solid var(--line);
+  transform:rotate(45deg);border-radius:2px;
+  transition:border-color .45s var(--ease),transform .55s var(--ease),background .45s;
+}
+.cl:hover .insignia::before,.fx:hover .insignia::before{
+  border-color:rgba(22,191,169,.42);transform:rotate(90deg);
+  background:radial-gradient(60% 60% at 50% 50%, rgba(22,191,169,.10), transparent 70%);
+}
+.insignia svg{
+  position:relative;width:19px;height:19px;
+  fill:none;stroke:var(--green-live);stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .45s var(--ease),stroke .3s;
+}
+.cl:hover .insignia svg,.fx:hover .insignia svg{transform:scale(1.12)}
+.insignia svg .cheio{fill:var(--green-live);stroke:none}
+
+/* ================= CARREIRA ================= */
+.carreira{background:var(--carreira-bg)}
+.verdade{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(12px,1.5vw,16px)}
+.vd{padding:clamp(22px,2.5vw,28px);display:flex;flex-direction:column;gap:9px}
+.vd .fase{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--metal);font-weight:500}
+.vd b{font-family:var(--f-disp);font-size:26px;font-weight:500;color:var(--ink-0);line-height:1.12}
+.vd p{font-size:14.5px;color:var(--ink-2);line-height:1.62}
+.vd .barra{height:3px;background:rgba(200,204,203,.1);border-radius:2px;overflow:hidden;margin-top:4px}
+.vd .barra i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green-live));width:0;transition:width 1.1s var(--ease)}
+.vd.revela .barra i,.vd:hover .barra i{width:var(--w,25%)}
+
+.tab-rolagem{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.comparativo{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.comparativo th,.comparativo td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line-soft)}
+.comparativo thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-4);font-weight:500;border-bottom:1px solid var(--line)}
+.comparativo tbody th{font-weight:400;color:var(--ink-3);font-size:14.5px}
+.comparativo tbody tr{transition:background .3s}
+.comparativo tbody tr:hover{background:rgba(22,191,169,.04)}
+.comparativo .assessor{color:var(--ink-0);font-weight:500}
+.comparativo .banco{color:var(--ink-4)}
+.comparativo tr.destaque td,.comparativo tr.destaque th{background:rgba(22,191,169,.07)}
+.comparativo tr.destaque .assessor{color:var(--green-live);font-weight:600}
+
+.quiz-chamada{
+  margin-top:clamp(28px,3.4vw,44px);border:1px solid rgba(22,191,169,.32);border-radius:3px;
+  background:radial-gradient(70% 150% at 10% 0%, rgba(0,102,94,.28), transparent 68%),var(--card);
+  padding:clamp(26px,3.4vw,46px);
+  display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,40px);align-items:center;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.quiz-chamada .txt{flex:1 1 320px;display:flex;flex-direction:column;gap:12px}
+.quiz-chamada h3{font-family:var(--f-disp);font-size:clamp(26px,3.2vw,38px);font-weight:500;color:var(--ink-0);line-height:1.12}
+.quiz-chamada p{font-size:15.5px;color:var(--ink-2);max-width:46ch}
+.quiz-passos{display:flex;flex-wrap:wrap;gap:7px;margin-top:5px}
+.quiz-passos span{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:2px;padding:6px 10px;transition:border-color .3s,color .3s}
+.quiz-chamada:hover .quiz-passos span{border-color:rgba(22,191,169,.3);color:var(--ink-2)}
+
+/* ================= MIDIA ================= */
+.midia{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:clamp(14px,1.7vw,20px)}
+.mcard{display:flex;flex-direction:column}
+.mcard .capa{aspect-ratio:16/10;position:relative;overflow:hidden}
+.mcard .capa img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.1s var(--ease),filter .5s}
+.mcard:hover .capa img{transform:scale(1.07)}
+.mcard .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55));pointer-events:none}
+/* tarja de exemplo: sai quando entrar materia real */
+.mcard .tarja{
+  position:absolute;top:10px;left:10px;z-index:3;
+  font-family:var(--f-mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--selo-tx);background:var(--selo-bg);border:1px solid var(--selo-bd);
+  padding:4px 8px;border-radius:2px;
+}
+.mcard .txt{padding:19px 21px 23px;display:flex;flex-direction:column;gap:10px;flex:1}
+.mcard .txt p{font-size:15px;color:var(--ink-2);line-height:1.5}
+.mcard .veic{margin-top:auto;padding-top:13px;border-top:1px solid var(--line-soft);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4)}
+
+/* ================= MAPA ================= */
+.mapa-bloco{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,60px);align-items:center}
+@media(max-width:900px){.mapa-bloco{grid-template-columns:1fr}}
+.mapa-caixa{position:relative;display:grid;place-items:center;padding:clamp(14px,2vw,26px)}
+.mapa-svg{width:100%;max-width:420px;height:auto;overflow:visible}
+.mapa-svg .pais{fill:#0B1110;stroke:rgba(200,204,203,.22);stroke-width:1.2;stroke-linejoin:round}
+.mapa-svg .sp{fill:var(--green);stroke:var(--green-live);stroke-width:1.4;opacity:0;animation:acende 1s var(--ease) .35s forwards}
+@keyframes acende{to{opacity:1}}
+.mapa-svg .pulso{fill:none;stroke:var(--green-live);stroke-width:1.5;transform-origin:268px 322px;animation:pulsar 2.9s ease-out infinite}
+@keyframes pulsar{0%{r:7;opacity:.85}70%{r:30;opacity:0}100%{r:30;opacity:0}}
+.mapa-svg .ponto{fill:var(--green-live)}
+.mapa-svg .risca{stroke:var(--green-live);stroke-width:1;stroke-dasharray:3 3}
+.mapa-svg .rotulo{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:var(--green-live)}
+.mapa-svg .rotulo-sub{font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;fill:var(--ink-4)}
+.mapa-legenda{display:flex;flex-direction:column;gap:14px}
+.praca{padding:clamp(20px,2.3vw,26px);display:flex;align-items:flex-start;gap:16px}
+.praca .marcador{width:10px;height:10px;border-radius:50%;background:var(--green-live);margin-top:7px;flex:none;box-shadow:0 0 0 4px rgba(22,191,169,.15)}
+.praca.futura .marcador{background:transparent;border:1px solid var(--ink-4);box-shadow:none}
+.praca .txt{display:flex;flex-direction:column;gap:5px}
+.praca b{font-family:var(--f-disp);font-size:24px;font-weight:500;color:var(--ink-0)}
+.praca span{font-size:14.5px;color:var(--ink-3);line-height:1.55}
+.praca .marca-tempo{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--metal)}
+
+/* ================= FORM ================= */
+.mel{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-bloco{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(30px,4vw,64px);align-items:start}
+@media(max-width:880px){.form-bloco{grid-template-columns:1fr}}
+form{display:flex;flex-direction:column;gap:15px}
+.campo{display:flex;flex-direction:column;gap:7px}
+.campo label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-4);font-weight:500}
+.campo input,.campo select{
+  font-family:var(--f-ui);font-size:15.5px;font-weight:400;color:var(--ink-1);
+  background:var(--campo-bg);border:1px solid var(--line);border-radius:2px;padding:14px 15px;
+  transition:border-color .25s,background .25s,box-shadow .25s;
+}
+.campo input::placeholder{color:var(--ink-5)}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--green-live);background:var(--foco-bg);box-shadow:0 0 0 3px rgba(22,191,169,.1)}
+.campo-2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:540px){.campo-2{grid-template-columns:1fr}}
+.lgpd{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-4);line-height:1.55;margin-top:5px}
+.lgpd input{margin-top:3px;accent-color:var(--green);flex:none;width:16px;height:16px}
+.lgpd a{color:var(--ink-2)}
+.ouvidoria{margin-top:28px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:var(--card)}
+.ouvidoria b{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);margin-bottom:6px}
+.ouvidoria span{font-family:var(--f-mono);font-size:19px;color:var(--green-live);letter-spacing:.02em}
+
+/* ================= TICKER ================= */
+.ticker{border-top:1px solid var(--line);background:var(--ticker-bg);overflow:hidden}
+.ticker-topo{display:flex;align-items:center;gap:13px;flex-wrap:wrap;padding:12px 0 0}
+.ticker-abas{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.ticker-abas button{
+  appearance:none;border:0;background:transparent;cursor:pointer;font-family:var(--f-mono);
+  font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4);
+  padding:8px 14px;border-right:1px solid var(--line-soft);transition:background .25s,color .25s;
+}
+.ticker-abas button:last-child{border-right:0}
+.ticker-abas button:hover{color:var(--ink-1);background:var(--hover-suave)}
+.ticker-abas button[aria-pressed="true"]{background:var(--green);color:#fff}
+.ticker-abas button:focus-visible{outline:2px solid var(--green-live);outline-offset:-2px}
+.ticker-nota{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-5)}
+.esteira{position:relative;overflow:hidden;padding:14px 0 16px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.esteira-linha{display:flex;width:max-content;animation:correr 48s linear infinite;transition:opacity .2s}
+.esteira:hover .esteira-linha{animation-play-state:paused}
+@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk{display:flex;align-items:center;gap:10px;padding:0 26px;border-right:1px solid var(--line-soft);white-space:nowrap}
+.tk .marca{
+  width:22px;height:22px;min-width:22px;max-width:22px;min-height:22px;max-height:22px;
+  padding:0;margin:0;flex:0 0 22px;display:grid;place-items:center;border-radius:50%;
+  background:rgba(255,255,255,.05);border:1px solid var(--line-soft);overflow:hidden;
+}
+.tk .marca svg{width:12px;height:12px;fill:currentColor;stroke:none}
+/* prefixo m- para nao colidir com classes de layout (a .fx das faixas de patrimonio) */
+.tk .marca.m-btc{color:#F7931A;background:rgba(247,147,26,.1);border-color:rgba(247,147,26,.3)}
+.tk .marca.m-eth{color:#9AA0C4;background:rgba(154,160,196,.12);border-color:rgba(154,160,196,.32)}
+.tk .marca.m-sol{color:#14F195;background:rgba(20,241,149,.1);border-color:rgba(20,241,149,.28)}
+.tk .marca.m-xrp{color:#DEDEDE;background:rgba(222,222,222,.09);border-color:rgba(222,222,222,.26)}
+.tk .marca.m-ada{color:#5A96F7;background:rgba(90,150,247,.12);border-color:rgba(90,150,247,.32)}
+.tk .marca.m-link{color:#6A9AF5;background:rgba(106,154,245,.12);border-color:rgba(106,154,245,.32)}
+.tk .marca.m-idx{color:var(--green-live);background:rgba(22,191,169,.1);border-color:rgba(22,191,169,.28)}
+.tk .marca.m-fx{color:var(--metal);background:rgba(184,165,103,.1);border-color:rgba(184,165,103,.3)}
+.tk .marca.m-txt{font-family:var(--f-mono);font-size:9.5px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.tk .nome{font-family:var(--f-ui);font-size:13px;font-weight:600;color:var(--ink-1)}
+.tk .preco{font-family:var(--f-mono);font-size:13px;color:var(--ink-2)}
+.tk .var{font-family:var(--f-mono);font-size:12px;display:flex;align-items:center;gap:4px}
+.tk .var.sobe{color:var(--up)} .tk .var.cai{color:var(--down)}
+.tk .var svg{width:9px;height:9px;fill:currentColor}
+
+/* ================= RODAPE ================= */
+.rodape{background:var(--rodape-bg);border-top:1px solid var(--line);padding-block:clamp(44px,5vw,68px) 32px}
+.rodape-topo{
+  display:grid;
+  grid-template-columns:minmax(340px,1.9fr) repeat(4,minmax(128px,1fr));
+  gap:clamp(30px,3.6vw,54px);
+  padding-bottom:clamp(30px,3.4vw,44px);border-bottom:1px solid var(--line);
+}
+@media(max-width:1120px){.rodape-topo{grid-template-columns:minmax(300px,1fr) repeat(2,minmax(128px,1fr))}}
+@media(max-width:720px){.rodape-topo{grid-template-columns:1fr 1fr}.rodape-marca{grid-column:1 / -1}}
+@media(max-width:460px){.rodape-topo{grid-template-columns:1fr}}
+.rodape-marca{display:flex;flex-direction:column;gap:22px;min-width:0}
+.rodape-topo > *{min-width:0}
+.rodape-marca .lockup{flex-wrap:wrap;row-gap:12px}
+.rodape-marca .vsym{height:62px}
+.rodape-marca .vname{font-size:41px;letter-spacing:.07em}
+.rodape-marca .vdesc{font-size:9px;letter-spacing:.5em;padding-left:.5em;margin-top:9px;color:var(--ink-4)}
+.rodape-marca .lk-fio{height:58px}
+.rodape-marca .xp{height:52px}
+.rodape-marca p{font-size:14px;color:var(--ink-4);max-width:40ch;line-height:1.6}
+.rodape-col{display:flex;flex-direction:column;gap:10px}
+.rodape-col b{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-bottom:3px}
+.rodape-col a{font-size:14.5px;color:var(--ink-4);text-decoration:none;transition:color .22s,transform .22s;width:fit-content}
+.rodape-col a:hover{color:var(--green-live);transform:translateX(2px)}
+.legal{padding-top:28px;display:flex;flex-direction:column;gap:18px}
+.legal p{font-size:12px;line-height:1.75;color:var(--ink-5)}
+.legal .fim{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:baseline;padding-top:16px;border-top:1px solid var(--line-soft)}
+.legal .fim span{font-family:var(--f-mono);font-size:11px;color:var(--ink-5)}
+
+/* ================= FAIXA DE IMAGEM ================= */
+.faixa-img{position:relative;height:clamp(230px,34vw,400px);overflow:hidden;border-block:1px solid var(--line)}
+.faixa-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.4s var(--ease)}
+.faixa-img:hover img{transform:scale(1.11)}
+.faixa-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.28) 42%,rgba(0,0,0,.86) 100%)}
+.faixa-img .frase{
+  position:absolute;inset:0;z-index:2;display:grid;place-items:center;text-align:center;
+  padding-inline:var(--pad);
+}
+.faixa-img .frase b{
+  font-family:var(--f-disp);font-weight:500;font-style:italic;
+  font-size:clamp(23px,3.4vw,42px);line-height:1.2;color:#fff;max-width:22ch;
+  text-shadow:0 2px 30px rgba(0,0,0,.8);
+}
+.faixa-img .frase small{
+  display:block;margin-top:14px;font-family:var(--f-mono);font-size:10.5px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--green-live);font-style:normal;
+}
+
+/* ================= BLOCO COM IMAGEM LATERAL ================= */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3.4vw,54px);align-items:center}
+@media(max-width:880px){.duo{grid-template-columns:1fr}}
+.duo-img{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);border-radius:3px}
+.duo-img img,.duo-img video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.1s var(--ease)}
+.duo-img:hover img,.duo-img:hover video{transform:scale(1.07)}
+.duo-img::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.6) 100%);pointer-events:none}
+.duo-img .selo{position:absolute;left:0;bottom:0;z-index:2;padding:18px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+/* ================= MAPA (imagem) ================= */
+.mapa-caixa{position:relative;padding:0;overflow:hidden;aspect-ratio:1}
+.mapa-caixa img{width:100%;height:100%;object-fit:cover;display:block}
+.mapa-pin{position:absolute;left:66.5%;top:69%;z-index:3;transform:translate(-50%,-50%);pointer-events:none}
+.mapa-pin .anel{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:1px solid var(--green-live);border-radius:50%;animation:anelar 2.8s ease-out infinite}
+.mapa-pin .anel:nth-child(2){animation-delay:.9s}
+@keyframes anelar{0%{transform:scale(.6);opacity:.9}70%{transform:scale(3.6);opacity:0}100%{transform:scale(3.6);opacity:0}}
+.mapa-rotulo{position:absolute;left:calc(66.5% + 26px);top:69%;z-index:4;transform:translateY(-50%);display:flex;align-items:center;gap:10px}
+.mapa-rotulo .tracinho{width:clamp(18px,3vw,42px);height:1px;background:linear-gradient(90deg,var(--green-live),rgba(22,191,169,.2))}
+.mapa-rotulo .txt{display:flex;flex-direction:column;gap:2px}
+.mapa-rotulo b{font-family:var(--f-mono);font-size:clamp(11px,1.5vw,14px);letter-spacing:.14em;text-transform:uppercase;color:var(--green-live)}
+.mapa-rotulo span{font-family:var(--f-mono);font-size:clamp(8px,1.1vw,10px);letter-spacing:.1em;color:var(--ink-3)}
+
+/* ================= FLOCOS ================= */
+/* Poeira luminosa sobre a pagina inteira. Fica acima dos fundos e abaixo da
+   navegacao, em modo screen: acende sobre o escuro e some sobre o claro. */
+#flocos{
+  position:fixed;inset:0;z-index:5;pointer-events:none;
+  mix-blend-mode:screen;opacity:.92;
+}
+@media(prefers-reduced-motion:reduce){#flocos{display:none}}
+
+/* ================= ENTRADA ================= */
+.pre{opacity:0;transform:translateY(18px)}
+.revela{opacity:1;transform:none;transition:opacity .78s var(--ease),transform .78s var(--ease)}
+@media(prefers-reduced-motion:reduce){.pre{opacity:1!important;transform:none!important}*{animation:none!important;transition:none!important}}
+</style>
+
+<style id="lapidacao-16-09">
+/* ================= LAPIDACAO 16/09 ================= */
+
+/* titulos: Cormorant Garamond (a familia do letreiro). Destaque separa por PESO e por cor */
+:root{--f-disp:"Cormorant Garamond",Georgia,serif}
+h1,h2{font-weight:600;letter-spacing:-.005em;font-variation-settings:normal}
+h1{font-size:clamp(44px,6.2vw,84px)}
+.sec-head h2{font-size:clamp(35px,4.9vw,58px);line-height:1.04}
+h1 em,h2 em,h3 em,h4 em,.sec-head h2 em{font-weight:700;font-style:italic}
+.fx .nivel{font-size:33px;font-weight:600}
+.socio .galeria .nome-sobre b{font-size:34px;font-weight:600}
+.quiz legend,.quiz-porta h4,.quiz-chamada h3{font-weight:600}
+.faixa-img .frase b{font-weight:600}
+
+/* ---------- o lacre: botao da casa, em verde Aston ---------- */
+.lacre{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden;
+  padding:13px 22px;text-decoration:none;white-space:nowrap;cursor:pointer;
+  background:linear-gradient(168deg,#23C9B1 0%,#00806F 44%,#00524A 100%);
+  border:1px solid #003F39;
+  box-shadow:0 10px 26px -8px rgba(0,0,0,.55),inset 0 1px 0 rgba(220,255,248,.45);
+  transition:background .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease),border-color .5s;
+}
+.lacre::before{content:"";position:absolute;inset:4px;z-index:1;pointer-events:none;border:1px solid rgba(220,255,248,.28);transition:border-color .5s}
+.lacre::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(235,255,250,.7),transparent);transform:skewX(-16deg);opacity:0}
+.lacre b{position:relative;z-index:2;font-family:var(--f-ui);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 0 rgba(0,40,36,.55)}
+.lacre i{position:absolute;z-index:2;width:8px;height:8px;pointer-events:none;border:0 solid rgba(230,255,250,.75);opacity:.8;
+  transition:width .5s var(--ease),height .5s var(--ease),opacity .45s}
+.lacre i:nth-child(1){top:-1px;left:-1px;border-top-width:2px;border-left-width:2px}
+.lacre i:nth-child(2){top:-1px;right:-1px;border-top-width:2px;border-right-width:2px}
+.lacre i:nth-child(3){bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px}
+.lacre i:nth-child(4){bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px}
+.lacre:hover,.lacre:focus-visible{
+  background:linear-gradient(168deg,#4FE6CF 0%,#00A08D 44%,#00645A 100%);border-color:#00766A;transform:translateY(-3px);
+  box-shadow:0 18px 38px -10px rgba(22,191,169,.55),0 10px 26px -8px rgba(0,0,0,.55),inset 0 1px 0 rgba(235,255,250,.7)}
+.lacre:hover::after,.lacre:focus-visible::after{animation:lustro .85s var(--ease)}
+.lacre:hover i,.lacre:focus-visible i{width:14px;height:14px;opacity:1}
+.lacre:hover::before{border-color:rgba(235,255,250,.5)}
+.lacre:active{transform:translateY(-1px) scale(.98)}
+.lacre:focus-visible{outline:2px solid var(--green-live);outline-offset:3px}
+/* a segunda porta: mesma moldura, metal profundo */
+.lacre.profundo{background:linear-gradient(168deg,#0F4A43 0%,#012E29 50%,#001A17 100%);border-color:#0B5C53}
+.lacre.profundo b{color:#BFF5EB}
+.lacre.profundo:hover,.lacre.profundo:focus-visible{background:linear-gradient(168deg,#16695F 0%,#034139 50%,#00241F 100%);border-color:#16BFA9}
+.lacre.grande{padding:17px 28px}
+.lacre.grande b{font-size:13px}
+@keyframes lustro{0%{left:-60%;opacity:0}20%{opacity:1}100%{left:120%;opacity:0}}
+
+/* nav com as duas portas */
+
+/* nav: as duas portas falam a lingua dos outros links. Destaque pela marca (losango), nao pelo volume */
+.nav-portas{display:flex;align-items:center;gap:clamp(16px,1.8vw,28px);flex:none;padding-left:clamp(14px,1.6vw,24px);border-left:1px solid var(--line)}
+.porta{position:relative;display:inline-flex;align-items:center;gap:9px;text-decoration:none;white-space:nowrap;
+  font-family:var(--f-ui);font-size:14px;font-weight:600;color:var(--green-live);padding:9px 0;transition:color .25s}
+.porta::before{content:"";width:7px;height:7px;flex:none;transform:rotate(45deg);
+  background:linear-gradient(168deg,#4FE6CF,#00806F 55%,#00524A);box-shadow:0 0 8px rgba(22,191,169,.55);transition:transform .5s var(--ease),box-shadow .4s}
+.porta::after{content:"";position:absolute;left:16px;right:100%;bottom:4px;height:1.5px;
+  background:linear-gradient(90deg,#00806F,#7FF0DD,#00806F);box-shadow:0 0 8px rgba(31,216,190,.6);transition:right .45s var(--ease)}
+.porta:hover,.porta:focus-visible{color:var(--ink-0)}
+.porta:hover::before,.porta:focus-visible::before{transform:rotate(225deg);box-shadow:0 0 14px rgba(31,216,190,.9)}
+.porta:hover::after,.porta:focus-visible::after{right:0}
+.porta[aria-current="page"]::after{right:0}
+.porta:focus-visible{outline:2px solid var(--green-live);outline-offset:4px}
+:root[data-tema="claro"] .porta::before{box-shadow:0 0 6px rgba(0,120,108,.35)}
+.nav-links a.so-mobile{display:none}
+@media(max-width:1240px){
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--nav-bg-mob);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 18px;margin:0}
+  .nav-links.aberto{display:flex}
+  .nav-links a{width:100%;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .nav-burger{display:block;margin-left:auto}
+}
+@media(max-width:760px){
+  .nav-portas{display:none}
+  .nav-links a.so-mobile{display:block;color:var(--green-live);font-weight:600}
+}
+
+/* ---------- a marca acesa: simbolo esmeralda, XP no mesmo verde ---------- */
+.lockup .vsym{fill:url(#esmeralda);filter:drop-shadow(0 0 7px rgba(22,191,169,.45));animation:respira 5.5s ease-in-out infinite}
+@keyframes respira{0%,100%{filter:drop-shadow(0 0 5px rgba(22,191,169,.32))}50%{filter:drop-shadow(0 0 13px rgba(31,216,190,.62))}}
+.lockup .vname{
+  background:linear-gradient(100deg,var(--ink-0) 0%,var(--ink-0) 38%,#7FF0DD 50%,var(--ink-0) 62%,var(--ink-0) 100%);
+  background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;
+  transition:background-position 1.1s var(--ease)}
+.lockup:hover .vname{background-position:0 0}
+.lockup .vdesc{color:var(--green-live)!important}
+.lockup .xp{color:#00665E;filter:drop-shadow(0 0 7px rgba(22,191,169,.28))}
+:root[data-tema="claro"] .lockup .vsym{fill:#00665E;animation:none;filter:drop-shadow(0 2px 5px rgba(0,86,79,.28))}
+:root[data-tema="claro"] .lockup .vname{background-image:linear-gradient(100deg,var(--ink-0) 0%,var(--ink-0) 38%,#00A08D 50%,var(--ink-0) 62%,var(--ink-0) 100%)}
+:root[data-tema="claro"] .lockup .xp{color:#00564F;filter:none}
+/* no verde, a XP entra na versão branca (monocromática, como a assinatura conjunta pede) */
+:root[data-tema="verde"] .lockup .xp{color:#FFFFFF;filter:none}
+
+/* ---------- ticker no topo: uma faixa so, logo abaixo da nav ---------- */
+.ticker.topo{border-top:0;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5}
+.ticker.topo .ticker-topo{max-width:none;margin:0;padding:0 14px 0 var(--pad);flex:none;gap:10px}
+.ticker.topo .ticker-abas button{padding:6px 10px;font-size:9.5px}
+.ticker.topo .ticker-nota{display:none}
+.ticker.topo .esteira{flex:1;min-width:0;padding:9px 0}
+@media(max-width:760px){
+  .ticker.topo{flex-direction:column;align-items:stretch}
+  .ticker.topo .ticker-topo{padding:8px var(--pad) 0;overflow-x:auto}
+  .ticker.topo .ticker-abas{flex:none}
+}
+@media (prefers-reduced-motion: reduce){.lockup .vsym{animation:none}.lacre::after{animation:none!important}}
+
+/* peso: as regras de secao travavam 500, aqui o titulo fica firme e o destaque em negrito */
+.hero h1{font-weight:600;font-size:clamp(44px,6.6vw,84px)}
+.hero h1 em{font-weight:700}
+/* titulos com peso escrito direto na tag tambem seguem a regra */
+h1,h2{font-weight:600!important}
+h1 em,h2 em{font-weight:700!important}
+.sec-head h2{font-weight:600}
+/* nav: "Para voce" e "Para sua empresa" moram no menu; no desktop a porta Investir cumpre o papel */
+@media(min-width:1241px){.nav-links a.so-menu{display:none}}
+</style>
+
+<style>
+/* ====== PAGINAS LEGAIS ====== */
+.doc{max-width:74ch}
+.doc .atualizado{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4);margin:0 0 clamp(30px,4vw,48px)}
+.doc h3{font-family:var(--f-disp);font-weight:500;font-size:clamp(21px,2.3vw,26px);color:var(--ink-0);margin:clamp(34px,4vw,50px) 0 12px;display:flex;gap:14px;align-items:baseline}
+.doc h3 .n{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--green-live);flex:none}
+.doc p,.doc li{font-size:16.5px;line-height:1.75;color:var(--ink-2)}
+.doc p + p{margin-top:12px}
+.doc ul{margin:12px 0 0;padding-left:20px}
+.doc li{margin-bottom:6px}
+.doc li::marker{color:var(--green-live)}
+.doc a{color:var(--green-live);text-underline-offset:3px}
+/* campo que so a casa pode preencher: aparece entre colchetes, igual ao disclaimer do rodape */
+.doc .campo-casa{font-weight:600;color:var(--ink-1)}
+.caixa{border:1px solid var(--line);background:var(--card);padding:clamp(20px,2.4vw,28px);margin-top:18px}
+.caixa b{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-4);font-weight:500;margin-bottom:8px}
+.caixa span,.caixa a{font-family:var(--f-mono);font-size:clamp(17px,1.8vw,20px);color:var(--green-live)}
+.caixa a{font-size:clamp(14px,1.4vw,16px);overflow-wrap:anywhere}
+.caixas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.caixas .caixa{margin-top:0}
+.caixa p{font-size:14.5px;margin-top:8px;color:var(--ink-3)}
+.tab-rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:18px}
+.relacao{width:100%;border-collapse:collapse;min-width:560px;border:1px solid var(--line);background:var(--card)}
+.relacao th,.relacao td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line-soft);font-size:15.5px;color:var(--ink-2)}
+.relacao thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-4);font-weight:500;border-bottom:1px solid var(--line)}
+.relacao td:first-child{color:var(--ink-0);font-weight:600}
+</style>
+</head>
+<body data-legal>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="vsym" viewBox="0 0 40 112"><path fill-rule="evenodd" d="M20 0L40 56L20 112L0 56Z M5.5 43L10 43L20 68L30 43L34.5 43L20 79Z"/></symbol>
+  <linearGradient id="esmeralda" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4FE6CF"/><stop offset="48%" stop-color="#00A08D"/><stop offset="100%" stop-color="#005850"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1FD8BE"/><stop offset="46%" stop-color="#00897C"/><stop offset="100%" stop-color="#004A44"/>
+  </linearGradient>
+  <linearGradient id="metal-hi" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#39EBD2"/><stop offset="46%" stop-color="#00A092"/><stop offset="100%" stop-color="#005850"/>
+  </linearGradient>
+  <linearGradient id="chapa" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="rgba(255,255,255,.34)"/><stop offset="52%" stop-color="rgba(255,255,255,.04)"/><stop offset="100%" stop-color="rgba(0,0,0,.28)"/>
+  </linearGradient>
+  <symbol id="xp" viewBox="0 0 56 51"><path d="M40.788 39.035h6.343c2.372 0 4.022-1.083 4.022-3.3 0-2.218-1.65-3.3-4.022-3.3h-6.343v6.6zm0 11.5h8.457c4.486 0 6.807-2.321 6.807-6.808v-4.692h-.155c-1.29 3.919-4.641 5.105-8.612 5.105h-6.29c-.155 0-.207.051-.207.206v6.188zm-11.911-14.8l6.497 6.29v-12.58l-6.497 6.29zm-22.07 14.8h28.567V49.09c0-2.527.877-3.97 2.887-4.744v-.154H30.27c-.413 0-.567-.052-.877-.361l-4.177-4.332-4.331 4.383c-.206.206-.361.31-.774.31h-6.445c-.361 0-.361-.207-.155-.413l8.25-7.993-8.405-8.147c-.206-.206-.154-.412.207-.412h6.497c.36 0 .516.051.722.309l4.538 4.538 4.28-4.538c.206-.206.36-.31.67-.31h16.965c3.919 0 7.374 1.29 8.663 5.209h.155V6.807C56.052 2.32 53.732 0 49.245 0H6.807C2.32 0 0 2.32 0 6.807v36.972c0 4.435 2.32 6.755 6.807 6.755z"/></symbol>
+</defs></svg>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a data-i18n-a="aria-label:ka42d8a34" class="nav-marca lockup" href="index.html#topo" aria-label="Vectrum Capital, escritório credenciado à XP Investimentos">
+      <span class="lk-v">
+        <svg class="vsym" viewBox="0 0 40 112" aria-hidden="true"><use href="#vsym"/></svg>
+        <span><span data-i18n="k9fcedc9a" class="vname">Vectrum</span><span data-i18n="k2bd8d265" class="vdesc" style="display:block">Capital</span></span>
+      </span>
+      <span class="lk-fio"></span>
+      <svg class="xp" viewBox="0 0 56 51" aria-hidden="true"><use href="#xp"/></svg>
+    </a>
+    <button data-i18n-a="title:k5ebac4d2;aria-label:kac0c41a6" class="nav-tema" id="tema" type="button" aria-label="Alternar tema claro e escuro" title="Tema claro ou escuro">
+      <svg class="t-sol" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.2a1 1 0 0 1-1-1V1.6a1 1 0 1 1 2 0v1.2a1 1 0 0 1-1 1zm0 18.6a1 1 0 0 1-1-1v-1.2a1 1 0 1 1 2 0v1.2a1 1 0 0 1-1 1zM3.8 12a1 1 0 0 1-1 1H1.6a1 1 0 1 1 0-2h1.2a1 1 0 0 1 1 1zm18.6 0a1 1 0 0 1-1 1h-1.2a1 1 0 1 1 0-2h1.2a1 1 0 0 1 1 1zM5.6 5.6a1 1 0 0 1 0-1.4l.85-.85a1 1 0 1 1 1.4 1.4l-.85.85a1 1 0 0 1-1.4 0zm11.4 11.4a1 1 0 0 1 0-1.4l.85-.85a1 1 0 0 1 1.4 1.4l-.85.85a1 1 0 0 1-1.4 0zM5.6 18.4a1 1 0 0 1 1.4 0l.85.85a1 1 0 0 1-1.4 1.4l-.85-.85a1 1 0 0 1 0-1.4zM17 7a1 1 0 0 1 1.4 0l.85-.85a1 1 0 0 0-1.4-1.4L17 5.6A1 1 0 0 1 17 7z"/></svg>
+      <svg class="t-verde" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2" fill="#00665E" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="t-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.1 13.4A9.2 9.2 0 1 1 10.6 2.9a7.4 7.4 0 0 0 10.5 10.5z"/></svg>
+    </button>
+    <div class="nav-lingua" id="idioma">
+      <button class="nav-idioma" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Idioma: Português" title="Idioma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3z"/></svg>
+        <span class="idioma-sigla">PT</span>
+        <svg class="idioma-seta" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+      </button>
+      <div class="idioma-menu" role="menu" hidden></div>
+    </div>
+    <button data-i18n="k57f5f5ef" class="nav-burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <div class="nav-links" id="menu">
+      <a data-i18n="kde4780f1" class="so-menu" href="index.html#para-voce">Para você</a>
+      <a data-i18n="kacb59da7" class="so-menu" href="index.html#empresas">Para sua empresa</a>
+      <a data-i18n="kde3c9c1a" href="index.html#a-casa">A Vectrum</a>
+      <a data-i18n="k062c3afe" href="index.html#fundadores">Os fundadores</a>
+      <a data-i18n="k56661c07" href="index.html#contato">Contato</a>
+      <a data-i18n="kee1af3e5" class="so-mobile" href="investir.html">Investir com a Vectrum</a>
+      <a data-i18n="k612eb93c" class="so-mobile" href="assessor.html">Seja um Assessor Vectrum</a>
+    </div>
+    <div class="nav-portas"><a data-i18n="kee1af3e5" class="porta" href="investir.html">Investir com a Vectrum</a><a data-i18n="k612eb93c" class="porta" href="assessor.html">Seja um Assessor Vectrum</a></div>
+  </div>
+</nav>
+
+<section class="sec faixa-escura" id="topo" style="padding-top:clamp(40px,5vw,68px);padding-bottom:clamp(20px,3vw,36px)">
+  <div class="wrap"><div class="sec-head" style="margin:0 auto;max-width:74ch">
+    <p data-i18n="k902c91d9" class="eyebrow metal">Legal</p>
+    <h2 data-i18n="ke90384a4">Política de <em>Cookies</em>.</h2>
+    <p data-i18n="kc7d5d6fd" class="lede">Curta porque o site guarda quase nada. E o que guarda está listado aqui, item por item.</p>
+  </div></div>
+</section>
+<section class="sec sec-linha" style="padding-top:clamp(36px,5vw,64px)">
+  <div class="wrap"><div class="doc" style="margin-inline:auto">
+<p data-i18n="k6471de9e" class="atualizado">Última atualização: 16 de setembro de 2026</p>
+<p data-i18n="kbabf84f1">Esta página descreve, com exatidão, o que o site da Vectrum Capital guarda no seu navegador e quais serviços externos ele acessa.</p>
+
+<h3 data-i18n="k0cc43b62"><span class="n">01</span>A Vectrum não usa cookies de rastreamento</h3>
+<p data-i18n="k79feb9d5">A Vectrum não instala cookies próprios de publicidade, de redes sociais nem de análise de audiência. Não há pixel ou remarketing da casa acompanhando você em outros sites. A exceção é a faixa de cotações, fornecida por um serviço externo e descrita no item 03.</p>
+
+<h3 data-i18n="k1d95d245"><span class="n">02</span>O que fica guardado no seu navegador</h3>
+<p data-i18n="k0fd13e4b">Uma única preferência, guardada no armazenamento local do navegador, e não num cookie:</p>
+<div class="tab-rolagem">
+  <table class="relacao">
+    <thead><tr><th data-i18n="k13030dd9" scope="col">Nome</th><th data-i18n="k34d816fd" scope="col">Para que serve</th><th data-i18n="k92fabe45" scope="col">Duração</th></tr></thead>
+    <tbody>
+      <tr><td data-i18n="kd7aa6903">vectrum-tema</td><td data-i18n="kefa03c43">Lembrar se você escolheu o tema claro ou o escuro</td><td data-i18n="k36892849">Até você limpar os dados do navegador</td></tr>
+    </tbody>
+  </table>
+</div>
+<p data-i18n="kfe4a7f63" style="margin-top:14px">Essa informação não identifica você, não sai do seu aparelho e não é enviada para a Vectrum. Se o navegador bloquear o armazenamento, o site continua funcionando normalmente no tema escuro.</p>
+
+<h3 data-i18n="ka99c5b99"><span class="n">03</span>Serviços externos</h3>
+<p data-i18n="kbf021d35">Para exibir as fontes tipográficas, o site carrega arquivos do Google Fonts. Nesse carregamento, o Google recebe dados técnicos da conexão, como o endereço IP e o tipo de navegador, conforme a política de privacidade do Google.</p>
+<p data-i18n="keaccf191">A faixa de cotações no topo das páginas é fornecida pelo TradingView e carregada diretamente dos servidores dele. O TradingView pode receber dados técnicos da conexão e usar cookies e tecnologias próprias, conforme a política de privacidade e de cookies do TradingView. As cotações têm caráter informativo e podem ter atraso.</p>
+
+<h3 data-i18n="k585d9715"><span class="n">04</span>Como controlar</h3>
+<p data-i18n="k4756539b">Você pode apagar a preferência de tema a qualquer momento limpando os dados de navegação do site nas configurações do seu navegador.</p>
+
+<h3 data-i18n="k42348230"><span class="n">05</span>Se isso mudar</h3>
+<p data-i18n="ka987166f">Se o site passar a usar qualquer cookie além do descrito aqui, esta página será atualizada antes, e cookies não essenciais só serão ativados com a sua autorização. Para o tratamento dos dados dos formulários, veja a <a href="privacidade.html">Política de Privacidade</a>.</p>
+
+  </div></div>
+</section>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-topo">
+      <div class="rodape-marca">
+        <div class="lockup">
+          <span class="lk-v">
+            <svg class="vsym" viewBox="0 0 40 112" aria-hidden="true"><use href="#vsym"/></svg>
+            <span><span data-i18n="k9fcedc9a" class="vname">Vectrum</span><span data-i18n="k2bd8d265" class="vdesc" style="display:block">Capital</span></span>
+          </span>
+          <span class="lk-fio"></span>
+          <svg data-i18n-a="aria-label:ke525a57a" class="xp" viewBox="0 0 56 51" aria-label="XP Investimentos"><use href="#xp"/></svg>
+        </div>
+        <p data-i18n="kd8599262">Escritório de Assessoria de Investimentos credenciado à XP Investimentos.</p>
+        <div class="ouvidoria" style="margin-top:0"><b data-i18n="k73c161a6">Ouvidoria XP</b><span>0800 722 3730</span></div>
+      </div>
+
+      <div class="rodape-col"><b data-i18n="kcf5acd0f">A casa</b><a data-i18n="k3b1d17e8" href="index.html#a-casa">Quem somos</a><a data-i18n="k062c3afe" href="index.html#fundadores">Os fundadores</a><a data-i18n="kb2d7fedb" href="assessores.html">Relação de assessores</a><a data-i18n="k56661c07" href="index.html#contato">Contato</a></div>
+      <div class="rodape-col"><b data-i18n="kfff9eab2">Atendimento</b><a data-i18n="kde4780f1" class="so-menu" href="index.html#para-voce">Para você</a><a data-i18n="kacb59da7" class="so-menu" href="index.html#empresas">Para sua empresa</a><a data-i18n="kbea19da0" href="index.html#contato">Abrir conta</a></div>
+      <div class="rodape-col"><b data-i18n="k53d5bafa">Carreira</b><a data-i18n="kc69ac3a3" href="assessor.html">Seja um assessor</a><a data-i18n="k68eaf801" href="assessor.html">Vindo do banco</a><a data-i18n="kdaa2bfa5" href="assessor.html#teste">Fazer o teste</a></div>
+      <div class="rodape-col"><b data-i18n="k902c91d9">Legal</b><a data-i18n="k30913ac9" href="privacidade.html">Política de Privacidade</a><a data-i18n="k00820352" href="cookies.html">Política de Cookies</a><a data-i18n="ke7b6e197" href="canal-confidencial.html">Canal Confidencial</a></div>
+    </div>
+
+    <div class="legal">
+      <p data-i18n="k0c9e51cb">A <strong>VECTRUM ASSESSORES DE INVESTIMENTOS LTDA</strong>, inscrita sob o CNPJ <strong>68.674.385/0001-06</strong>, é uma empresa de Assessoria de Investimento devidamente registrada na Comissão de Valores Mobiliários na forma da Resolução CVM 178/23 ("Sociedade"), que mantém contrato de distribuição de produtos financeiros com a XP Investimentos Corretora de Câmbio, Títulos e Valores Mobiliários S.A. ("XP") e pode, por conta e ordem dos seus clientes, operar no mercado de capitais segundo a legislação vigente. Na forma da legislação da CVM, o Assessor de Investimento não pode administrar ou gerir o patrimônio de investidores. O investimento em ações é um investimento de risco e rentabilidade passada não é garantia de rentabilidade futura. Na realização de operações com derivativos existe a possibilidade de perdas superiores aos valores investidos, podendo resultar em significativas perdas patrimoniais. A Sociedade poderá exercer atividades complementares relacionadas aos mercados financeiro, securitário, de previdência e capitalização, desde que não conflitem com a atividade de assessoria de investimentos, podendo ser realizada por meio da pessoa jurídica acima descrita ou por meio de pessoa jurídica terceira. Todas as atividades são prestadas mantendo a devida segregação e em cumprimento ao quanto previsto nas regras da CVM ou de outros órgãos reguladores e autorreguladores. Para informações e dúvidas sobre produtos, contate seu assessor de investimentos. Para reclamações, contate a Ouvidoria da XP pelo telefone 0800 722 3730.</p>
+      <div class="fim">
+        <span data-i18n="kcbf281fc">© 2026 Vectrum Capital</span>
+        <span data-i18n="k693e1327">vectrumcapital.com.br</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- menu ---------- */
+  /* ---------- tema claro e escuro ----------
+     O site nasce claro. A escolha da pessoa fica guardada no navegador dela.
+     Se o navegador bloquear o armazenamento, o site segue funcionando no claro. */
+  (function(){
+    var raiz = document.documentElement;
+    var botao = document.getElementById('tema');
+    var meta  = document.querySelector('meta[name="theme-color"]');
+    function guardar(v){ try { localStorage.setItem('vectrum-tema-v2', v); } catch(e){} }
+    function ler(){ try { return localStorage.getItem('vectrum-tema-v2'); } catch(e){ return null; } }
+    function aplicar(v){
+      if (v === 'claro' || v === 'verde') raiz.setAttribute('data-tema', v);
+      else raiz.removeAttribute('data-tema');
+      if (meta) meta.setAttribute('content', v === 'claro' ? '#F5F7F6' : v === 'verde' ? '#00332E' : '#000000');
+      if (botao) botao.setAttribute('aria-pressed', String(v === 'claro'));
+    }
+    var salvo = ler(); aplicar(salvo === 'escuro' || salvo === 'verde' ? salvo : 'claro');
+    if (botao) botao.addEventListener('click', function(){
+      var proximo = { claro: 'escuro', escuro: 'verde', verde: 'claro' };
+      var novo = proximo[raiz.getAttribute('data-tema') || 'escuro'];
+      aplicar(novo); guardar(novo);
+    });
+  })();
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var aberto = menu.classList.toggle('aberto');
+    burger.setAttribute('aria-expanded', String(aberto));
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') { menu.classList.remove('aberto'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  })();
+</script>
+</body>
+</html>
