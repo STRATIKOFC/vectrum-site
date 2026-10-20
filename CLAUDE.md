@@ -33,3 +33,13 @@ vercel --prod                  # publicar em produção (só depois do PR aprova
 ## Git
 - **Nunca trabalhar direto na `main`.** Branch `feature/…`, `fix/…` ou `docs/…` → Pull Request → revisão do outro sócio → merge.
 - Commits: `feat:`, `fix:`, `docs:`, `chore:` + frase curta no presente.
+
+## Antes e depois de publicar (obrigatório)
+Em 12/10 um deploy pela CLI apagou a logo; em 20/10 conferimos que o site no ar é igual ao `main`, mas **todos os deploys de produção até então vieram da CLI**, nenhum do Git. Por isso:
+1. `git pull` e partir da `main` atualizada.
+2. **Antes de publicar**, rodar `python scripts/verificar-site-no-ar.py`. Se ele disser que o ar difere do repo, **parar**: alguém publicou por fora do Git. Entender antes de continuar.
+3. Publicar só por branch e Pull Request (o merge na `main` publica). **Nunca `vercel --prod`.**
+4. **Depois do merge**, rodar o script de novo (tem que dar OK) e conferir na Vercel que o deploy novo tem origem `git`.
+5. Se algo sumir: voltar ao deploy anterior na Vercel (rollback em um clique) e só então investigar.
+
+Detalhes e estado atual: `stratik-docs/decisoes/2026-10-20-conferir-o-site-da-vectrum-antes-e-depois-de-publicar.md` (cofre da STRATIK).
