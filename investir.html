@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#F5F7F6">
 <script>/* tema antes da pintura: o site nasce claro; quem escolheu o escuro volta no escuro */try{var tv=localStorage.getItem('vectrum-tema-v2');if(tv==='escuro')document.documentElement.removeAttribute('data-tema');else if(tv==='verde')document.documentElement.setAttribute('data-tema','verde');if((localStorage.getItem('vectrum-idioma')||'pt')!=='pt')document.documentElement.className+=' i18n-carregando'}catch(e){}</script>
 <link rel="stylesheet" href="i18n/i18n.css?v=4">
-<script src="i18n/i18n.js?v=4" defer></script>
+<script src="i18n/i18n.js?v=5" defer></script>
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
 <meta data-i18n-a="content:kee1af3e5" property="og:title" content="Investir com a Vectrum">
 <meta data-i18n-a="content:kbe88fcd1" property="og:description" content="Recurso parado tem valor. Recurso com direção tem destino.">
@@ -1068,7 +1068,7 @@ h1 em,h2 em{font-weight:700!important}
   var aviso = document.getElementById('form-aviso');
   /* Endereco do Apps Script da planilha (ver planilha/LEIA-ME.md).
      Vazio = modo demonstracao: nada sai do navegador. */
-  var PLANILHA_URL = '';
+  var PLANILHA_URL = 'https://script.google.com/macros/s/AKfycbz6uR_JsZHWqYnEMB86WORA4tSVNt0hWbfjTTL3neXvkBUfUC48_7gzlGffLpd6RvY3/exec';
 
   form.addEventListener('submit', function(e){
     e.preventDefault();

@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#F5F7F6">
 <script>/* tema antes da pintura: o site nasce claro; quem escolheu o escuro volta no escuro */try{var tv=localStorage.getItem('vectrum-tema-v2');if(tv==='escuro')document.documentElement.removeAttribute('data-tema');else if(tv==='verde')document.documentElement.setAttribute('data-tema','verde');if((localStorage.getItem('vectrum-idioma')||'pt')!=='pt')document.documentElement.className+=' i18n-carregando'}catch(e){}</script>
 <link rel="stylesheet" href="i18n/i18n.css?v=4">
-<script src="i18n/i18n.js?v=4" defer></script>
+<script src="i18n/i18n.js?v=5" defer></script>
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
 <meta data-i18n-a="content:kf7795882" property="og:title" content="Seja um assessor Vectrum">
 <meta data-i18n-a="content:kbe88fcd1" property="og:description" content="Recurso parado tem valor. Recurso com direção tem destino.">
@@ -472,7 +472,10 @@ form{display:flex;flex-direction:column;gap:15px}
 }
 .campo input::placeholder{color:var(--ink-5)}
 .campo input:focus,.campo select:focus{outline:none;border-color:var(--green-live);background:var(--foco-bg);box-shadow:0 0 0 3px rgba(22,191,169,.1)}
-.campo-2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.campo-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+/* rótulo longo quebra em 2 linhas sem desalinhar o par: rótulo no topo, campo embaixo; opção longa não estoura a coluna */
+.campo-2 .campo{justify-content:space-between;min-width:0}
+.campo select{min-width:0;max-width:100%;text-overflow:ellipsis}
 @media(max-width:540px){.campo-2{grid-template-columns:1fr}}
 .lgpd{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-4);line-height:1.55;margin-top:5px}
 .lgpd input{margin-top:3px;accent-color:var(--green);flex:none;width:16px;height:16px}
@@ -923,12 +926,22 @@ h1 em,h2 em{font-weight:700!important}
       </div>
       <div class="campo-2">
         <div class="campo"><label data-i18n="k969deb00" for="c-onde">Onde você atua hoje</label>
-          <select id="c-onde" name="onde"><option data-i18n="kd8e3d19a" value="Banco">Banco</option><option data-i18n="kb2306a5d" value="Outro escritório de assessoria">Outro escritório de assessoria</option><option data-i18n="ke47db8cf" value="Autônomo">Autônomo</option><option data-i18n="k0d012cee" value="Estou me certificando agora">Estou me certificando agora</option><option data-i18n="kf769d793" value="Fora do mercado, quero entrar">Fora do mercado, quero entrar</option></select></div>
-        <div class="campo"><label data-i18n="ke5d13745" for="c-cert">Certificação</label>
-          <select id="c-cert" name="certificacao"><option data-i18n="k994dd498" value="ANCORD">ANCORD</option><option data-i18n="k5b8d269d" value="CEA">CEA</option><option data-i18n="k62739de4" value="CFP">CFP</option><option data-i18n="kda66b42c" value="CGA">CGA</option><option data-i18n="k9ea43703" value="Ainda não tenho">Ainda não tenho</option></select></div>
+          <select id="c-onde" name="onde"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="kd8e3d19a" value="Banco">Banco</option><option data-i18n="kb2306a5d" value="Outro escritório de assessoria">Outro escritório de assessoria</option><option data-i18n="ke47db8cf" value="Autônomo">Autônomo</option><option data-i18n="k0d012cee" value="Estou me certificando agora">Estou me certificando agora</option><option data-i18n="kf769d793" value="Fora do mercado, quero entrar">Fora do mercado, quero entrar</option></select></div>
+        <div class="campo"><label data-i18n="kf784e996" for="c-tempo">Há quanto tempo você está no mercado financeiro?</label>
+          <select id="c-tempo" name="tempo_mercado"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="ka10640c3" value="Ainda não comecei">Ainda não comecei</option><option data-i18n="kce21942c" value="Menos de 2 anos">Menos de 2 anos</option><option data-i18n="k65b8a77e" value="De 2 a 5 anos">De 2 a 5 anos</option><option data-i18n="k7430a90f" value="De 5 a 10 anos">De 5 a 10 anos</option><option data-i18n="kb8a6294f" value="Mais de 10 anos">Mais de 10 anos</option></select></div>
       </div>
-      <div class="campo"><label data-i18n="k4250115a" for="c-carteira">Carteira sob seu atendimento hoje</label>
-        <select id="c-carteira" name="carteira"><option data-i18n="k896411ab" value="Prefiro falar pessoalmente">Prefiro falar pessoalmente</option><option data-i18n="kfcd4de99" value="Até R$ 10 milhões">Até R$ 10 milhões</option><option data-i18n="k5cbefd91" value="R$ 10 a 50 milhões">R$ 10 a 50 milhões</option><option data-i18n="k548fdc65" value="R$ 50 a 200 milhões">R$ 50 a 200 milhões</option><option data-i18n="kfef9dd28" value="Acima de R$ 200 milhões">Acima de R$ 200 milhões</option><option data-i18n="k132ecd9e" value="Ainda não tenho carteira">Ainda não tenho carteira</option></select></div>
+      <div class="campo-2">
+        <div class="campo"><label data-i18n="ke5d13745" for="c-cert">Certificação</label>
+          <select id="c-cert" name="certificacao"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="k994dd498" value="ANCORD">ANCORD</option><option data-i18n="k5b8d269d" value="CEA">CEA</option><option data-i18n="k62739de4" value="CFP">CFP</option><option data-i18n="kda66b42c" value="CGA">CGA</option><option data-i18n="k9ea43703" value="Ainda não tenho">Ainda não tenho</option></select></div>
+        <div class="campo"><label data-i18n="k4250115a" for="c-carteira">Carteira sob seu atendimento hoje</label>
+          <select id="c-carteira" name="carteira"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="k896411ab" value="Prefiro falar pessoalmente">Prefiro falar pessoalmente</option><option data-i18n="kfcd4de99" value="Até R$ 10 milhões">Até R$ 10 milhões</option><option data-i18n="k5cbefd91" value="R$ 10 a 50 milhões">R$ 10 a 50 milhões</option><option data-i18n="k548fdc65" value="R$ 50 a 200 milhões">R$ 50 a 200 milhões</option><option data-i18n="kfef9dd28" value="Acima de R$ 200 milhões">Acima de R$ 200 milhões</option><option data-i18n="k132ecd9e" value="Ainda não tenho carteira">Ainda não tenho carteira</option></select></div>
+      </div>
+      <div class="campo-2">
+        <div class="campo"><label data-i18n="kf5c72d7d" for="c-trava">O que mais te segura hoje?</label>
+          <select id="c-trava" name="trava"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="k46054dae" value="A renda dos primeiros meses">A renda dos primeiros meses</option><option data-i18n="k0f301304" value="Deixar a estabilidade do salário">Deixar a estabilidade do salário</option><option data-i18n="k92530682" value="Não saber se a carteira me acompanha">Não saber se a carteira me acompanha</option><option data-i18n="k463c0f43" value="O que o meu contrato atual permite">O que o meu contrato atual permite</option><option data-i18n="ke70b7007" value="Nada, só preciso da proposta certa">Nada, só preciso da proposta certa</option></select></div>
+        <div class="campo"><label data-i18n="k030a46a0" for="c-quando">Quando você pensaria em mudar?</label>
+          <select id="c-quando" name="quando"><option data-i18n="kselecione" value="" selected>Selecione</option><option data-i18n="kd59cc970" value="Nos próximos 3 meses">Nos próximos 3 meses</option><option data-i18n="kd19f7540" value="Entre 3 e 6 meses">Entre 3 e 6 meses</option><option data-i18n="kb6b89ef5" value="Daqui a mais de 6 meses">Daqui a mais de 6 meses</option><option data-i18n="ke4870795" value="Por enquanto só quero entender">Por enquanto só quero entender</option></select></div>
+      </div>
       <label class="lgpd" for="c-lgpd"><input type="checkbox" id="c-lgpd" name="lgpd"><span data-i18n="k11967c41">Autorizo o contato e o tratamento dos meus dados conforme a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>, nos termos da Lei 13.709/18.</span></label>
       <button data-i18n="k7f509afe" class="btn btn-1" type="submit" style="margin-top:8px">Conversar reservadamente</button>
       <p id="form-aviso" style="font-family:var(--f-mono);font-size:12px;color:var(--metal);min-height:18px"></p>
@@ -1189,7 +1202,7 @@ h1 em,h2 em{font-weight:700!important}
   var aviso = document.getElementById('form-aviso');
   /* Endereco do Apps Script da planilha (ver planilha/LEIA-ME.md).
      Vazio = modo demonstracao: nada sai do navegador. */
-  var PLANILHA_URL = '';
+  var PLANILHA_URL = 'https://script.google.com/macros/s/AKfycbz6uR_JsZHWqYnEMB86WORA4tSVNt0hWbfjTTL3neXvkBUfUC48_7gzlGffLpd6RvY3/exec';
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -1207,7 +1220,7 @@ h1 em,h2 em{font-weight:700!important}
     var dados = { tipo: form.getAttribute('data-tipo'), pagina: location.pathname.split('/').pop() || 'index.html', aceite_lgpd: new Date().toISOString() };
     Array.prototype.forEach.call(form.elements, function(el){
       if (!el.name || el.name === 'lgpd' || el.name === 'site') return;
-      dados[el.name] = el.tagName === 'SELECT' ? el.options[el.selectedIndex].text : el.value;
+      dados[el.name] = el.tagName === 'SELECT' ? (el.value === '' ? '' : el.options[el.selectedIndex].text) : el.value;
     });
 
     var botao = form.querySelector('button[type="submit"]');
@@ -1430,12 +1443,15 @@ h1 em,h2 em{font-weight:700!important}
     function escolher(id, v){
       var sel = document.getElementById(id);
       if (!sel || !v) return;
-      Array.prototype.slice.call(sel.options).forEach(function(o){ if (o.text === v) sel.value = o.value; });
+      Array.prototype.slice.call(sel.options).forEach(function(o){ if (o.value === v || o.text === v) sel.value = o.value; });
     }
     escolher('c-onde', valor('q-onde'));
     escolher('c-cert', valor('q-cert'));
     escolher('c-carteira', valor('q-carteira'));
-    var extras = { porta: PORTAS[porta()].n, tempo_mercado: valor('q-tempo'), trava: valor('q-trava'), quando: valor('q-quando') };
+    escolher('c-tempo', valor('q-tempo'));
+    escolher('c-trava', valor('q-trava'));
+    escolher('c-quando', valor('q-quando'));
+    var extras = { porta: PORTAS[porta()].n }; // as outras 5 respostas já vão nos campos visíveis do formulário
     Object.keys(extras).forEach(function(k){
       var campo = form.querySelector('input[type="hidden"][name="' + k + '"]');
       if (!campo) { campo = document.createElement('input'); campo.type = 'hidden'; campo.name = k; form.appendChild(campo); }
