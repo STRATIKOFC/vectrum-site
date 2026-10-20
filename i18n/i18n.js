@@ -33,7 +33,7 @@
     { re: /^(\d+) de (\d+)$/, en: '$1 of $2', es: '$1 de $2', it: '$1 di $2', zh: '$1 / $2' }
   ];
   var CHAVE = 'vectrum-idioma';
-  var VERSAO = '2';
+  var VERSAO = '3';
 
   var raiz = document.documentElement;
   var dicionarios = { pt: null };
